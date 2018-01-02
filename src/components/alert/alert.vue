@@ -36,7 +36,7 @@
         computed: {
             getType() {
                 return {
-                    this.types[this.type] : true
+                    this.types[this.type]: true
                 }
             }
         }
