@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/apapazisis/bootstrapvue/issues"
   },
-  "homepage": "https://github.com/apapazisis/bootstrapvue#readme"
+  "homepage": "https://github.com/apapazisis/bootstrapvue#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta.3"
+  }
 }
