@@ -21,7 +21,10 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader'
+                loader: 'babel-loader',
+                options: {
+                    presets: ['env']
+                }
             },
             {
                 test: /\.s[ac]ss$/,
@@ -35,5 +38,10 @@ module.exports = {
                 loader: 'vue-loader'
             }
         ]
-    }
+    },
+    resolve: {
+        alias: { // The alias is used to make the import more readable. That means that if not use the alias we should type import vue from vue/dist/vue.esm.js
+            'vue$': 'vue/dist/vue.esm.js'
+        }
+    },
 };
