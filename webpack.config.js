@@ -7,7 +7,10 @@ module.exports = {
         app: [
             './resources/bootstrap.js',
             './resources/sass/style.scss',
-        ]
+        ],
+        'bootstrapvue': [
+            './src/index.js'
+        ],
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,7 +44,7 @@ module.exports = {
         ]
     },
     resolve: {
-        alias: { // The alias is used to make the import more readable. That means that if not use the alias we should type import vue from vue/dist/vue.esm.js
+        alias: {
             'vue$': 'vue/dist/vue.esm.js'
         }
     },

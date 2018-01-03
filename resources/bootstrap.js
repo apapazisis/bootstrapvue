@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import alert from '../src/components/alert/alert.vue';
+import { alert } from 'bootstrapvue';
 
 let app = new Vue({
     el: '#app',
