@@ -1,5 +1,5 @@
 <template>
-    <div class="alert" :class="getType" role="alert">
+    <div class="alert" :class="{'alert-success': type == 'success'}" role="alert">
         <button v-if="dismissable" type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -10,15 +10,6 @@
 <script>
     export default {
         name: 'alert',
-        data: () => ({
-            types: {
-                primary: 'alert-primary',
-                success: 'alert-success',
-                secondary: 'alert-secondary',
-                danger: 'alert-danger',
-                warning: 'alert-warning'
-            }
-        }),
         props: {
             show: {
                 type: Boolean,
@@ -31,13 +22,6 @@
             dismissable: {
                 type: Boolean,
                 default: false
-            }
-        },
-        computed: {
-            getType() {
-                return {
-                    this.types[this.type]: true
-                }
             }
         }
     }

@@ -6,6 +6,7 @@ module.exports = {
     entry: {
         app: [
             './resources/bootstrap.js',
+            './resources/sass/style.scss',
         ]
     },
     output: {
@@ -44,4 +45,7 @@ module.exports = {
             'vue$': 'vue/dist/vue.esm.js'
         }
     },
+    plugins: [
+        new ExtractTextPlugin('[name].css')
+    ]
 };
