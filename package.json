@@ -17,11 +17,13 @@
     "url": "https://github.com/apapazisis/bootstrapvue/issues"
   },
   "homepage": "https://github.com/apapazisis/bootstrapvue#readme",
+  "dependencies": {
+    "bootstrap": "^4.0.0-beta.2"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "bootstrap": "^4.0.0-beta.2",
     "bootstrapvue": "github:apapazisis/bootstrapvue#master",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.2",
