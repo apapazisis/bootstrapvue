@@ -10,9 +10,6 @@
         "type": "git",
         "url": "git+https://github.com/apapazisis/bootstrapvue.git"
     },
-    "files": [
-        "dist"
-    ],
     "keywords": [],
     "author": "Apostolos Papazisis papazisisgr@hotmail.com",
     "license": "MIT",
