@@ -1,38 +1,41 @@
 {
-  "name": "apapazisis-bootstrapvue",
-  "version": "1.0.1",
-  "description": "",
-  "main": "dist/bootstrapvue.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/apapazisis/bootstrapvue.git"
-  },
-  "keywords": [],
-  "author": "Apostolos Papazisis papazisisgr@hotmail.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/apapazisis/bootstrapvue/issues"
-  },
-  "homepage": "https://github.com/apapazisis/bootstrapvue#readme",
-  "dependencies": {
-    "bootstrap": "^4.0.0-beta.2"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "bootstrapvue": "github:apapazisis/bootstrapvue#master",
-    "css-loader": "^0.28.7",
-    "extract-text-webpack-plugin": "^3.0.2",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.19.1",
-    "vue": "^2.5.13",
-    "vue-loader": "^13.6.2",
-    "vue-template-compiler": "^2.5.13",
-    "webpack": "^3.10.0"
-  }
+    "name": "apapazisis-bootstrapvue",
+    "version": "1.0.1",
+    "description": "",
+    "main": "dist/bootstrapvue.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/apapazisis/bootstrapvue.git"
+    },
+    "files": [
+        "dist"
+    ],
+    "keywords": [],
+    "author": "Apostolos Papazisis papazisisgr@hotmail.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/apapazisis/bootstrapvue/issues"
+    },
+    "homepage": "https://github.com/apapazisis/bootstrapvue#readme",
+    "dependencies": {
+        "bootstrap": "^4.0.0-beta.2"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-preset-env": "^1.6.1",
+        "bootstrapvue": "github:apapazisis/bootstrapvue#master",
+        "css-loader": "^0.28.7",
+        "extract-text-webpack-plugin": "^3.0.2",
+        "node-sass": "^4.7.2",
+        "sass-loader": "^6.0.6",
+        "style-loader": "^0.19.1",
+        "vue": "^2.5.13",
+        "vue-loader": "^13.6.2",
+        "vue-template-compiler": "^2.5.13",
+        "webpack": "^3.10.0"
+    }
 }
