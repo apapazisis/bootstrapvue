@@ -5,7 +5,7 @@
     "main": "dist/bootstrapvue.js",
     "scripts": {
         "build": "webpack",
-        "prepublish": "npm run build"
+        "preinstall": "npm run build"
     },
     "repository": {
         "type": "git",
