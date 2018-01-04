@@ -5,7 +5,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     entry: {
         app: [
-            './resources/bootstrap.js',
             './resources/sass/style.scss',
         ],
         'bootstrapvue': [
