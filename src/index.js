@@ -1,4 +1,4 @@
-import alert from './components/alert/alert.vue';
+import alert from './components/alert.vue';
 
 const BootstrapVue = {
     alert
