@@ -28,5 +28,10 @@ module.exports = {
                 loader: 'vue-loader'
             }
         ]
-    }
+    },
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            minimize : true
+        })
+    ]
 };
