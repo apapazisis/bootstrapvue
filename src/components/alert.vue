@@ -34,9 +34,11 @@
             }
         },
         data: () => ({
-            mutateShow: true,
-            edo: this.show
+            mutateShow: true
         }),
+        mounted() {
+            this.mutateShow = this.show;
+        },
         methods: {
             getTypeClass(type) {
                 return {

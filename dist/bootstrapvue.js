@@ -78,8 +78,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var _this = this;
-
 //
 //
 //
@@ -116,9 +114,11 @@ var _this = this;
         }
     },
     data: () => ({
-        mutateShow: true,
-        edo: _this.show
+        mutateShow: true
     }),
+    mounted() {
+        this.mutateShow = this.show;
+    },
     methods: {
         getTypeClass(type) {
             return {
