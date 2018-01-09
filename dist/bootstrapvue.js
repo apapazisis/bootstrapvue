@@ -78,6 +78,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var _this = this;
+
 //
 //
 //
@@ -110,11 +112,12 @@ return /******/ (function(modules) { // webpackBootstrap
         },
         timeout: {
             type: Number,
-            default: 2000
+            default: 100
         }
     },
     data: () => ({
-        mutateShow: true
+        mutateShow: true,
+        edo: _this.$props.show
     }),
     methods: {
         getTypeClass(type) {

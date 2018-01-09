@@ -30,11 +30,12 @@
             },
             timeout: {
                 type: Number,
-                default: 2000
+                default: 100
             }
         },
         data: () => ({
-            mutateShow: true
+            mutateShow: true,
+            edo: this.$props.show
         }),
         methods: {
             getTypeClass(type) {
