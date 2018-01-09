@@ -1,7 +1,7 @@
 <template>
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item" :class="{'active': item.active}" v-for="(item, index) in items" :key="index">
+            <li class="breadcrumb-item" :class="{'active': item.active}" v-bind="bindActive(item.active)" v-for="(item, index) in items" :key="index">
                 <a :href="item.href" v-if="!item.active">{{ item.text }}</a>
                 <template v-else>{{ item.text }}</template>
             </li>
@@ -16,6 +16,13 @@
             items: {
                 type: Array,
                 default: []
+            }
+        },
+        methods: {
+            bindActive(isActive) {
+                if (isActive) {
+                    return {'aria-current':'page'}
+                }
             }
         }
     }

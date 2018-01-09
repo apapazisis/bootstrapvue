@@ -344,6 +344,13 @@ module.exports = function normalizeComponent (
             type: Array,
             default: []
         }
+    },
+    methods: {
+        bindActive(isActive) {
+            if (isActive) {
+                return { 'aria-current': 'page' };
+            }
+        }
     }
 });
 
@@ -1070,11 +1077,16 @@ var render = function() {
       _vm._l(_vm.items, function(item, index) {
         return _c(
           "li",
-          {
-            key: index,
-            staticClass: "breadcrumb-item",
-            class: { active: item.active }
-          },
+          _vm._b(
+            {
+              key: index,
+              staticClass: "breadcrumb-item",
+              class: { active: item.active }
+            },
+            "li",
+            _vm.bindActive(item.active),
+            false
+          ),
           [
             !item.active
               ? _c("a", { attrs: { href: item.href } }, [
