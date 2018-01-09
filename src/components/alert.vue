@@ -33,13 +33,8 @@
                 default: 2000
             }
         },
-        computed: {
-            closeAlert() {
-                this.show = false;
-            }
-        },
         methods: {
-            getTypeClass(type, dismiss) {
+            getTypeClass(type) {
                 return {
                     'alert-primary': type == 'primary',
                     'alert-secondary': type == 'secondary',
@@ -50,6 +45,9 @@
                     'alert-light': type == 'light',
                     'alert-dark': type == 'dark'
                 }
+            },
+            closeAlert() {
+                this.show = false;
             }
         }
     }
