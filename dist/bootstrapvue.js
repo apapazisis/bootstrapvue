@@ -113,6 +113,11 @@ return /******/ (function(modules) { // webpackBootstrap
             default: 2000
         }
     },
+    computed: {
+        closeAlert() {
+            this.show = false;
+        }
+    },
     methods: {
         getTypeClass(type, dismiss) {
             return {
@@ -346,11 +351,7 @@ var render = function() {
                       "data-dismiss": "alert",
                       "aria-label": "Close"
                     },
-                    on: {
-                      click: function($event) {
-                        _vm.show = false
-                      }
-                    }
+                    on: { click: _vm.closeAlert }
                   },
                   [
                     _c("span", { attrs: { "aria-hidden": "true" } }, [
