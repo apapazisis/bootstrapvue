@@ -12,3 +12,5 @@ $ npm install github:apapazisis/bootstrapvue#master
 
 Developed Components
 - Alert
+- Badge
+- Breadcrumb
