@@ -97,9 +97,6 @@ var _this = this;
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'alert',
-    data: () => ({
-        mutateShow: _this.show
-    }),
     props: {
         show: {
             type: Boolean,
@@ -118,6 +115,9 @@ var _this = this;
             default: 2000
         }
     },
+    data: () => ({
+        mutateShow: _this.show
+    }),
     methods: {
         getTypeClass(type) {
             return {

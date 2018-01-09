@@ -15,9 +15,6 @@
 <script>
     export default {
         name: 'alert',
-        data: () => ({
-            mutateShow: this.show
-        }),
         props: {
             show: {
                 type: Boolean,
@@ -36,6 +33,9 @@
                 default: 2000
             }
         },
+        data: () => ({
+            mutateShow: this.show
+        }),
         methods: {
             getTypeClass(type) {
                 return {
