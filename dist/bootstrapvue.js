@@ -98,7 +98,7 @@ return /******/ (function(modules) { // webpackBootstrap
     props: {
         show: {
             type: Boolean,
-            default: true
+            default: false
         },
         type: {
             type: String,
@@ -114,7 +114,7 @@ return /******/ (function(modules) { // webpackBootstrap
         }
     },
     data: () => ({
-        mutateShow: true
+        mutateShow: false
     }),
     mounted() {
         this.mutateShow = this.show;

@@ -18,7 +18,7 @@
         props: {
             show: {
                 type: Boolean,
-                default: true
+                default: false
             },
             type: {
                 type: String,
@@ -34,7 +34,7 @@
             }
         },
         data: () => ({
-            mutateShow: true
+            mutateShow: false
         }),
         mounted() {
             this.mutateShow = this.show;
