@@ -1,7 +1,7 @@
 <template>
     <transition name="fade" :duration="timeout">
         <div class="alert" :class="getTypeClass(type)" v-if="show" role="alert">
-            <button v-if="dismiss" @click="closeAlert" type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <button v-if="dismiss" @click="mutateShow = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
             <h4 class="alert-heading">
@@ -15,6 +15,9 @@
 <script>
     export default {
         name: 'alert',
+        data: () => ({
+            mutateShow: this.show
+        }),
         props: {
             show: {
                 type: Boolean,
@@ -45,9 +48,6 @@
                     'alert-light': type == 'light',
                     'alert-dark': type == 'dark'
                 }
-            },
-            closeAlert() {
-                this.show = false;
             }
         }
     }

@@ -78,6 +78,8 @@ return /******/ (function(modules) { // webpackBootstrap
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+var _this = this;
+
 //
 //
 //
@@ -95,6 +97,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'alert',
+    data: () => ({
+        mutateShow: _this.show
+    }),
     props: {
         show: {
             type: Boolean,
@@ -125,9 +130,6 @@ return /******/ (function(modules) { // webpackBootstrap
                 'alert-light': type == 'light',
                 'alert-dark': type == 'dark'
             };
-        },
-        closeAlert() {
-            this.show = false;
         }
     }
 });
@@ -349,7 +351,11 @@ var render = function() {
                       "data-dismiss": "alert",
                       "aria-label": "Close"
                     },
-                    on: { click: _vm.closeAlert }
+                    on: {
+                      click: function($event) {
+                        _vm.mutateShow = false
+                      }
+                    }
                   },
                   [
                     _c("span", { attrs: { "aria-hidden": "true" } }, [
