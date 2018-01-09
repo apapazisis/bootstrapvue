@@ -35,7 +35,7 @@
         },
         data: () => ({
             mutateShow: true,
-            edo: this.$props.show
+            edo: this.show
         }),
         methods: {
             getTypeClass(type) {

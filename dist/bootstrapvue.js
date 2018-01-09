@@ -117,7 +117,7 @@ var _this = this;
     },
     data: () => ({
         mutateShow: true,
-        edo: _this.$props.show
+        edo: _this.show
     }),
     methods: {
         getTypeClass(type) {
