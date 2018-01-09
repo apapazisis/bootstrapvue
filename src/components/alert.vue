@@ -1,5 +1,5 @@
 <template>
-    <div class="alert" :class="getTypeClass(type)" role="alert">
+    <div class="alert" :class="getTypeClass(type, dismiss)" role="alert">
         <button v-if="dismiss" type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>

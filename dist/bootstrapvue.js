@@ -108,7 +108,7 @@ return /******/ (function(modules) { // webpackBootstrap
         }
     },
     methods: {
-        getTypeClass(type) {
+        getTypeClass(type, dismiss) {
             return {
                 'alert-primary': type == 'primary',
                 'alert-secondary': type == 'secondary',
@@ -117,7 +117,8 @@ return /******/ (function(modules) { // webpackBootstrap
                 'alert-warning': type == 'warning',
                 'alert-info': type == 'info',
                 'alert-light': type == 'light',
-                'alert-dark': type == 'dark'
+                'alert-dark': type == 'dark',
+                'alert-dismissible fade show': dismiss == true
             };
         }
     }
@@ -324,7 +325,7 @@ var render = function() {
     "div",
     {
       staticClass: "alert",
-      class: _vm.getTypeClass(_vm.type),
+      class: _vm.getTypeClass(_vm.type, _vm.dismiss),
       attrs: { role: "alert" }
     },
     [
