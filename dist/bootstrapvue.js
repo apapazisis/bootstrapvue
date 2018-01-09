@@ -332,7 +332,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("transition", { attrs: { name: "fade", duration: _vm.timeout } }, [
-    _vm.show
+    _vm.mutateShow
       ? _c(
           "div",
           {
