@@ -1,5 +1,5 @@
 <template>
-    <transition name="fade" :duration="timeout">
+    <transition name="fade">
         <div class="alert" :class="getTypeClass(type)" v-if="mutateShow" role="alert">
             <button v-if="dismiss" @click="mutateShow = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -56,4 +56,8 @@
     }
 </script>
 
-
+<style>
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+</style>
