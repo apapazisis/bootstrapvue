@@ -89,9 +89,6 @@ return /******/ (function(modules) { // webpackBootstrap
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'alert',
@@ -754,8 +751,6 @@ var render = function() {
                   ]
                 )
               : _vm._e(),
-            _vm._v(" "),
-            _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
             _vm._v(" "),
             _vm._t("default")
           ],

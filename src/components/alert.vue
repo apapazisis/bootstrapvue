@@ -4,9 +4,6 @@
             <button v-if="dismiss" @click="mutateShow = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="alert-heading">
-                <slot name="head"></slot>
-            </h4>
             <slot></slot>
         </div>
     </transition>
