@@ -34,7 +34,7 @@
             }
         },
         data: () => ({
-            mutateShow: this.show
+            mutateShow: true
         }),
         methods: {
             getTypeClass(type) {
