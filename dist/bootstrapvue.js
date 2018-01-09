@@ -98,7 +98,7 @@ return /******/ (function(modules) { // webpackBootstrap
     props: {
         show: {
             type: Boolean,
-            default: false
+            default: true
         },
         type: {
             type: String,
@@ -327,35 +327,41 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("transition", { attrs: { name: "fade", duration: _vm.timeout } }, [
-    _c(
-      "div",
-      {
-        staticClass: "alert",
-        class: _vm.getTypeClass(_vm.type),
-        attrs: { role: "alert" }
-      },
-      [
-        _vm.dismiss
-          ? _c(
-              "button",
-              {
-                staticClass: "close",
-                attrs: {
-                  type: "button",
-                  "data-dismiss": "alert",
-                  "aria-label": "Close"
-                }
-              },
-              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
-        _vm._v(" "),
-        _vm._t("default")
-      ],
-      2
-    )
+    _vm.show
+      ? _c(
+          "div",
+          {
+            staticClass: "alert",
+            class: _vm.getTypeClass(_vm.type),
+            attrs: { role: "alert" }
+          },
+          [
+            _vm.dismiss
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "close",
+                    attrs: {
+                      type: "button",
+                      "data-dismiss": "alert",
+                      "aria-label": "Close"
+                    }
+                  },
+                  [
+                    _c("span", { attrs: { "aria-hidden": "true" } }, [
+                      _vm._v("×")
+                    ])
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
+            _vm._v(" "),
+            _vm._t("default")
+          ],
+          2
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = []

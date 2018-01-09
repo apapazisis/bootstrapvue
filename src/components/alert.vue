@@ -1,6 +1,6 @@
 <template>
     <transition name="fade" :duration="timeout">
-        <div class="alert" :class="getTypeClass(type)" role="alert">
+        <div class="alert" :class="getTypeClass(type)" v-if="show" role="alert">
             <button v-if="dismiss" type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -18,7 +18,7 @@
         props: {
             show: {
                 type: Boolean,
-                default: false
+                default: true
             },
             type: {
                 type: String,
