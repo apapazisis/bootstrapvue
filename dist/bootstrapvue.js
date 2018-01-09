@@ -318,7 +318,6 @@ module.exports = function normalizeComponent (
             };
         }
     }
-
 });
 
 /***/ }),
