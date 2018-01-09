@@ -339,8 +339,10 @@ module.exports = function normalizeComponent (
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'breadcrumb',
     props: {
-        items: Array,
-        default: []
+        items: {
+            type: Array,
+            default: []
+        }
     }
 });
 

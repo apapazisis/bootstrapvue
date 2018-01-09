@@ -12,8 +12,10 @@
     export default {
         name: 'breadcrumb',
         props: {
-            items: Array,
-            default: []
+            items: {
+                type: Array,
+                default: []
+            }
         }
     }
 </script>
