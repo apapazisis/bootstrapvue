@@ -21,7 +21,7 @@
         methods: {
             bindActive(isActive) {
                 if (isActive) {
-                    return {'aria-current':'page'}
+                    return {'aria-current': 'page'}
                 }
             }
         }
