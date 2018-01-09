@@ -30,7 +30,7 @@
             },
             timeout: {
                 type: Number,
-                default: 100
+                default: 0
             }
         },
         data: () => ({
@@ -38,6 +38,15 @@
         }),
         mounted() {
             this.mutateShow = this.show;
+        },
+        watch: {
+            mutateShow(val) {
+                if (val && this.timeout) {
+                    setTimeout(() => {
+                        this.mutateShow = false
+                    }, this.timeout);
+                }
+            }
         },
         methods: {
             getTypeClass(type) {
