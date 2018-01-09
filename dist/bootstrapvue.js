@@ -329,21 +329,9 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'breadcrumb',
-    props: {
-        items: {
-            type: Array,
-            default: []
-        }
-    }
+    name: 'breadcrumb'
 });
 
 /***/ }),
@@ -1062,27 +1050,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("nav", { attrs: { "aria-label": "breadcrumb" } }, [
-    _c(
-      "ol",
-      { staticClass: "breadcrumb" },
-      _vm._l(_vm.items, function(item, index) {
-        return _c(
-          "li",
-          {
-            key: index,
-            staticClass: "breadcrumb-item",
-            class: { active: item.active }
-          },
-          [
-            _c("a", { attrs: { href: "item.href" } }, [
-              _vm._v(_vm._s(item.text))
-            ])
-          ]
-        )
-      })
-    )
-  ])
+  return _c("div", [_vm._v("test")])
 }
 var staticRenderFns = []
 render._withStripped = true
