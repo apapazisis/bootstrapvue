@@ -87,10 +87,12 @@ return /******/ (function(modules) { // webpackBootstrap
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'alert',
-    data: () => ({}),
     props: {
         show: {
             type: Boolean,
@@ -100,7 +102,7 @@ return /******/ (function(modules) { // webpackBootstrap
             type: String,
             default: 'primary'
         },
-        dismissable: {
+        dismiss: {
             type: Boolean,
             default: false
         }
@@ -108,8 +110,14 @@ return /******/ (function(modules) { // webpackBootstrap
     methods: {
         getTypeClass(type) {
             return {
+                'alert-primary': type == 'primary',
+                'alert-secondary': type == 'secondary',
                 'alert-success': type == 'success',
-                'alert-danger': type == 'danger'
+                'alert-danger': type == 'danger',
+                'alert-warning': type == 'warning',
+                'alert-info': type == 'info',
+                'alert-light': type == 'light',
+                'alert-dark': type == 'dark'
             };
         }
     }
@@ -320,7 +328,7 @@ var render = function() {
       attrs: { role: "alert" }
     },
     [
-      _vm.dismissable
+      _vm.dismiss
         ? _c(
             "button",
             {
@@ -334,6 +342,8 @@ var render = function() {
             [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
           )
         : _vm._e(),
+      _vm._v(" "),
+      _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
       _vm._v(" "),
       _vm._t("default")
     ],
