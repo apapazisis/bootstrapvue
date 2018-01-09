@@ -28,7 +28,7 @@
             }
         },
         methods: {
-            getTypeClass(type) {
+            getTypeClass(type, dismiss) {
                 return {
                     'alert-primary': type == 'primary',
                     'alert-secondary': type == 'secondary',
@@ -37,7 +37,8 @@
                     'alert-warning': type == 'warning',
                     'alert-info': type == 'info',
                     'alert-light': type == 'light',
-                    'alert-dark': type == 'dark'
+                    'alert-dark': type == 'dark',
+                    'alert-dismissible fade show': dismiss == true
                 }
             }
         }
