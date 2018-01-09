@@ -335,6 +335,7 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'breadcrumb',
@@ -1075,10 +1076,13 @@ var render = function() {
             class: { active: item.active }
           },
           [
-            _c("a", { attrs: { href: "item.href" } }, [
-              _vm._v(_vm._s(item.text))
-            ])
-          ]
+            !item.active
+              ? _c("a", { attrs: { href: item.href } }, [
+                  _vm._v(_vm._s(item.text))
+                ])
+              : [_vm._v(_vm._s(item.text))]
+          ],
+          2
         )
       })
     )
