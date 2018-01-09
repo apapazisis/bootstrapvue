@@ -90,6 +90,8 @@ return /******/ (function(modules) { // webpackBootstrap
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'alert',
@@ -105,6 +107,10 @@ return /******/ (function(modules) { // webpackBootstrap
         dismiss: {
             type: Boolean,
             default: false
+        },
+        timeout: {
+            type: Number,
+            default: 2000
         }
     },
     methods: {
@@ -117,8 +123,7 @@ return /******/ (function(modules) { // webpackBootstrap
                 'alert-warning': type == 'warning',
                 'alert-info': type == 'info',
                 'alert-light': type == 'light',
-                'alert-dark': type == 'dark',
-                'alert-dismissible fade show': dismiss == true
+                'alert-dark': type == 'dark'
             };
         }
     }
@@ -321,35 +326,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    {
-      staticClass: "alert",
-      class: _vm.getTypeClass(_vm.type, _vm.dismiss),
-      attrs: { role: "alert" }
-    },
-    [
-      _vm.dismiss
-        ? _c(
-            "button",
-            {
-              staticClass: "close",
-              attrs: {
-                type: "button",
-                "data-dismiss": "alert",
-                "aria-label": "Close"
-              }
-            },
-            [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
-      _vm._v(" "),
-      _vm._t("default")
-    ],
-    2
-  )
+  return _c("transition", { attrs: { name: "fade", duration: _vm.timeout } }, [
+    _c(
+      "div",
+      {
+        staticClass: "alert",
+        class: _vm.getTypeClass(_vm.type),
+        attrs: { role: "alert" }
+      },
+      [
+        _vm.dismiss
+          ? _c(
+              "button",
+              {
+                staticClass: "close",
+                attrs: {
+                  type: "button",
+                  "data-dismiss": "alert",
+                  "aria-label": "Close"
+                }
+              },
+              [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+            )
+          : _vm._e(),
+        _vm._v(" "),
+        _c("h4", { staticClass: "alert-heading" }, [_vm._t("head")], 2),
+        _vm._v(" "),
+        _vm._t("default")
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

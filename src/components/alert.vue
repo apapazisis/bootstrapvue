@@ -1,13 +1,15 @@
 <template>
-    <div class="alert" :class="getTypeClass(type, dismiss)" role="alert">
-        <button v-if="dismiss" type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="alert-heading">
-            <slot name="head"></slot>
-        </h4>
-        <slot></slot>
-    </div>
+    <transition name="fade" :duration="timeout">
+        <div class="alert" :class="getTypeClass(type)" role="alert">
+            <button v-if="dismiss" type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="alert-heading">
+                <slot name="head"></slot>
+            </h4>
+            <slot></slot>
+        </div>
+    </transition>
 </template>
 
 <script>
@@ -25,6 +27,10 @@
             dismiss: {
                 type: Boolean,
                 default: false
+            },
+            timeout: {
+                type: Number,
+                default: 2000
             }
         },
         methods: {
@@ -37,11 +43,11 @@
                     'alert-warning': type == 'warning',
                     'alert-info': type == 'info',
                     'alert-light': type == 'light',
-                    'alert-dark': type == 'dark',
-                    'alert-dismissible fade show': dismiss == true
+                    'alert-dark': type == 'dark'
                 }
             }
         }
     }
 </script>
+
 
