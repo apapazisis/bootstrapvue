@@ -273,17 +273,22 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'badge',
     props: {
-        badge: {
+        variant: {
             type: String,
             default: ''
         },
         type: {
             type: String,
             default: ''
+        },
+        href: {
+            type: String,
+            default: '#'
         }
     },
     methods: {
@@ -297,6 +302,19 @@ module.exports = function normalizeComponent (
                 'badge-info': type == 'info',
                 'badge-light': type == 'light',
                 'badge-dark': type == 'dark'
+            };
+        },
+        getBtnClass(type) {
+            return {
+                'btn-primary': type == 'primary',
+                'btn-secondary': type == 'secondary',
+                'btn-success': type == 'success',
+                'btn-danger': type == 'danger',
+                'btn-warning': type == 'warning',
+                'btn-info': type == 'info',
+                'btn-light': type == 'light',
+                'btn-dark': type == 'dark',
+                'btn-link': type == 'link'
             };
         }
     }
@@ -893,43 +911,50 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.badge == "heading1"
+      _vm.variant == "badge"
         ? [
             _c(
-              "h1",
-              [
-                _vm._t("text"),
-                _vm._v(" "),
+              "span",
+              { staticClass: "babge", class: _vm.getTypeClass(_vm.type) },
+              [_vm._t("default")],
+              2
+            )
+          ]
+        : _vm.variant == "contextual"
+          ? [
+              _c(
+                "span",
+                { staticClass: "badge", class: _vm.getTypeClass(_vm.type) },
+                [_vm._t("default")],
+                2
+              )
+            ]
+          : _vm.variant == "pill"
+            ? [
                 _c(
                   "span",
-                  { staticClass: "babge", class: _vm.getTypeClass(_vm.type) },
-                  [_vm._t("badge_text")],
+                  {
+                    staticClass: "badge badge-pill",
+                    class: _vm.getTypeClass(_vm.type)
+                  },
+                  [_vm._t("default")],
                   2
                 )
-              ],
-              2
-            )
-          ]
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.badge == "button"
-        ? [
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "button" } },
-              [
-                _vm._t("default"),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  { staticClass: "badge", class: _vm.getTypeClass(_vm.type) },
-                  [_vm._v("4")]
-                )
-              ],
-              2
-            )
-          ]
-        : _vm._e()
+              ]
+            : _vm.variant == "link"
+              ? [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "badge",
+                      class: _vm.getTypeClass(_vm.type),
+                      attrs: { href: _vm.href }
+                    },
+                    [_vm._t("default")],
+                    2
+                  )
+                ]
+              : _vm._e()
     ],
     2
   )

@@ -1,17 +1,18 @@
 <template>
     <div>
-        <template v-if="badge == 'heading1'">
-            <h1>
-                <slot name="text"></slot>
-                <span class="babge" :class="getTypeClass(type)">
-                    <slot name="badge_text"></slot>
-                </span>
-            </h1>
+        <template v-if="variant == 'badge'">
+            <span class="babge" :class="getTypeClass(type)">
+                <slot></slot>
+            </span>
         </template>
-        <template v-if="badge == 'button'">
-            <button type="button" class="btn btn-primary">
-                <slot></slot> <span class="badge" :class="getTypeClass(type)">4</span>
-            </button>
+        <template v-else-if="variant == 'contextual'">
+            <span class="badge" :class="getTypeClass(type)"><slot></slot></span>
+        </template>
+        <template v-else-if="variant == 'pill'">
+            <span class="badge badge-pill" :class="getTypeClass(type)"><slot></slot></span>
+        </template>
+        <template v-else-if="variant == 'link'">
+            <a :href="href" class="badge" :class="getTypeClass(type)"><slot></slot></a>
         </template>
     </div>
 </template>
@@ -20,13 +21,17 @@
     export default {
         name: 'badge',
         props: {
-            badge: {
+            variant: {
                 type: String,
                 default: ''
             },
             type: {
                 type: String,
                 default: ''
+            },
+            href: {
+                type: String,
+                default: '#'
             }
         },
         methods: {
@@ -40,6 +45,19 @@
                     'badge-info': type == 'info',
                     'badge-light': type == 'light',
                     'badge-dark': type == 'dark'
+                }
+            },
+            getBtnClass(type) {
+                return {
+                    'btn-primary': type == 'primary',
+                    'btn-secondary': type == 'secondary',
+                    'btn-success': type == 'success',
+                    'btn-danger': type == 'danger',
+                    'btn-warning': type == 'warning',
+                    'btn-info': type == 'info',
+                    'btn-light': type == 'light',
+                    'btn-dark': type == 'dark',
+                    'btn-link': type == 'link'
                 }
             }
         }
