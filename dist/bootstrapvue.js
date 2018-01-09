@@ -345,6 +345,11 @@ var render = function() {
                       type: "button",
                       "data-dismiss": "alert",
                       "aria-label": "Close"
+                    },
+                    on: {
+                      click: function($event) {
+                        _vm.show = false
+                      }
                     }
                   },
                   [
