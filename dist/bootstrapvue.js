@@ -381,7 +381,7 @@ module.exports = function normalizeComponent (
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'button',
+    name: 'btn',
     props: {
         variant: {
             type: String,
