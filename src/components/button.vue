@@ -1,19 +1,19 @@
 <template>
     <div>
         <template v-if="type == 'button'">
-            <button type="button" class="btn" v-bind="{disabled}" :class="[getClass(variant), getSize(size), getBlock(block)]"><slot></slot></button>
+            <button type="button" class="btn" v-bind="disabled, bindActive(active)" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
         </template>
         <template v-else-if="type == 'link'">
-            <a class="btn" :class="[getClass(variant), getDisabled(disabled)]" :href="href" role="button"><slot></slot></a>
+            <a class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" v-bind="bindDisabled(disabled), bindActive(active)" :href="href" role="button"><slot></slot></a>
         </template>
         <template v-else-if="type == 'reset'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="reset" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="reset" v-bind="value, bindActive(active)">
         </template>
         <template v-else-if="type == 'submit'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="submit" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="submit" v-bind="value, bindActive(active)">
         </template>
         <template v-else-if="type == 'ibutton'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="button" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="button" v-bind="value, bindActive(active)">
         </template>
     </div>
 </template>
@@ -49,6 +49,10 @@
             value: {
                 type: String,
                 default: ''
+            },
+            active: {
+                type: Boolean,
+                default: false
             }
         },
         methods: {
@@ -87,6 +91,25 @@
             getDisabled(disabled) {
                 return {
                     'disabled': disabled
+                }
+            },
+            bindDisabled(disabled) {
+                if (disabled) {
+                    return {
+                        'aria-disabled': 'true'
+                    }
+                }
+            },
+            getActive(active) {
+                return {
+                    'active': active
+                }
+            },
+            bindActive(active) {
+                if (active) {
+                    return {
+                        'aria-pressed': 'true'
+                    }
                 }
             }
         }

@@ -397,6 +397,10 @@ module.exports = function normalizeComponent (
         value: {
             type: String,
             default: ''
+        },
+        active: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
@@ -436,6 +440,25 @@ module.exports = function normalizeComponent (
             return {
                 'disabled': disabled
             };
+        },
+        bindDisabled(disabled) {
+            if (disabled) {
+                return {
+                    'aria-disabled': 'true'
+                };
+            }
+        },
+        getActive(active) {
+            return {
+                'active': active
+            };
+        },
+        bindActive(active) {
+            if (active) {
+                return {
+                    'aria-pressed': 'true'
+                };
+            }
         }
     }
 });
@@ -1277,12 +1300,14 @@ var render = function() {
                   class: [
                     _vm.getClass(_vm.variant),
                     _vm.getSize(_vm.size),
-                    _vm.getBlock(_vm.block)
+                    _vm.getBlock(_vm.block),
+                    _vm.getActive(_vm.active)
                   ],
                   attrs: { type: "button" }
                 },
                 "button",
-                { disabled: _vm.disabled },
+                _vm.disabled,
+                _vm.bindActive(_vm.active),
                 false
               ),
               [_vm._t("default")],
@@ -1293,14 +1318,21 @@ var render = function() {
           ? [
               _c(
                 "a",
-                {
-                  staticClass: "btn",
-                  class: [
-                    _vm.getClass(_vm.variant),
-                    _vm.getDisabled(_vm.disabled)
-                  ],
-                  attrs: { href: _vm.href, role: "button" }
-                },
+                _vm._b(
+                  {
+                    staticClass: "btn",
+                    class: [
+                      _vm.getClass(_vm.variant),
+                      _vm.getDisabled(_vm.disabled),
+                      _vm.getActive(_vm.active)
+                    ],
+                    attrs: { href: _vm.href, role: "button" }
+                  },
+                  "a",
+                  _vm.bindDisabled(_vm.disabled),
+                  _vm.bindActive(_vm.active),
+                  false
+                ),
                 [_vm._t("default")],
                 2
               )
@@ -1314,12 +1346,14 @@ var render = function() {
                       staticClass: "btn",
                       class: [
                         _vm.getClass(_vm.variant),
-                        _vm.getDisabled(_vm.disabled)
+                        _vm.getDisabled(_vm.disabled),
+                        _vm.getActive(_vm.active)
                       ],
                       attrs: { type: "reset" }
                     },
                     "input",
-                    { value: _vm.value },
+                    _vm.value,
+                    _vm.bindActive(_vm.active),
                     false
                   )
                 )
@@ -1333,12 +1367,14 @@ var render = function() {
                         staticClass: "btn",
                         class: [
                           _vm.getClass(_vm.variant),
-                          _vm.getDisabled(_vm.disabled)
+                          _vm.getDisabled(_vm.disabled),
+                          _vm.getActive(_vm.active)
                         ],
                         attrs: { type: "submit" }
                       },
                       "input",
-                      { value: _vm.value },
+                      _vm.value,
+                      _vm.bindActive(_vm.active),
                       false
                     )
                   )
@@ -1352,12 +1388,14 @@ var render = function() {
                           staticClass: "btn",
                           class: [
                             _vm.getClass(_vm.variant),
-                            _vm.getDisabled(_vm.disabled)
+                            _vm.getDisabled(_vm.disabled),
+                            _vm.getActive(_vm.active)
                           ],
                           attrs: { type: "button" }
                         },
                         "input",
-                        { value: _vm.value },
+                        _vm.value,
+                        _vm.bindActive(_vm.active),
                         false
                       )
                     )
