@@ -1306,7 +1306,7 @@ var render = function() {
                   attrs: { type: "button" }
                 },
                 "button",
-                [_vm.disabled, _vm.bindActive(_vm.active)],
+                [{ disabled: _vm.disabled }, _vm.bindActive(_vm.active)],
                 false
               ),
               [_vm._t("default")],
@@ -1350,7 +1350,7 @@ var render = function() {
                       attrs: { type: "reset" }
                     },
                     "input",
-                    [_vm.value, _vm.bindActive(_vm.active)],
+                    [{ value: _vm.value }, _vm.bindActive(_vm.active)],
                     false
                   )
                 )
@@ -1370,7 +1370,7 @@ var render = function() {
                         attrs: { type: "submit" }
                       },
                       "input",
-                      [_vm.value, _vm.bindActive(_vm.active)],
+                      [{ value: _vm.value }, _vm.bindActive(_vm.active)],
                       false
                     )
                   )
@@ -1390,7 +1390,7 @@ var render = function() {
                           attrs: { type: "button" }
                         },
                         "input",
-                        [_vm.value, _vm.bindActive(_vm.active)],
+                        [{ value: _vm.value }, _vm.bindActive(_vm.active)],
                         false
                       )
                     )
