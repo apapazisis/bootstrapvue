@@ -1,13 +1,13 @@
 import alert from './components/alert.vue';
 import badge from './components/badge.vue';
 import breadcrumb from './components/breadcrumb.vue';
-import buttons from './components/buttons.vue';
+import button from './components/button.vue';
 
 const BootstrapVue = {
-    alert: alert,
-    badge: badge,
-    breadcrumb: breadcrumb,
-    button: buttons
+    'bv-alert': alert,
+    'bv-badge': badge,
+    'bv-breadcrumb': breadcrumb,
+    'bv-button': button
 }
 
 module.exports = BootstrapVue
