@@ -4,10 +4,10 @@ import breadcrumb from './components/breadcrumb.vue';
 import button from './components/button.vue';
 
 const BootstrapVue = {
-    'bv-alert': alert,
-    'bv-badge': badge,
-    'bv-breadcrumb': breadcrumb,
-    'bv-button': button
+    'bvAlert': alert,
+    'bvBadge': badge,
+    'bvBreadcrumb': breadcrumb,
+    'bvButton': button
 }
 
 module.exports = BootstrapVue

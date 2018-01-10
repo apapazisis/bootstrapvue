@@ -477,10 +477,10 @@ var _button2 = _interopRequireDefault(_button);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var BootstrapVue = {
-    'bv-alert': _alert2.default,
-    'bv-badge': _badge2.default,
-    'bv-breadcrumb': _breadcrumb2.default,
-    'bv-button': _button2.default
+    'bvAlert': _alert2.default,
+    'bvBadge': _badge2.default,
+    'bvBreadcrumb': _breadcrumb2.default,
+    'bvButton': _button2.default
 };
 
 module.exports = BootstrapVue;
