@@ -1290,7 +1290,7 @@ var render = function() {
                   attrs: { type: "button" }
                 },
                 "button",
-                _vm.disabled,
+                { disabled: _vm.disabled },
                 false
               ),
               [_vm._t("default")],
@@ -1321,7 +1321,7 @@ var render = function() {
                       attrs: { type: "reset" }
                     },
                     "input",
-                    _vm.value,
+                    { value: _vm.value },
                     false
                   )
                 )
@@ -1337,7 +1337,7 @@ var render = function() {
                         attrs: { type: "submit" }
                       },
                       "input",
-                      _vm.value,
+                      { value: _vm.value },
                       false
                     )
                   )
@@ -1353,7 +1353,7 @@ var render = function() {
                           attrs: { type: "button" }
                         },
                         "input",
-                        _vm.value,
+                        { value: _vm.value },
                         false
                       )
                     )
