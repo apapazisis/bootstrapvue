@@ -1,21 +1,20 @@
 <template>
-    <div>
-        <template v-if="type == 'button'">
-            <button type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
-        </template>
-        <template v-else-if="type == 'link'">
-            <a class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
-        </template>
-        <template v-else-if="type == 'reset'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="reset" v-bind="[{value}, bindActive(active)]">
-        </template>
-        <template v-else-if="type == 'submit'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="submit" v-bind="[{value}, bindActive(active)]">
-        </template>
-        <template v-else-if="type == 'ibutton'">
-            <input class="btn" :class="[getClass(variant), getDisabled(disabled), getActive(active)]" type="button" v-bind="[{value}, bindActive(active)]">
-        </template>
-    </div>
+
+            <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
+
+
+            <a v-else-if="type == 'link'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
+
+
+            <input v-else-if="type == 'reset'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="reset" v-bind="[{value}, bindActive(active)]">
+
+
+            <input v-else-if="type == 'submit'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="submit" v-bind="[{value}, bindActive(active)]">
+
+
+            <input v-else-if="type == 'ibutton'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="button" v-bind="[{value}, bindActive(active)]">
+
+
 </template>
 
 <script>

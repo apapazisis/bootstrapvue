@@ -365,7 +365,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'btn',
@@ -1287,13 +1286,72 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.type == "button"
-        ? [
-            _c(
-              "button",
+  return _vm.type == "button"
+    ? _c(
+        "button",
+        _vm._b(
+          {
+            staticClass: "btn",
+            class: [
+              _vm.getClass(_vm.variant),
+              _vm.getSize(_vm.size),
+              _vm.getBlock(_vm.block),
+              _vm.getActive(_vm.active)
+            ],
+            attrs: { type: "button" }
+          },
+          "button",
+          [{ disabled: _vm.disabled }, _vm.bindActive(_vm.active)],
+          false
+        ),
+        [_vm._t("default")],
+        2
+      )
+    : _vm.type == "link"
+      ? _c(
+          "a",
+          _vm._b(
+            {
+              staticClass: "btn",
+              class: [
+                _vm.getClass(_vm.variant),
+                _vm.getSize(_vm.size),
+                _vm.getBlock(_vm.block),
+                _vm.getDisabled(_vm.disabled),
+                _vm.getActive(_vm.active)
+              ],
+              attrs: { href: _vm.href, role: "button" }
+            },
+            "a",
+            [_vm.bindDisabled(_vm.disabled), _vm.bindActive(_vm.active)],
+            false
+          ),
+          [_vm._t("default")],
+          2
+        )
+      : _vm.type == "reset"
+        ? _c(
+            "input",
+            _vm._b(
+              {
+                staticClass: "btn",
+                class: [
+                  _vm.getClass(_vm.variant),
+                  _vm.getSize(_vm.size),
+                  _vm.getBlock(_vm.block),
+                  _vm.getDisabled(_vm.disabled),
+                  _vm.getActive(_vm.active)
+                ],
+                attrs: { type: "reset" }
+              },
+              "input",
+              [{ value: _vm.value }, _vm.bindActive(_vm.active)],
+              false
+            )
+          )
+        : _vm.type == "submit"
+          ? _c(
+              "input",
               _vm._b(
                 {
                   staticClass: "btn",
@@ -1301,104 +1359,37 @@ var render = function() {
                     _vm.getClass(_vm.variant),
                     _vm.getSize(_vm.size),
                     _vm.getBlock(_vm.block),
+                    _vm.getDisabled(_vm.disabled),
                     _vm.getActive(_vm.active)
                   ],
-                  attrs: { type: "button" }
+                  attrs: { type: "submit" }
                 },
-                "button",
-                [{ disabled: _vm.disabled }, _vm.bindActive(_vm.active)],
+                "input",
+                [{ value: _vm.value }, _vm.bindActive(_vm.active)],
                 false
-              ),
-              [_vm._t("default")],
-              2
+              )
             )
-          ]
-        : _vm.type == "link"
-          ? [
-              _c(
-                "a",
+          : _vm.type == "ibutton"
+            ? _c(
+                "input",
                 _vm._b(
                   {
                     staticClass: "btn",
                     class: [
                       _vm.getClass(_vm.variant),
+                      _vm.getSize(_vm.size),
+                      _vm.getBlock(_vm.block),
                       _vm.getDisabled(_vm.disabled),
                       _vm.getActive(_vm.active)
                     ],
-                    attrs: { href: _vm.href, role: "button" }
+                    attrs: { type: "button" }
                   },
-                  "a",
-                  [_vm.bindDisabled(_vm.disabled), _vm.bindActive(_vm.active)],
-                  false
-                ),
-                [_vm._t("default")],
-                2
-              )
-            ]
-          : _vm.type == "reset"
-            ? [
-                _c(
                   "input",
-                  _vm._b(
-                    {
-                      staticClass: "btn",
-                      class: [
-                        _vm.getClass(_vm.variant),
-                        _vm.getDisabled(_vm.disabled),
-                        _vm.getActive(_vm.active)
-                      ],
-                      attrs: { type: "reset" }
-                    },
-                    "input",
-                    [{ value: _vm.value }, _vm.bindActive(_vm.active)],
-                    false
-                  )
+                  [{ value: _vm.value }, _vm.bindActive(_vm.active)],
+                  false
                 )
-              ]
-            : _vm.type == "submit"
-              ? [
-                  _c(
-                    "input",
-                    _vm._b(
-                      {
-                        staticClass: "btn",
-                        class: [
-                          _vm.getClass(_vm.variant),
-                          _vm.getDisabled(_vm.disabled),
-                          _vm.getActive(_vm.active)
-                        ],
-                        attrs: { type: "submit" }
-                      },
-                      "input",
-                      [{ value: _vm.value }, _vm.bindActive(_vm.active)],
-                      false
-                    )
-                  )
-                ]
-              : _vm.type == "ibutton"
-                ? [
-                    _c(
-                      "input",
-                      _vm._b(
-                        {
-                          staticClass: "btn",
-                          class: [
-                            _vm.getClass(_vm.variant),
-                            _vm.getDisabled(_vm.disabled),
-                            _vm.getActive(_vm.active)
-                          ],
-                          attrs: { type: "button" }
-                        },
-                        "input",
-                        [{ value: _vm.value }, _vm.bindActive(_vm.active)],
-                        false
-                      )
-                    )
-                  ]
-                : _vm._e()
-    ],
-    2
-  )
+              )
+            : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
