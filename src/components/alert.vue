@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="alert" :class="getTypeClass(type)" v-if="mutateShow" role="alert">
+        <div class="alert" :class="getClass(variant)" v-if="mutateShow" role="alert">
             <button v-if="dismiss" @click="mutateShow = false" type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -17,7 +17,7 @@
                 type: Boolean,
                 default: false
             },
-            type: {
+            variant: {
                 type: String,
                 default: 'primary'
             },
@@ -46,16 +46,16 @@
             }
         },
         methods: {
-            getTypeClass(type) {
+            getClass(variant) {
                 return {
-                    'alert-primary': type == 'primary',
-                    'alert-secondary': type == 'secondary',
-                    'alert-success': type == 'success',
-                    'alert-danger': type == 'danger',
-                    'alert-warning': type == 'warning',
-                    'alert-info': type == 'info',
-                    'alert-light': type == 'light',
-                    'alert-dark': type == 'dark'
+                    'alert-primary': variant == 'primary',
+                    'alert-secondary': variant == 'secondary',
+                    'alert-success': variant == 'success',
+                    'alert-danger': variant == 'danger',
+                    'alert-warning': variant == 'warning',
+                    'alert-info': variant == 'info',
+                    'alert-light': variant == 'light',
+                    'alert-dark': variant == 'dark'
                 }
             }
         }

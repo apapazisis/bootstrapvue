@@ -4,16 +4,16 @@
             <button type="button" class="btn" v-bind="{disabled}" :class="[getClass(variant), getSize(size), getBlock(block)]"><slot></slot></button>
         </template>
         <template v-else-if="type == 'link'">
-            <a class="btn" :class="getClass(variant)" :href="href" role="button"><slot></slot></a>
+            <a class="btn" :class="[getClass(variant), getDisabled(disabled)]" :href="href" role="button"><slot></slot></a>
         </template>
         <template v-else-if="type == 'reset'">
-            <input class="btn" :class="getClass(variant)" type="reset" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="reset" v-bind="{value}">
         </template>
         <template v-else-if="type == 'submit'">
-            <input class="btn" :class="getClass(variant)" type="submit" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="submit" v-bind="{value}">
         </template>
         <template v-else-if="type == 'ibutton'">
-            <input class="btn" :class="getClass(variant)" type="button" v-bind="{value}">
+            <input class="btn" :class="[getClass(variant), getDisabled(disabled)]" type="button" v-bind="{value}">
         </template>
     </div>
 </template>
@@ -82,6 +82,11 @@
             getBlock(block) {
                 return {
                     'btn-clock': block
+                }
+            },
+            getDisabled(disabled) {
+                return {
+                    'disabled': disabled
                 }
             }
         }

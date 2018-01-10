@@ -206,7 +206,7 @@ module.exports = function normalizeComponent (
             type: Boolean,
             default: false
         },
-        type: {
+        variant: {
             type: String,
             default: 'primary'
         },
@@ -235,16 +235,16 @@ module.exports = function normalizeComponent (
         }
     },
     methods: {
-        getTypeClass(type) {
+        getClass(variant) {
             return {
-                'alert-primary': type == 'primary',
-                'alert-secondary': type == 'secondary',
-                'alert-success': type == 'success',
-                'alert-danger': type == 'danger',
-                'alert-warning': type == 'warning',
-                'alert-info': type == 'info',
-                'alert-light': type == 'light',
-                'alert-dark': type == 'dark'
+                'alert-primary': variant == 'primary',
+                'alert-secondary': variant == 'secondary',
+                'alert-success': variant == 'success',
+                'alert-danger': variant == 'danger',
+                'alert-warning': variant == 'warning',
+                'alert-info': variant == 'info',
+                'alert-light': variant == 'light',
+                'alert-dark': variant == 'dark'
             };
         }
     }
@@ -292,29 +292,16 @@ module.exports = function normalizeComponent (
         }
     },
     methods: {
-        getTypeClass(type) {
+        getClass(variant) {
             return {
-                'badge-primary': type == 'primary',
-                'badge-secondary': type == 'secondary',
-                'badge-success': type == 'success',
-                'badge-danger': type == 'danger',
-                'badge-warning': type == 'warning',
-                'badge-info': type == 'info',
-                'badge-light': type == 'light',
-                'badge-dark': type == 'dark'
-            };
-        },
-        getBtnClass(type) {
-            return {
-                'btn-primary': type == 'primary',
-                'btn-secondary': type == 'secondary',
-                'btn-success': type == 'success',
-                'btn-danger': type == 'danger',
-                'btn-warning': type == 'warning',
-                'btn-info': type == 'info',
-                'btn-light': type == 'light',
-                'btn-dark': type == 'dark',
-                'btn-link': type == 'link'
+                'badge-primary': variant == 'primary',
+                'badge-secondary': variant == 'secondary',
+                'badge-success': variant == 'success',
+                'badge-danger': variant == 'danger',
+                'badge-warning': variant == 'warning',
+                'badge-info': variant == 'info',
+                'badge-light': variant == 'light',
+                'badge-dark': variant == 'dark'
             };
         }
     }
@@ -443,6 +430,11 @@ module.exports = function normalizeComponent (
         getBlock(block) {
             return {
                 'btn-clock': block
+            };
+        },
+        getDisabled(disabled) {
+            return {
+                'disabled': disabled
             };
         }
     }
@@ -937,7 +929,7 @@ var render = function() {
           "div",
           {
             staticClass: "alert",
-            class: _vm.getTypeClass(_vm.type),
+            class: _vm.getClass(_vm.variant),
             attrs: { role: "alert" }
           },
           [
@@ -1048,43 +1040,43 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.variant == "badge"
+      _vm.type == "badge"
         ? [
             _c(
               "span",
-              { staticClass: "babge", class: _vm.getTypeClass(_vm.type) },
+              { staticClass: "babge", class: _vm.getClass(_vm.variant) },
               [_vm._t("default")],
               2
             )
           ]
-        : _vm.variant == "contextual"
+        : _vm.type == "contextual"
           ? [
               _c(
                 "span",
-                { staticClass: "badge", class: _vm.getTypeClass(_vm.type) },
+                { staticClass: "badge", class: _vm.getClass(_vm.variant) },
                 [_vm._t("default")],
                 2
               )
             ]
-          : _vm.variant == "pill"
+          : _vm.type == "pill"
             ? [
                 _c(
                   "span",
                   {
                     staticClass: "badge badge-pill",
-                    class: _vm.getTypeClass(_vm.type)
+                    class: _vm.getClass(_vm.variant)
                   },
                   [_vm._t("default")],
                   2
                 )
               ]
-            : _vm.variant == "link"
+            : _vm.type == "link"
               ? [
                   _c(
                     "a",
                     {
                       staticClass: "badge",
-                      class: _vm.getTypeClass(_vm.type),
+                      class: _vm.getClass(_vm.variant),
                       attrs: { href: _vm.href }
                     },
                     [_vm._t("default")],
@@ -1303,7 +1295,10 @@ var render = function() {
                 "a",
                 {
                   staticClass: "btn",
-                  class: _vm.getClass(_vm.variant),
+                  class: [
+                    _vm.getClass(_vm.variant),
+                    _vm.getDisabled(_vm.disabled)
+                  ],
                   attrs: { href: _vm.href, role: "button" }
                 },
                 [_vm._t("default")],
@@ -1317,7 +1312,10 @@ var render = function() {
                   _vm._b(
                     {
                       staticClass: "btn",
-                      class: _vm.getClass(_vm.variant),
+                      class: [
+                        _vm.getClass(_vm.variant),
+                        _vm.getDisabled(_vm.disabled)
+                      ],
                       attrs: { type: "reset" }
                     },
                     "input",
@@ -1333,7 +1331,10 @@ var render = function() {
                     _vm._b(
                       {
                         staticClass: "btn",
-                        class: _vm.getClass(_vm.variant),
+                        class: [
+                          _vm.getClass(_vm.variant),
+                          _vm.getDisabled(_vm.disabled)
+                        ],
                         attrs: { type: "submit" }
                       },
                       "input",
@@ -1349,7 +1350,10 @@ var render = function() {
                       _vm._b(
                         {
                           staticClass: "btn",
-                          class: _vm.getClass(_vm.variant),
+                          class: [
+                            _vm.getClass(_vm.variant),
+                            _vm.getDisabled(_vm.disabled)
+                          ],
                           attrs: { type: "button" }
                         },
                         "input",
