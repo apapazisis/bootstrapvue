@@ -354,17 +354,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'btn',
@@ -432,7 +421,7 @@ module.exports = function normalizeComponent (
         },
         getBlock(block) {
             return {
-                'btn-clock': block
+                'btn-block': block
             };
         },
         getDisabled(disabled) {

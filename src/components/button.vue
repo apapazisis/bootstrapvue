@@ -1,20 +1,9 @@
 <template>
-
-            <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
-
-
-            <a v-else-if="type == 'link'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
-
-
-            <input v-else-if="type == 'reset'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="reset" v-bind="[{value}, bindActive(active)]">
-
-
-            <input v-else-if="type == 'submit'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="submit" v-bind="[{value}, bindActive(active)]">
-
-
-            <input v-else-if="type == 'ibutton'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="button" v-bind="[{value}, bindActive(active)]">
-
-
+    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
+    <a v-else-if="type == 'link'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
+    <input v-else-if="type == 'reset'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="reset" v-bind="[{value}, bindActive(active)]">
+    <input v-else-if="type == 'submit'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="submit" v-bind="[{value}, bindActive(active)]">
+    <input v-else-if="type == 'ibutton'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="button" v-bind="[{value}, bindActive(active)]">
 </template>
 
 <script>
@@ -84,7 +73,7 @@
             },
             getBlock(block) {
                 return {
-                    'btn-clock': block
+                    'btn-block': block
                 }
             },
             getDisabled(disabled) {
