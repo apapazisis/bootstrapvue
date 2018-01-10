@@ -406,6 +406,10 @@ module.exports = function normalizeComponent (
         disabled: {
             type: Boolean,
             default: false
+        },
+        value: {
+            type: String,
+            default: ''
         }
     },
     methods: {
@@ -1286,7 +1290,7 @@ var render = function() {
                   attrs: { type: "button" }
                 },
                 "button",
-                { disabled: _vm.disabled },
+                _vm.disabled,
                 false
               ),
               [_vm._t("default")],
@@ -1308,27 +1312,51 @@ var render = function() {
             ]
           : _vm.type == "reset"
             ? [
-                _c("input", {
-                  staticClass: "btn",
-                  class: _vm.getClass(_vm.variant),
-                  attrs: { type: "reset", value: "Reset" }
-                })
+                _c(
+                  "input",
+                  _vm._b(
+                    {
+                      staticClass: "btn",
+                      class: _vm.getClass(_vm.variant),
+                      attrs: { type: "reset" }
+                    },
+                    "input",
+                    _vm.value,
+                    false
+                  )
+                )
               ]
             : _vm.type == "submit"
               ? [
-                  _c("input", {
-                    staticClass: "btn",
-                    class: _vm.getClass(_vm.variant),
-                    attrs: { type: "submit", value: "submit" }
-                  })
+                  _c(
+                    "input",
+                    _vm._b(
+                      {
+                        staticClass: "btn",
+                        class: _vm.getClass(_vm.variant),
+                        attrs: { type: "submit" }
+                      },
+                      "input",
+                      _vm.value,
+                      false
+                    )
+                  )
                 ]
-              : _vm.type == "input_button"
+              : _vm.type == "ibutton"
                 ? [
-                    _c("input", {
-                      staticClass: "btn",
-                      class: _vm.getClass(_vm.variant),
-                      attrs: { type: "button", value: "input" }
-                    })
+                    _c(
+                      "input",
+                      _vm._b(
+                        {
+                          staticClass: "btn",
+                          class: _vm.getClass(_vm.variant),
+                          attrs: { type: "button" }
+                        },
+                        "input",
+                        _vm.value,
+                        false
+                      )
+                    )
                   ]
                 : _vm._e()
     ],
