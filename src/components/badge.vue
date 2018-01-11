@@ -1,20 +1,10 @@
 <template>
-    <div>
-        <template v-if="type == 'badge'">
-            <span class="babge" :class="getClass(variant)">
-                <slot></slot>
-            </span>
-        </template>
-        <template v-else-if="type == 'contextual'">
-            <span class="badge" :class="getClass(variant)"><slot></slot></span>
-        </template>
-        <template v-else-if="type == 'pill'">
-            <span class="badge badge-pill" :class="getClass(variant)"><slot></slot></span>
-        </template>
-        <template v-else-if="type == 'link'">
-            <a :href="href" class="badge" :class="getClass(variant)"><slot></slot></a>
-        </template>
-    </div>
+    <span v-if="type == 'badge'" class="babge" :class="getClass(variant)">
+        <slot></slot>
+    </span>
+    <span v-else-if="type == 'contextual'" class="badge" :class="getClass(variant)"><slot></slot></span>
+    <span v-else-if="type == 'pill'" class="badge badge-pill" :class="getClass(variant)"><slot></slot></span>
+    <a v-else-if="type == 'link'" :href="href" class="badge" :class="getClass(variant)"><slot></slot></a>
 </template>
 
 <script>

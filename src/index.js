@@ -9,7 +9,7 @@ const BootstrapVue = {
     'bvBadge': badge,
     'bvBreadcrumb': breadcrumb,
     'bvButton': button,
-    'bvButtonGroup' : buttongroup
+    'bvButtonGroup': buttongroup
 }
 
 module.exports = BootstrapVue

@@ -264,16 +264,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'badge',
@@ -1121,56 +1111,42 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.type == "badge"
-        ? [
-            _c(
-              "span",
-              { staticClass: "babge", class: _vm.getClass(_vm.variant) },
+  return _vm.type == "badge"
+    ? _c(
+        "span",
+        { staticClass: "babge", class: _vm.getClass(_vm.variant) },
+        [_vm._t("default")],
+        2
+      )
+    : _vm.type == "contextual"
+      ? _c(
+          "span",
+          { staticClass: "badge", class: _vm.getClass(_vm.variant) },
+          [_vm._t("default")],
+          2
+        )
+      : _vm.type == "pill"
+        ? _c(
+            "span",
+            {
+              staticClass: "badge badge-pill",
+              class: _vm.getClass(_vm.variant)
+            },
+            [_vm._t("default")],
+            2
+          )
+        : _vm.type == "link"
+          ? _c(
+              "a",
+              {
+                staticClass: "badge",
+                class: _vm.getClass(_vm.variant),
+                attrs: { href: _vm.href }
+              },
               [_vm._t("default")],
               2
             )
-          ]
-        : _vm.type == "contextual"
-          ? [
-              _c(
-                "span",
-                { staticClass: "badge", class: _vm.getClass(_vm.variant) },
-                [_vm._t("default")],
-                2
-              )
-            ]
-          : _vm.type == "pill"
-            ? [
-                _c(
-                  "span",
-                  {
-                    staticClass: "badge badge-pill",
-                    class: _vm.getClass(_vm.variant)
-                  },
-                  [_vm._t("default")],
-                  2
-                )
-              ]
-            : _vm.type == "link"
-              ? [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "badge",
-                      class: _vm.getClass(_vm.variant),
-                      attrs: { href: _vm.href }
-                    },
-                    [_vm._t("default")],
-                    2
-                  )
-                ]
-              : _vm._e()
-    ],
-    2
-  )
+          : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
