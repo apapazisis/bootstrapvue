@@ -452,58 +452,33 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'button-group',
     props: {
-        role: {
-            type: String,
-            default: 'group'
-        },
         label: {
             type: String,
             default: 'basic'
         },
-        variant: {
+        size: {
             type: String,
-            default: 'primary'
+            default: 'sm'
         },
-        items: {
-            type: Array,
-            default: []
-        },
-        space: {
-            type: Number,
-            default: 0
+        vertical: {
+            type: Boolean,
+            default: false
         }
     },
     methods: {
-        getClass(variant) {
+        getSize(size) {
             return {
-                'btn-primary': variant == 'primary',
-                'btn-secondary': variant == 'secondary',
-                'btn-success': variant == 'success',
-                'btn-danger': variant == 'danger',
-                'btn-warning': variant == 'warning',
-                'btn-info': variant == 'info',
-                'btn-light': variant == 'light',
-                'btn-dark': variant == 'dark',
-                'btn-link': variant == 'link'
+                'btn-group-sm': size == 'sm',
+                'btn-group-lg': size == 'lg'
             };
         },
-        getSpace(space) {
+        getVertical(vertical) {
             return {
-                'mr-1': space == 1,
-                'mr-2': space == 2,
-                'mr-3': space == 3,
-                'mr-4': space == 4,
-                'mr-5': space == 5,
-                'mr-6': space == 6
+                'btn-group-vertical': vertical
             };
         }
     }
@@ -1502,57 +1477,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.role == "group"
-    ? _c(
-        "div",
-        {
-          staticClass: "btn-group",
-          attrs: { role: "group", "aria-label": _vm.label }
-        },
-        _vm._l(_vm.items, function(item, index) {
-          return _c(
-            "button",
-            {
-              key: index,
-              staticClass: "btn",
-              class: _vm.getClass(item.variant),
-              attrs: { type: "button" }
-            },
-            [_vm._v(_vm._s(item.text))]
-          )
-        })
-      )
-    : _vm.role == "toolbar"
-      ? _c(
-          "div",
-          {
-            staticClass: "btn-toolbar",
-            attrs: { role: "toolbar", "aria-label": _vm.label }
-          },
-          _vm._l(_vm.items, function(item, index) {
-            return _c(
-              "div",
-              {
-                staticClass: "btn-group",
-                class: _vm.getSpace(item.space),
-                attrs: { role: "group", "aria-label": item.label }
-              },
-              _vm._l(item, function(itm, idx) {
-                return _c(
-                  "button",
-                  {
-                    key: idx,
-                    staticClass: "btn",
-                    class: _vm.getClass(itm.variant),
-                    attrs: { type: "button" }
-                  },
-                  [_vm._v(_vm._s(itm.text))]
-                )
-              })
-            )
-          })
-        )
-      : _vm._e()
+  return _c(
+    "div",
+    {
+      staticClass: "btn-group",
+      class: [_vm.getSize(_vm.size), _vm.getVertical(_vm.vertical)],
+      attrs: { role: "group", "aria-label": _vm.label }
+    },
+    [_vm._t("default")],
+    2
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
