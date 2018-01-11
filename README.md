@@ -15,3 +15,4 @@ Developed Components
 - Badge
 - Breadcrumb
 - Buttons
+- Button Group
