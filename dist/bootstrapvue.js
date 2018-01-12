@@ -534,8 +534,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'cards',
@@ -582,9 +580,7 @@ module.exports = function normalizeComponent (
             return {
                 'card-img-top': imgTop
             };
-        }
-    },
-    computed: {
+        },
         createTitleTag() {
             let h = document.createElement(this.titleTag);
             let t = document.createTextNode(this.title);
@@ -597,6 +593,10 @@ module.exports = function normalizeComponent (
             h.appendChild(t);
             document.getElementsByClassName('card-body')[0].appendChild(h);
         }
+    },
+    mounted() {
+        this.createTitleTag();
+        this.createSubTitleTag();
     }
 });
 
@@ -1782,15 +1782,7 @@ var render = function() {
       attrs: { src: _vm.imgSrc, alt: _vm.imgAlt }
     }),
     _vm._v(" "),
-    _c("div", { staticClass: "card-body" }, [
-      _vm._v(
-        "\n        " +
-          _vm._s(_vm.createTitleTag) +
-          "\n        " +
-          _vm._s(_vm.createSubTitleTag) +
-          "\n    "
-      )
-    ])
+    _c("div", { staticClass: "card-body" })
   ])
 }
 var staticRenderFns = []

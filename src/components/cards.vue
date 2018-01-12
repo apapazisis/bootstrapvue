@@ -4,8 +4,6 @@
         </div>
         <img :class="getImgTopClass(imgTop)" :src="imgSrc" :alt="imgAlt">
         <div class="card-body">
-            {{ createTitleTag }}
-            {{ createSubTitleTag }}
         </div>
     </div>
 </template>
@@ -56,9 +54,7 @@
                 return {
                     'card-img-top': imgTop
                 }
-            }
-        },
-        computed: {
+            },
             createTitleTag() {
                 let h = document.createElement(this.titleTag);
                 let t = document.createTextNode(this.title);
@@ -71,6 +67,10 @@
                 h.appendChild(t);
                 document.getElementsByClassName('card-body')[0].appendChild(h);
             }
+        },
+        mounted() {
+            this.createTitleTag();
+            this.createSubTitleTag();
         }
     }
 </script>
