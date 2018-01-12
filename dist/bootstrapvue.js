@@ -458,7 +458,7 @@ module.exports = function normalizeComponent (
     props: {
         label: {
             type: String,
-            default: 'basic'
+            default: 'group'
         },
         size: {
             type: String,
@@ -467,6 +467,10 @@ module.exports = function normalizeComponent (
         vertical: {
             type: Boolean,
             default: false
+        },
+        space: {
+            type: Number,
+            default: 0
         }
     },
     methods: {
@@ -479,6 +483,15 @@ module.exports = function normalizeComponent (
         getVertical(vertical) {
             return {
                 'btn-group-vertical': vertical
+            };
+        },
+        getSpace(space) {
+            return {
+                'mr-1': space == 1,
+                'mr-2': space == 2,
+                'mr-3': space == 3,
+                'mr-4': space == 4,
+                'mr-5': space == 5
             };
         }
     }
@@ -1481,7 +1494,11 @@ var render = function() {
     "div",
     {
       staticClass: "btn-group",
-      class: [_vm.getSize(_vm.size), _vm.getVertical(_vm.vertical)],
+      class: [
+        _vm.getSize(_vm.size),
+        _vm.getVertical(_vm.vertical),
+        _vm.getSpace(_vm.space)
+      ],
       attrs: { role: "group", "aria-label": _vm.label }
     },
     [_vm._t("default")],
