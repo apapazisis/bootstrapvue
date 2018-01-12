@@ -536,7 +536,7 @@ module.exports = function normalizeComponent (
 //
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name: 'cards',
+    name: 'card',
     props: {
         title: {
             type: String,
@@ -642,9 +642,9 @@ var _buttonToolbar = __webpack_require__(25);
 
 var _buttonToolbar2 = _interopRequireDefault(_buttonToolbar);
 
-var _cards = __webpack_require__(27);
+var _card = __webpack_require__(27);
 
-var _cards2 = _interopRequireDefault(_cards);
+var _card2 = _interopRequireDefault(_card);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -655,7 +655,7 @@ var BootstrapVue = {
     'bvButton': _button2.default,
     'bvButtonGroup': _buttonGroup2.default,
     'bvButtonToolbar': _buttonToolbar2.default,
-    'bvCard': _cards2.default
+    'bvCard': _card2.default
 };
 
 module.exports = BootstrapVue;
@@ -1722,9 +1722,9 @@ if (false) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_cards_vue__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_card_vue__ = __webpack_require__(7);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_dcdf57ba_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_cards_vue__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cd8e2600_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_card_vue__ = __webpack_require__(28);
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -1741,14 +1741,14 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_cards_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_dcdf57ba_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_cards_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_card_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cd8e2600_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_card_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\components\\cards.vue"
+Component.options.__file = "src\\components\\card.vue"
 
 /* hot reload */
 if (false) {(function () {
@@ -1757,9 +1757,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-dcdf57ba", Component.options)
+    hotAPI.createRecord("data-v-cd8e2600", Component.options)
   } else {
-    hotAPI.reload("data-v-dcdf57ba", Component.options)
+    hotAPI.reload("data-v-cd8e2600", Component.options)
   }
   module.hot.dispose(function (data) {
     disposed = true
@@ -1798,7 +1798,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-dcdf57ba", esExports)
+    require("vue-hot-reload-api")      .rerender("data-v-cd8e2600", esExports)
   }
 }
 
