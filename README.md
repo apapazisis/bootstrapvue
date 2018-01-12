@@ -1,5 +1,5 @@
 <p align="center" >
-BootstrapVue
+    <img src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg">
 </p>
 
 <p align="center">
