@@ -2,7 +2,7 @@
     <div class="card">
         <div class="card-header">
         </div>
-        <img :class="getImgTopClass(imgTop)" :src="imgSrc" :alt="imgAlt">
+        <img v-if="imgSrc != ''" :class="getImgTopClass(imgTop)" :src="imgSrc" :alt="imgAlt">
         <div class="card-body">
         </div>
     </div>
@@ -69,8 +69,12 @@
             }
         },
         mounted() {
-            this.createTitleTag();
-            this.createSubTitleTag();
+            if (this.title != '') {
+                this.createTitleTag();
+            }
+            if (this.subtitleTag != '') {
+                this.createSubTitleTag();
+            }
         }
     }
 </script>

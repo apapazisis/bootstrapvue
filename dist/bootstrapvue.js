@@ -595,8 +595,12 @@ module.exports = function normalizeComponent (
         }
     },
     mounted() {
-        this.createTitleTag();
-        this.createSubTitleTag();
+        if (this.title != '') {
+            this.createTitleTag();
+        }
+        if (this.subtitleTag != '') {
+            this.createSubTitleTag();
+        }
     }
 });
 
@@ -651,7 +655,7 @@ var BootstrapVue = {
     'bvButton': _button2.default,
     'bvButtonGroup': _buttonGroup2.default,
     'bvButtonToolbar': _buttonToolbar2.default,
-    'bvCards': _cards2.default
+    'bvCard': _cards2.default
 };
 
 module.exports = BootstrapVue;
@@ -1777,10 +1781,12 @@ var render = function() {
   return _c("div", { staticClass: "card" }, [
     _c("div", { staticClass: "card-header" }),
     _vm._v(" "),
-    _c("img", {
-      class: _vm.getImgTopClass(_vm.imgTop),
-      attrs: { src: _vm.imgSrc, alt: _vm.imgAlt }
-    }),
+    _vm.imgSrc != ""
+      ? _c("img", {
+          class: _vm.getImgTopClass(_vm.imgTop),
+          attrs: { src: _vm.imgSrc, alt: _vm.imgAlt }
+        })
+      : _vm._e(),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" })
   ])

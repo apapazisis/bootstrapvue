@@ -13,7 +13,7 @@ const BootstrapVue = {
     'bvButton': button,
     'bvButtonGroup': buttongroup,
     'bvButtonToolbar': buttontoolbar,
-    'bvCards': cards
+    'bvCard': cards
 }
 
 module.exports = BootstrapVue
