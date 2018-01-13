@@ -6,6 +6,10 @@ export const props = {
     imgAlt: {
         type: String,
         default: ''
+    },
+    bottom: {
+        type: Boolean,
+        default: false
     }
 }
 
@@ -14,10 +18,14 @@ export default {
     functional: true,
     props,
     render(h, {props}) {
-        let components = [];
+        let staticClass = 'card-img-top';
+
+        if (props.bottom) {
+            staticClass = 'card-img-bottom';
+        }
 
         return h('img', {
-            staticClass: 'card-img-top',
+            staticClass,
             attrs: {
                 src: props.imgSrc,
                 alt: props.imgAlt

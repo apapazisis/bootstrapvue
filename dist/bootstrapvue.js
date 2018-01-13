@@ -1742,7 +1742,7 @@ exports.default = {
         var components = [];
 
         if (props.imgSrc != '') {
-            components.push(h(_cardImage2.default, { props: props }, slots().default));
+            components.push(h(_cardImage2.default, { props: props }));
         }
 
         if (props.noBody) {
@@ -1775,6 +1775,10 @@ var props = exports.props = {
     imgAlt: {
         type: String,
         default: ''
+    },
+    bottom: {
+        type: Boolean,
+        default: false
     }
 };
 
@@ -1785,10 +1789,14 @@ exports.default = {
     render: function render(h, _ref) {
         var props = _ref.props;
 
-        var components = [];
+        var staticClass = 'card-img-top';
+
+        if (props.bottom) {
+            staticClass = 'card-img-bottom';
+        }
 
         return h('img', {
-            staticClass: 'card-img-top',
+            staticClass: staticClass,
             attrs: {
                 src: props.imgSrc,
                 alt: props.imgAlt
