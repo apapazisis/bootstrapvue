@@ -531,8 +531,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
 
 
 
@@ -549,7 +547,6 @@ module.exports = function normalizeComponent (
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
 //
 //
 //
@@ -1810,11 +1807,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.noBody == false
-    ? _c("div", { class: _vm.getClass(_vm.overlay) }, [
-        _vm._v("\n    This is some text within a card body.\n    edo eimaste\n")
-      ])
-    : _vm._e()
+  return _c("div", { class: _vm.getClass(_vm.overlay) }, [_vm._t("default")], 2)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -1839,14 +1832,7 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "card" },
-    [
-      _c(
-        "card-body",
-        { attrs: { "no-body": _vm.noBody, overlay: _vm.overlay } },
-        [_vm._t("default")],
-        2
-      )
-    ],
+    [_vm.noBody == false ? _c("card-body") : _vm._e()],
     1
   )
 }
