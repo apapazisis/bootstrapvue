@@ -11,7 +11,7 @@ export default {
         let components = [];
 
         return h(CardBody, {
-
+            props
         })
     }
 }

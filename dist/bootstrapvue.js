@@ -1697,7 +1697,9 @@ exports.default = {
         console.log(props);
         var components = [];
 
-        return h(_cardBody2.default, {});
+        return h(_cardBody2.default, {
+            props: props
+        });
     }
 };
 
