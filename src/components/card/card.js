@@ -10,7 +10,7 @@ export default {
     render(h, {props, slots}) {
         let components = [];
 
-        if (props.imgSrc != '') {
+        if (props.imgSrc != '' && !props.bottom) {
             components.push(h(ImageBody, { props: props }));
         }
 
@@ -18,6 +18,10 @@ export default {
             components.push(slots().default);
         } else {
             components.push(h(CardBody, { props: props }, slots().default));
+        }
+
+        if (props.imgSrc != '' && props.bottom) {
+            components.push(h(ImageBody, { props: props }));
         }
 
         return h('div', {

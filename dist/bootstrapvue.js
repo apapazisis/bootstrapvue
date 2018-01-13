@@ -1741,7 +1741,7 @@ exports.default = {
 
         var components = [];
 
-        if (props.imgSrc != '') {
+        if (props.imgSrc != '' && !props.bottom) {
             components.push(h(_cardImage2.default, { props: props }));
         }
 
@@ -1749,6 +1749,10 @@ exports.default = {
             components.push(slots().default);
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
+        }
+
+        if (props.imgSrc != '' && props.bottom) {
+            components.push(h(_cardImage2.default, { props: props }));
         }
 
         return h('div', {
