@@ -1701,11 +1701,13 @@ exports.default = {
         var components = [];
 
         if (props.noBody) {
+            console.log('aaa');
             components.push(slots().default);
         } else {
+            console.log('bbb');
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
-
+        console.log(components);
         return h(components);
     }
 };
