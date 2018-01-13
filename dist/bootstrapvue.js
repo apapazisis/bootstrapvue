@@ -1677,7 +1677,7 @@ if (false) {
 
 
 Object.defineProperty(exports, "__esModule", {
-        value: true
+    value: true
 });
 
 var _cardBody = __webpack_require__(7);
@@ -1687,14 +1687,14 @@ var _cardBody2 = _interopRequireDefault(_cardBody);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-        name: 'card',
-        props: _cardBody.props,
-        render: function render(h) {
+    name: 'card',
+    props: _cardBody.props,
+    render: function render(h, props) {
+        console.log(props);
+        var components = [];
 
-                var components = [];
-
-                return h(_cardBody2.default, {});
-        }
+        return h(_cardBody2.default, {});
+    }
 };
 
 /***/ })
