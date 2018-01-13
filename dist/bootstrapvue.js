@@ -1742,14 +1742,14 @@ exports.default = {
 
         var components = [];
 
+        if (props.imgSrc != '') {
+            components.push(h(_cardImage2.default, { props: props }, slots().default));
+        }
+
         if (props.noBody) {
             components.push(slots().default);
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
-        }
-
-        if (props.imgSrc != '') {
-            components.push(h(_cardImage2.default, { props: props }, slots().default));
         }
 
         return h('div', {
