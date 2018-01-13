@@ -1840,7 +1840,7 @@ var render = function() {
     "div",
     { staticClass: "card" },
     [
-      _vm.noBody == false ? _c("card-body") : _vm._e(),
+      _vm.noBody == false ? _c("card-body", [_vm._t("default")], 2) : _vm._e(),
       _vm._v(" "),
       _vm._t("default")
     ],
