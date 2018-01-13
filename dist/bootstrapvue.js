@@ -580,7 +580,10 @@ exports.default = {
         }
 
         return h('div', {
-            staticClass: 'card-body'
+            staticClass: 'card-body',
+            class: {
+                'card-img-overlay': props.overlay
+            }
         }, components);
     }
 };
