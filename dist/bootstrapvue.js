@@ -531,6 +531,7 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
 
 
 
@@ -1838,8 +1839,12 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "card" },
-    [_vm.noBody == false ? _c("card-body") : _vm._e()],
-    1
+    [
+      _vm.noBody == false ? _c("card-body") : _vm._e(),
+      _vm._v(" "),
+      _vm._t("default")
+    ],
+    2
   )
 }
 var staticRenderFns = []

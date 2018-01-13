@@ -1,6 +1,7 @@
 <template>
     <div class="card">
         <card-body v-if="noBody == false"></card-body>
+        <slot></slot>
     </div>
 </template>
 
