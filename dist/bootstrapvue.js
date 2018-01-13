@@ -533,6 +533,9 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'card',
@@ -572,6 +575,10 @@ module.exports = function normalizeComponent (
         headerTag: {
             type: String,
             default: 'div'
+        },
+        footer: {
+            type: String,
+            default: ''
         }
     },
     methods: {
@@ -1795,7 +1802,11 @@ var render = function() {
         })
       : _vm._e(),
     _vm._v(" "),
-    _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
+    _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2),
+    _vm._v(" "),
+    _c("div", { staticClass: "card-footer" }, [
+      _vm._v("\n        " + _vm._s(_vm.footer) + "\n    ")
+    ])
   ])
 }
 var staticRenderFns = []

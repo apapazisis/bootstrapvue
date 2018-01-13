@@ -4,6 +4,9 @@
         <div class="card-body">
             <slot></slot>
         </div>
+        <div class="card-footer">
+            {{ footer }}
+        </div>
     </div>
 </template>
 
@@ -46,6 +49,10 @@
             headerTag: {
                 type: String,
                 default: 'div'
+            },
+            footer: {
+                type: String,
+                default: ''
             }
         },
         methods: {
