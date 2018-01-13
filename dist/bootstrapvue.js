@@ -1743,7 +1743,7 @@ exports.default = {
         var components = [];
 
         if (props.imgSrc != '') {
-            components.push(h(_cardImage2.default, { props: props }, slots().default));
+            components.push(h(_cardImage2.default, { props: props }));
         }
 
         if (props.noBody) {

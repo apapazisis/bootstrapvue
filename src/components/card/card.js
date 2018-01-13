@@ -14,7 +14,7 @@ export default {
         let components = [];
 
         if (props.imgSrc != '') {
-            components.push(h(ImageBody, { props: props }, slots().default));
+            components.push(h(ImageBody, { props: props }));
         }
 
         if (props.noBody) {
