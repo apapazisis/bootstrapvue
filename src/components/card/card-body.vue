@@ -1,6 +1,8 @@
 <template>
     <div v-if="noBody == false" :class="getClass(overlay)">
         This is some text within a card body.
+
+        edo eimaste
     </div>
     <div class="card-body" v-else>
         <slot></slot>

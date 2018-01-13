@@ -1,6 +1,5 @@
 <template>
     <div class="card">
-
     </div>
 </template>
 
@@ -11,7 +10,9 @@
         name: 'card',
         props: bodyProps,
         render(h) {
-            return h(CardBody, {})
+            return h(CardBody, {
+                props: this.props
+            })
         }
     }
 </script>

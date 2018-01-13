@@ -530,7 +530,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
 
 
 
@@ -538,7 +537,9 @@ module.exports = function normalizeComponent (
     name: 'card',
     props: __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["b" /* props */],
     render(h) {
-        return h(__WEBPACK_IMPORTED_MODULE_0__card_body_vue__["a" /* default */], {});
+        return h(__WEBPACK_IMPORTED_MODULE_0__card_body_vue__["a" /* default */], {
+            props: this.props
+        });
     }
 });
 
@@ -548,6 +549,8 @@ module.exports = function normalizeComponent (
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return props; });
+//
+//
 //
 //
 //
@@ -1811,7 +1814,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.noBody == false
     ? _c("div", { class: _vm.getClass(_vm.overlay) }, [
-        _vm._v("\n    This is some text within a card body.\n")
+        _vm._v(
+          "\n    This is some text within a card body.\n\n    edo eimaste\n"
+        )
       ])
     : _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
 }
