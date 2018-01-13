@@ -1721,9 +1721,16 @@ var _cardBody = __webpack_require__(7);
 
 var _cardBody2 = _interopRequireDefault(_cardBody);
 
+var _cardImage = __webpack_require__(28);
+
+var _cardImage2 = _interopRequireDefault(_cardImage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var props = exports.props = _cardBody.props;
+var props = exports.props = {
+    bodyProps: bodyProps,
+    ImageBody: _cardImage2.default
+};
 
 exports.default = {
     name: 'card',
@@ -1741,9 +1748,53 @@ exports.default = {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
 
+        if (props.imgSrc != '') {
+            components.push(h(_cardImage2.default, { props: props }, slots().default));
+        }
+
         return h('div', {
             staticClass: 'card'
         }, components);
+    }
+};
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var props = exports.props = {
+    imgSrc: {
+        type: String,
+        default: '#'
+    },
+    imgAlt: {
+        type: String,
+        default: ''
+    }
+};
+
+exports.default = {
+    name: 'card-image',
+    functional: true,
+    props: props,
+    render: function render(h, _ref) {
+        var props = _ref.props;
+
+        var components = [];
+
+        return h('img', {
+            staticClass: 'card-img-top',
+            attrs: {
+                src: props.imgSrc,
+                alt: props.imgAlt
+            }
+        });
     }
 };
 
