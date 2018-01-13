@@ -45,11 +45,11 @@ export default {
                 domProps: {innerHTML: props.subtitle}
             }))
         }
-console.log(props);
+
         return h('div', {
-            staticClass: 'card-body',
             class: {
-                'card-img-overlay': props.overlay
+                'card-body': props.overlay == false,
+                'card-img-overlay': props.overlay == true
             }
         }, components)
     }
