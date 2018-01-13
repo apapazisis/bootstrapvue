@@ -6,7 +6,7 @@ export default {
     functional: true,
     name: 'card',
     props,
-    render(h, props) {
+    render(h, {props}) {
         console.log(props);
         let components = [];
 

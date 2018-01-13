@@ -1693,7 +1693,9 @@ exports.default = {
     functional: true,
     name: 'card',
     props: props,
-    render: function render(h, props) {
+    render: function render(h, _ref) {
+        var props = _ref.props;
+
         console.log(props);
         var components = [];
 
