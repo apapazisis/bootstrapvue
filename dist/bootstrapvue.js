@@ -1741,6 +1741,8 @@ exports.default = {
 
         var components = [];
 
+        console.log(slots().default);
+
         if (props.imgSrc != '' && !props.bottom) {
             components.push(h(_cardImage2.default, { props: props }));
         }

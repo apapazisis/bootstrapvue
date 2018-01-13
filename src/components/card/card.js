@@ -10,6 +10,8 @@ export default {
     render(h, {props, slots}) {
         let components = [];
 
+        console.log( slots().default );
+
         if (props.imgSrc != '' && !props.bottom) {
             components.push(h(ImageBody, { props: props }));
         }
