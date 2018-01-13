@@ -533,7 +533,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'card',
@@ -572,7 +571,7 @@ module.exports = function normalizeComponent (
         },
         headerTag: {
             type: String,
-            default: ''
+            default: 'div'
         }
     },
     methods: {
@@ -592,6 +591,13 @@ module.exports = function normalizeComponent (
             let t = document.createTextNode(this.subtitle);
             h.appendChild(t);
             document.getElementsByClassName('card-body')[0].appendChild(h);
+        },
+        createHeaderTag() {
+            let h = document.createElement(this.headerTag);
+            h.className = 'card-header';
+            let t = document.createTextNode(this.header);
+            h.appendChild(t);
+            document.getElementsByClassName('card')[0].appendChild(h);
         }
     },
     mounted() {
@@ -600,6 +606,9 @@ module.exports = function normalizeComponent (
         }
         if (this.subtitleTag != '') {
             this.createSubTitleTag();
+        }
+        if (this.header != '') {
+            this.createHeaderTag();
         }
     }
 });
@@ -1779,8 +1788,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card" }, [
-    _c("div", { staticClass: "card-header" }),
-    _vm._v(" "),
     _vm.imgSrc != ""
       ? _c("img", {
           class: _vm.getImgTopClass(_vm.imgTop),
@@ -1788,7 +1795,7 @@ var render = function() {
         })
       : _vm._e(),
     _vm._v(" "),
-    _c("div", { staticClass: "card-body" })
+    _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
   ])
 }
 var staticRenderFns = []

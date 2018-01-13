@@ -1,9 +1,8 @@
 <template>
     <div class="card">
-        <div class="card-header">
-        </div>
         <img v-if="imgSrc != ''" :class="getImgTopClass(imgTop)" :src="imgSrc" :alt="imgAlt">
         <div class="card-body">
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -46,7 +45,7 @@
             },
             headerTag: {
                 type: String,
-                default: ''
+                default: 'div'
             }
         },
         methods: {
@@ -66,6 +65,13 @@
                 let t = document.createTextNode(this.subtitle);
                 h.appendChild(t);
                 document.getElementsByClassName('card-body')[0].appendChild(h);
+            },
+            createHeaderTag() {
+                let h = document.createElement(this.headerTag);
+                h.className = 'card-header';
+                let t = document.createTextNode(this.header);
+                h.appendChild(t);
+                document.getElementsByClassName('card')[0].appendChild(h);
             }
         },
         mounted() {
@@ -74,6 +80,9 @@
             }
             if (this.subtitleTag != '') {
                 this.createSubTitleTag();
+            }
+            if (this.header != '') {
+                this.createHeaderTag();
             }
         }
     }
