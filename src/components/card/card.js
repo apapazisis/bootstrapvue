@@ -17,6 +17,6 @@ export default {
             components.push(h(CardBody, { props: props }, slots().default))
         }
         console.log(components);
-        return h(components);
+        return h('div', components);
     }
 }
