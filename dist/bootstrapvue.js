@@ -531,6 +531,8 @@ module.exports = function normalizeComponent (
 //
 //
 //
+//
+//
 
 
 
@@ -1841,9 +1843,12 @@ var render = function() {
     "div",
     { staticClass: "card" },
     [
-      _c("card-body", {
-        attrs: { "no-body": _vm.noBody, overlay: _vm.overlay }
-      })
+      _c(
+        "card-body",
+        { attrs: { "no-body": _vm.noBody, overlay: _vm.overlay } },
+        [_vm._t("default")],
+        2
+      )
     ],
     1
   )
