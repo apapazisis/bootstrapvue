@@ -3,9 +3,6 @@
         This is some text within a card body.
         edo eimaste
     </div>
-    <div class="card-body" v-else>
-        <slot></slot>
-    </div>
 </template>
 
 <script>

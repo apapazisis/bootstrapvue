@@ -556,9 +556,6 @@ module.exports = function normalizeComponent (
 //
 //
 //
-//
-//
-//
 
 
 const props = {
@@ -1817,7 +1814,7 @@ var render = function() {
     ? _c("div", { class: _vm.getClass(_vm.overlay) }, [
         _vm._v("\n    This is some text within a card body.\n    edo eimaste\n")
       ])
-    : _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
+    : _vm._e()
 }
 var staticRenderFns = []
 render._withStripped = true
