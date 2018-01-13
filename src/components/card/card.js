@@ -10,14 +10,12 @@ export default {
     render(h, {props, slots}) {
         let components = [];
 
-        console.log( slots().default );
-
         if (props.imgSrc != '' && !props.bottom) {
             components.push(h(ImageBody, { props: props }));
         }
 
         if (props.noBody) {
-            components.push(slots().default);
+            components.push(slots().default); // Edo periexete to <p class="card-text"></p>
         } else {
             components.push(h(CardBody, { props: props }, slots().default));
         }

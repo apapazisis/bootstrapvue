@@ -579,6 +579,8 @@ exports.default = {
                 domProps: { innerHTML: props.subtitle }
             }));
         }
+
+        console.log(slots().default);
         components.push(slots().default);
 
         return h('div', {
@@ -1741,14 +1743,12 @@ exports.default = {
 
         var components = [];
 
-        console.log(slots().default);
-
         if (props.imgSrc != '' && !props.bottom) {
             components.push(h(_cardImage2.default, { props: props }));
         }
 
         if (props.noBody) {
-            components.push(slots().default);
+            components.push(slots().default); // Edo periexete to <p class="card-text"></p>
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
