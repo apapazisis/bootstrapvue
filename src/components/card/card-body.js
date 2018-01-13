@@ -5,7 +5,7 @@ export const props = {
     },
     overlay: {
         type: Boolean,
-        default: true
+        default: false
     },
     title: {
         type: String,
@@ -45,7 +45,7 @@ export default {
                 domProps: {innerHTML: props.subtitle}
             }))
         }
-
+console.log(props);
         return h('div', {
             staticClass: 'card-body',
             class: {

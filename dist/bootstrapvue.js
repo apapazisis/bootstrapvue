@@ -536,7 +536,7 @@ var props = exports.props = {
     },
     overlay: {
         type: Boolean,
-        default: true
+        default: false
     },
     title: {
         type: String,
@@ -578,7 +578,7 @@ exports.default = {
                 domProps: { innerHTML: props.subtitle }
             }));
         }
-
+        console.log(props);
         return h('div', {
             staticClass: 'card-body',
             class: {
