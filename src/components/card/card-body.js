@@ -29,7 +29,7 @@ export default {
     name: 'card-body',
     functional: true,
     props,
-    render(h, {props}) {
+    render(h, {props, slots}) {
         let components = [];
 
         if (props.title != '') {

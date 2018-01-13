@@ -561,7 +561,8 @@ exports.default = {
     functional: true,
     props: props,
     render: function render(h, _ref) {
-        var props = _ref.props;
+        var props = _ref.props,
+            slots = _ref.slots;
 
         var components = [];
 
