@@ -1,8 +1,10 @@
 import CardBody, {props as bodyProps} from './card-body';
 
+export const props = bodyProps;
+
 export default {
     name: 'card',
-    props: bodyProps,
+    props,
     render(h, props) {
         console.log(props);
         let components = [];

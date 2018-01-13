@@ -1679,6 +1679,7 @@ if (false) {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.props = undefined;
 
 var _cardBody = __webpack_require__(7);
 
@@ -1686,9 +1687,11 @@ var _cardBody2 = _interopRequireDefault(_cardBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var props = exports.props = _cardBody.props;
+
 exports.default = {
     name: 'card',
-    props: _cardBody.props,
+    props: props,
     render: function render(h, props) {
         console.log(props);
         var components = [];
