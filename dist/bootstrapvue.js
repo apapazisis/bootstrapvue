@@ -550,7 +550,7 @@ var props = exports.props = {
         type: String,
         default: ''
     },
-    subTitleTag: {
+    subtitleTag: {
         type: String,
         default: 'h6'
     }
@@ -573,9 +573,9 @@ exports.default = {
         }
 
         if (props.subTitle != '') {
-            components.push(h(props.subTitleTag, {
+            components.push(h(props.subtitleTag, {
                 staticClass: 'card-subtitle',
-                domProps: { innerHTML: props.subTitle }
+                domProps: { innerHTML: props.subtitle }
             }));
         }
 
