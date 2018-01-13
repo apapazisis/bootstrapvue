@@ -536,7 +536,7 @@ var props = exports.props = {
     },
     overlay: {
         type: Boolean,
-        default: false
+        default: true
     },
     title: {
         type: String,

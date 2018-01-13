@@ -5,7 +5,7 @@ export const props = {
     },
     overlay: {
         type: Boolean,
-        default: false
+        default: true
     },
     title: {
         type: String,
