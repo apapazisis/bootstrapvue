@@ -1,7 +1,6 @@
 <template>
     <div v-if="noBody == false" :class="getClass(overlay)">
         This is some text within a card body.
-
         edo eimaste
     </div>
     <div class="card-body" v-else>
@@ -11,7 +10,7 @@
 
 <script>
 
-    export let props = {
+    export const props = {
         noBody: {
             type: Boolean,
             default: false

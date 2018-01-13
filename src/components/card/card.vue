@@ -1,12 +1,12 @@
 <script>
-    import CardBody, {props as bodyProps} from './card-body.vue';
+    import CardBody, {props as BodyProps} from './card-body.vue';
 
     export default {
         name: 'card',
-        props: bodyProps,
+        props: BodyProps,
         render(h) {
             return h(CardBody, {
-                props: this.props
+                props
             })
         }
     }

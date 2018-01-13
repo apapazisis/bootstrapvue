@@ -533,7 +533,7 @@ module.exports = function normalizeComponent (
     props: __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["b" /* props */],
     render(h) {
         return h(__WEBPACK_IMPORTED_MODULE_0__card_body_vue__["a" /* default */], {
-            props: this.props
+            props
         });
     }
 });
@@ -543,8 +543,6 @@ module.exports = function normalizeComponent (
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return props; });
-//
 //
 //
 //
@@ -557,7 +555,7 @@ module.exports = function normalizeComponent (
 //
 
 
-let props = {
+const props = {
     noBody: {
         type: Boolean,
         default: false
@@ -567,6 +565,8 @@ let props = {
         default: false
     }
 };
+/* harmony export (immutable) */ __webpack_exports__["b"] = props;
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'card-body',
@@ -1808,9 +1808,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.noBody == false
     ? _c("div", { class: _vm.getClass(_vm.overlay) }, [
-        _vm._v(
-          "\n    This is some text within a card body.\n\n    edo eimaste\n"
-        )
+        _vm._v("\n    This is some text within a card body.\n    edo eimaste\n")
       ])
     : _c("div", { staticClass: "card-body" }, [_vm._t("default")], 2)
 }
