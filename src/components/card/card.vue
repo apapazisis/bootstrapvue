@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <card-body no-body overlay></card-body>
+        <card-body :no-body="noBody" :overlay="overlay"></card-body>
     </div>
 </template>
 

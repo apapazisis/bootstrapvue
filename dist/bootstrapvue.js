@@ -1840,7 +1840,11 @@ var render = function() {
   return _c(
     "div",
     { staticClass: "card" },
-    [_c("card-body", { attrs: { "no-body": "", overlay: "" } })],
+    [
+      _c("card-body", {
+        attrs: { "no-body": _vm.noBody, overlay: _vm.overlay }
+      })
+    ],
     1
   )
 }
