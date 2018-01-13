@@ -6,12 +6,13 @@ export default {
     functional: true,
     name: 'card',
     props,
-    render(h, {props}) {
-        console.log(props);
+    render(h, {props, slots}) {
         let components = [];
-
-        return h(CardBody, {
-            props: props
-        })
+console.log(slots);
+        if (props.noBody) {
+            components.push($slots.default)
+        } else {
+            components.push(h(CardBody, { props: props }, $slots.default))
+        }
     }
 }

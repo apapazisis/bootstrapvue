@@ -1694,14 +1694,16 @@ exports.default = {
     name: 'card',
     props: props,
     render: function render(h, _ref) {
-        var props = _ref.props;
+        var props = _ref.props,
+            slots = _ref.slots;
 
-        console.log(props);
         var components = [];
-
-        return h(_cardBody2.default, {
-            props: props
-        });
+        console.log(slots);
+        if (props.noBody) {
+            components.push($slots.default);
+        } else {
+            components.push(h(_cardBody2.default, { props: props }, $slots.default));
+        }
     }
 };
 
