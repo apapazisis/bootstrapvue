@@ -1,7 +1,7 @@
 import CardBody, {props as BodyProps} from './card-body';
 import ImageBody, {props as ImageProps} from './card-image';
 
-export const props = Object.assign({}, BodyProps, ImageBody);
+export const props = Object.assign({}, BodyProps, ImageProps);
 
 export default {
     name: 'card',

@@ -1727,7 +1727,7 @@ var _cardImage2 = _interopRequireDefault(_cardImage);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var props = exports.props = Object.assign({}, _cardBody.props, _cardImage2.default);
+var props = exports.props = Object.assign({}, _cardBody.props, _cardImage.props);
 
 exports.default = {
     name: 'card',
