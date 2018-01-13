@@ -1704,7 +1704,8 @@ exports.default = {
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
-        console.log(slots);
+
+        return h(components);
     }
 };
 

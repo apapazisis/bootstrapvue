@@ -14,6 +14,7 @@ export default {
         } else {
             components.push(h(CardBody, { props: props }, slots().default))
         }
-        console.log(slots);
+
+        return h(components);
     }
 }
