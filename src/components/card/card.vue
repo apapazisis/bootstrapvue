@@ -1,13 +1,14 @@
+<template>
+    <div class="card">
+        <card-body no-body overlay></card-body>
+    </div>
+</template>
+
 <script>
-    import CardBody, {props as BodyProps} from './card-body.vue';
+    import CardBody, {props as bodyProps} from './card-body.vue';
 
     export default {
         name: 'card',
-        props: BodyProps,
-        render(h, props) {
-            return h(CardBody, {
-                props: props
-            })
-        }
+        props: bodyProps
     }
 </script>
