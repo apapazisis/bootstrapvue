@@ -531,9 +531,9 @@ module.exports = function normalizeComponent (
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'card',
     props: __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["b" /* props */],
-    render(h) {
+    render(h, { props }) {
         return h(__WEBPACK_IMPORTED_MODULE_0__card_body_vue__["a" /* default */], {
-            props: this.BodyProps
+            props: props
         });
     }
 });
