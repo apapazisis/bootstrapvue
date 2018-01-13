@@ -1,8 +1,3 @@
-<template>
-    <div class="card">
-    </div>
-</template>
-
 <script>
     import CardBody, {props as bodyProps} from './card-body.vue';
 
