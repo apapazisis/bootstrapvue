@@ -9,6 +9,9 @@
 
     export default {
         name: 'card',
-        props: bodyProps
+        props: bodyProps,
+        components: {
+            cardBody
+        }
     }
 </script>
