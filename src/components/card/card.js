@@ -12,7 +12,7 @@ export default {
     props,
     render(h, {props, slots}) {
         let components = [];
-
+console.log(props);
         if (props.imgSrc != '') {
             components.push(h(ImageBody, { props: props }));
         }
