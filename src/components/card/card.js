@@ -9,10 +9,10 @@ export default {
     render(h, {props, slots}) {
         let components = [];
 console.log(slots);
-        if (props.noBody) {
-            components.push($slots.default)
-        } else {
-            components.push(h(CardBody, { props: props }, $slots.default))
-        }
+        // if (props.noBody) {
+        //     components.push($slots.default)
+        // } else {
+        //     components.push(h(CardBody, { props: props }, $slots.default))
+        // }
     }
 }

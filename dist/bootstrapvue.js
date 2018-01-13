@@ -1699,11 +1699,11 @@ exports.default = {
 
         var components = [];
         console.log(slots);
-        if (props.noBody) {
-            components.push($slots.default);
-        } else {
-            components.push(h(_cardBody2.default, { props: props }, $slots.default));
-        }
+        // if (props.noBody) {
+        //     components.push($slots.default)
+        // } else {
+        //     components.push(h(CardBody, { props: props }, $slots.default))
+        // }
     }
 };
 
