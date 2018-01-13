@@ -58,28 +58,28 @@
                 let h = document.createElement(this.titleTag);
                 let t = document.createTextNode(this.title);
                 h.appendChild(t);
-                document.getElementsByClassName('card-body')[0].appendChild(h);
+                document.getElementsByClassName('card-body')[0].insertAdjacentElement('afterbegin', h);
             },
             createSubTitleTag() {
                 let h = document.createElement(this.subtitleTag);
                 let t = document.createTextNode(this.subtitle);
                 h.appendChild(t);
-                document.getElementsByClassName('card-body')[0].appendChild(h);
+                document.getElementsByClassName('card-body')[0].insertAdjacentElement('afterbegin', h);
             },
             createHeaderTag() {
                 let h = document.createElement(this.headerTag);
                 h.className = 'card-header';
                 let t = document.createTextNode(this.header);
                 h.appendChild(t);
-                document.getElementsByClassName('card')[0].insertAdjacentElement('afterbegin', h)
+                document.getElementsByClassName('card')[0].insertAdjacentElement('afterbegin', h);
             }
         },
         mounted() {
-            if (this.title != '') {
-                this.createTitleTag();
-            }
             if (this.subtitleTag != '') {
                 this.createSubTitleTag();
+            }
+            if (this.title != '') {
+                this.createTitleTag();
             }
             if (this.header != '') {
                 this.createHeaderTag();
