@@ -578,6 +578,7 @@ exports.default = {
                 domProps: { innerHTML: props.subtitle }
             }));
         }
+        components.push(slots().default);
 
         return h('div', {
             class: {
