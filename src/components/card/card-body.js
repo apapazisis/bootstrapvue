@@ -11,6 +11,7 @@ export const props = {
 
 export default {
     name: 'card-body',
+    functional: true,
     props,
     render(h) {
         return h('div', {

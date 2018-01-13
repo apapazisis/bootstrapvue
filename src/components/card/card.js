@@ -3,8 +3,8 @@ import CardBody, {props as bodyProps} from './card-body';
 export const props = bodyProps;
 
 export default {
-    functional: true,
     name: 'card',
+    functional: true,
     props,
     render(h, {props, slots}) {
         let components = [];

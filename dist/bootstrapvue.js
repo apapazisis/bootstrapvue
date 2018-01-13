@@ -542,6 +542,7 @@ var props = exports.props = {
 
 exports.default = {
     name: 'card-body',
+    functional: true,
     props: props,
     render: function render(h) {
         return h('div', {
@@ -1690,8 +1691,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var props = exports.props = _cardBody.props;
 
 exports.default = {
-    functional: true,
     name: 'card',
+    functional: true,
     props: props,
     render: function render(h, _ref) {
         var props = _ref.props,
