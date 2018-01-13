@@ -1738,9 +1738,9 @@ exports.default = {
             slots = _ref.slots;
 
         var components = [];
-        console.log(props);
+
         if (props.imgSrc != '') {
-            components.push(h(_cardImage2.default, { props: props }));
+            components.push(h(_cardImage2.default, { props: props }, slots().default));
         }
 
         if (props.noBody) {
