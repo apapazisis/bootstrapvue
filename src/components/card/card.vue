@@ -1,6 +1,8 @@
 <template>
     <div class="card">
-        <card-body v-if="noBody == false"><slot></slot></card-body>
+        <card-body v-if="noBody == false" :overlay="overlay">
+            <slot></slot>
+        </card-body>
         <slot v-else></slot>
     </div>
 </template>
