@@ -1,10 +1,9 @@
 import CardBody, {props as bodyProps} from './card-body';
 
 export const props = bodyProps;
-console.log(bodyProps);
-console.log(props);
 
 export default {
+    functional: true,
     name: 'card',
     props,
     render(h, props) {

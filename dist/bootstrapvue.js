@@ -1688,10 +1688,9 @@ var _cardBody2 = _interopRequireDefault(_cardBody);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var props = exports.props = _cardBody.props;
-console.log(_cardBody.props);
-console.log(props);
 
 exports.default = {
+    functional: true,
     name: 'card',
     props: props,
     render: function render(h, props) {
