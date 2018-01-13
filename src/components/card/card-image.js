@@ -1,7 +1,7 @@
 export const props = {
     imgSrc: {
         type: String,
-        default: '#'
+        default: ''
     },
     imgAlt: {
         type: String,

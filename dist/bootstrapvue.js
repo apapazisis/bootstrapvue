@@ -1768,7 +1768,7 @@ Object.defineProperty(exports, "__esModule", {
 var props = exports.props = {
     imgSrc: {
         type: String,
-        default: '#'
+        default: ''
     },
     imgAlt: {
         type: String,
