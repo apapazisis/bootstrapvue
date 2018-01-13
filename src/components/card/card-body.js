@@ -13,13 +13,11 @@ export default {
     name: 'card-body',
     functional: true,
     props,
-    render(h) {
+    render(h, {props}) {
+        let components = [];
+
         return h('div', {
-            'class': {
-                'is-red': true
-            }
-        }, [
-            h('p', 'Example Text')
-        ])
+            staticClass: 'card-body'
+        })
     }
 }

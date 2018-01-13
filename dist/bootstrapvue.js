@@ -544,12 +544,14 @@ exports.default = {
     name: 'card-body',
     functional: true,
     props: props,
-    render: function render(h) {
+    render: function render(h, _ref) {
+        var props = _ref.props;
+
+        var components = [];
+
         return h('div', {
-            'class': {
-                'is-red': true
-            }
-        }, [h('p', 'Example Text')]);
+            staticClass: 'card-body'
+        });
     }
 };
 
@@ -1701,14 +1703,14 @@ exports.default = {
         var components = [];
 
         if (props.noBody) {
-            console.log('aaa');
             components.push(slots().default);
         } else {
-            console.log('bbb');
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
-        console.log(components);
-        return h('div', components);
+
+        return h('div', {
+            staticClass: 'card'
+        }, components);
     }
 };
 
