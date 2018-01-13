@@ -6,7 +6,7 @@
         props: BodyProps,
         render(h) {
             return h(CardBody, {
-                props: this.props
+                props: this.BodyProps
             })
         }
     }
