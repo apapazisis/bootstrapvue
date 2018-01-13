@@ -1689,6 +1689,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var props = exports.props = _cardBody.props;
 console.log(_cardBody.props);
+console.log(props);
+
 exports.default = {
     name: 'card',
     props: props,
