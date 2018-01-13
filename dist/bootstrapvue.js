@@ -547,7 +547,7 @@ exports.default = {
     render: function render(h) {
         return h('div', {
             'class': {
-                'is-red': this.noBody
+                'is-red': true
             }
         }, [h('p', 'Example Text')]);
     }
