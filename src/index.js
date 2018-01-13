@@ -4,7 +4,7 @@ import breadcrumb from './components/breadcrumb.vue';
 import button from './components/button.vue';
 import buttongroup from './components/button-group.vue';
 import buttontoolbar from './components/button-toolbar.vue';
-import card from './components/card.vue';
+import card from './components/card/card.vue';
 
 const BootstrapVue = {
     'bvAlert': alert,
