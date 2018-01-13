@@ -15,7 +15,7 @@ export const props = {
         type: String,
         default: 'h5'
     },
-    subTitle: {
+    subtitle: {
         type: String,
         default: ''
     },
