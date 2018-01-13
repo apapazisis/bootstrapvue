@@ -11,7 +11,7 @@
         name: 'card',
         props: bodyProps,
         components: {
-            cardBody
+            CardBody
         }
     }
 </script>
