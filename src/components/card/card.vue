@@ -4,7 +4,7 @@
     export default {
         name: 'card',
         props: BodyProps,
-        render(h, { props }) {
+        render(h, props) {
             return h(CardBody, {
                 props: props
             })
