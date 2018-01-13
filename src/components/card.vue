@@ -71,7 +71,7 @@
                 h.className = 'card-header';
                 let t = document.createTextNode(this.header);
                 h.appendChild(t);
-                document.getElementsByClassName('card')[0].appendChild(h);
+                document.getElementsByClassName('card')[0].insertAdjacentElement('afterbegin', h)
             }
         },
         mounted() {
