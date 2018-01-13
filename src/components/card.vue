@@ -75,7 +75,7 @@
             }
         },
         mounted() {
-            if (this.subtitleTag != '') {
+            if (this.subtitle != '') {
                 this.createSubTitleTag();
             }
             if (this.title != '') {
