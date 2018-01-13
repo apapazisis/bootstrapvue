@@ -533,7 +533,7 @@ module.exports = function normalizeComponent (
     props: __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["b" /* props */],
     render(h) {
         return h(__WEBPACK_IMPORTED_MODULE_0__card_body_vue__["a" /* default */], {
-            props
+            props: props
         });
     }
 });
