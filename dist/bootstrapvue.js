@@ -542,10 +542,9 @@ exports.default = {
     props: props,
     render: function render(h, _ref) {
         var props = _ref.props,
-            slots = _ref.slots,
-            methods = _ref.methods;
+            slots = _ref.slots;
 
-        console.log(methods, props);
+        console.log(this.getClass('success'));
         return h('div', {
             staticClass: 'alert',
             attrs: {
