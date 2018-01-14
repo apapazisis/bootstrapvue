@@ -13,6 +13,13 @@ export default {
                 'data-dismiss': 'alert',
                 'aria-label': 'asd'
             }
-        }, ['span', { attrs: { 'aria-hidden': 'true' }, innerHTML: '&times;' } ]);
+        }, [
+            h('span', {
+                attrs: {
+                    'aria-hidden': 'true'
+                },
+                innerHTML: '&times;'
+            })
+        ]);
     }
 }
