@@ -1855,6 +1855,7 @@ exports.default = {
             slots = _ref.slots;
 
 
+        console.log(slots().default);
         return h(props.headerTag, {
             staticClass: 'card-header'
         }, slots().default || [h('div', { domProps: { innerHTML: props.header } })]);
