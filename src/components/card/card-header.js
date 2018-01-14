@@ -6,6 +6,10 @@ export const props = {
     headerTag: {
         type: String,
         default: 'div'
+    },
+    headerClass: {
+        type: [String, Object, Array],
+        default: null
     }
 }
 
@@ -15,7 +19,10 @@ export default {
     props,
     render(h, {props, slots}) {
         return h(props.headerTag, {
-            staticClass: 'card-header'
+            staticClass: 'card-header',
+            class: [
+                props.headerClass
+            ]
         }, [
             h('div', { domProps: { innerHTML: props.header } })
         ])

@@ -2,6 +2,10 @@ export const props = {
     footer: {
         type: String,
         default: ''
+    },
+    footerClass: {
+        type: [String, Object, Array],
+        default: null
     }
 }
 
@@ -11,7 +15,10 @@ export default {
     props,
     render(h, {props}) {
         return h('div', {
-            staticClass: 'card-footer'
+            staticClass: 'card-footer',
+            class: [
+                props.footerClass
+            ]
         }, [
             h('div', {domProps: { innerHTML: props.footer } })
         ])

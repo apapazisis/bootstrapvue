@@ -13,7 +13,7 @@ export default {
         let components = [];
 
         if (props.header != '') {
-            components.push(h(CardHeader, { props: props }, slots().header));
+            components.push(h(CardHeader, { props: props }));
         }
 
         if (props.imgSrc != '' && !props.bottom) {
@@ -27,7 +27,7 @@ export default {
         }
 
         if (props.footer != '') {
-            components.push(h(CardFooter, { props: props }, slots().footer));
+            components.push(h(CardFooter, { props: props }));
         }
 
         if (props.imgSrc != '' && props.bottom) {

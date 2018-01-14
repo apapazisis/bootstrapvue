@@ -1750,7 +1750,7 @@ exports.default = {
         var components = [];
 
         if (props.header != '') {
-            components.push(h(_cardHeader2.default, { props: props }, slots().header));
+            components.push(h(_cardHeader2.default, { props: props }));
         }
 
         if (props.imgSrc != '' && !props.bottom) {
@@ -1764,7 +1764,7 @@ exports.default = {
         }
 
         if (props.footer != '') {
-            components.push(h(_cardFooter2.default, { props: props }, slots().footer));
+            components.push(h(_cardFooter2.default, { props: props }));
         }
 
         if (props.imgSrc != '' && props.bottom) {
@@ -1843,6 +1843,10 @@ var props = exports.props = {
     headerTag: {
         type: String,
         default: 'div'
+    },
+    headerClass: {
+        type: [String, Object, Array],
+        default: null
     }
 };
 
@@ -1855,7 +1859,8 @@ exports.default = {
             slots = _ref.slots;
 
         return h(props.headerTag, {
-            staticClass: 'card-header'
+            staticClass: 'card-header',
+            class: [props.headerClass]
         }, [h('div', { domProps: { innerHTML: props.header } })]);
     }
 };
@@ -1874,6 +1879,10 @@ var props = exports.props = {
     footer: {
         type: String,
         default: ''
+    },
+    footerClass: {
+        type: [String, Object, Array],
+        default: null
     }
 };
 
@@ -1885,7 +1894,8 @@ exports.default = {
         var props = _ref.props;
 
         return h('div', {
-            staticClass: 'card-footer'
+            staticClass: 'card-footer',
+            class: [props.footerClass]
         }, [h('div', { domProps: { innerHTML: props.footer } })]);
     }
 };
