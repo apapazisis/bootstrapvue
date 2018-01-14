@@ -573,7 +573,7 @@ exports.default = {
             }));
         }
 
-        if (props.subTitle != '') {
+        if (props.subtitle != '') {
             components.push(h(props.subtitleTag, {
                 staticClass: 'card-subtitle',
                 domProps: { innerHTML: props.subtitle }
