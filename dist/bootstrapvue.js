@@ -517,6 +517,9 @@ module.exports = BootstrapVue;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var props = exports.props = {
     show: {
         type: Boolean,
@@ -541,28 +544,13 @@ exports.default = {
     functional: true,
     props: props,
     render: function render(h, asd) {
-        console.log(asd);
         return h('div', {
             staticClass: 'alert',
+            class: _defineProperty({}, 'alert-' + variant, true),
             attrs: {
                 role: 'alert'
             }
         });
-    },
-
-    methods: {
-        getClass: function getClass(variant) {
-            return {
-                'alert-primary': variant == 'primary',
-                'alert-secondary': variant == 'secondary',
-                'alert-success': variant == 'success',
-                'alert-danger': variant == 'danger',
-                'alert-warning': variant == 'warning',
-                'alert-info': variant == 'info',
-                'alert-light': variant == 'light',
-                'alert-dark': variant == 'dark'
-            };
-        }
     }
 };
 

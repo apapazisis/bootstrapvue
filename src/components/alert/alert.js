@@ -22,26 +22,14 @@ export default {
     functional: true,
     props,
     render(h, asd) {
-        console.log(asd);
         return h('div', {
             staticClass: 'alert',
+            class: {
+                [`alert-${variant}`]: true
+            },
             attrs: {
                 role: 'alert'
             }
         })
-    },
-    methods: {
-        getClass(variant) {
-            return {
-                'alert-primary': variant == 'primary',
-                'alert-secondary': variant == 'secondary',
-                'alert-success': variant == 'success',
-                'alert-danger': variant == 'danger',
-                'alert-warning': variant == 'warning',
-                'alert-info': variant == 'info',
-                'alert-light': variant == 'light',
-                'alert-dark': variant == 'dark'
-            }
-        }
     }
 }
