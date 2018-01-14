@@ -1744,7 +1744,7 @@ exports.default = {
             slots = _ref.slots;
 
         var components = [];
-
+        console.log(props);
         if (props.header != '') {
             components.push(h(_cardHeader2.default, { props: props }));
         }

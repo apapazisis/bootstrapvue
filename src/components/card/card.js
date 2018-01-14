@@ -10,7 +10,7 @@ export default {
     props,
     render(h, {props, slots}) {
         let components = [];
-
+console.log(props);
         if (props.header != '') {
             components.push(h(Header, { props: props }));
         }
