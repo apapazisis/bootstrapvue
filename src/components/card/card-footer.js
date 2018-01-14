@@ -10,11 +10,10 @@ export default {
     functional: true,
     props,
     render(h, {props}) {
-
         return h('div', {
             staticClass: 'card-footer'
         }, [
-            h('div', {domProps: { innerHTML: props.header } })
+            h('div', {domProps: { innerHTML: props.footer } })
         ])
     }
 }

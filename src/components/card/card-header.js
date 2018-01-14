@@ -14,7 +14,6 @@ export default {
     functional: true,
     props,
     render(h, {props, slots}) {
-
         return h(props.headerTag, {
             staticClass: 'card-header'
         }, [
