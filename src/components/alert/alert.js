@@ -22,7 +22,7 @@ export default {
     functional: true,
     props,
     render(h, {props, slots, methods}) {
-
+console.log(methods, props);
         return h('div', {
             staticClass: 'alert',
             attrs: {

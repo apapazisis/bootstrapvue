@@ -545,7 +545,7 @@ exports.default = {
             slots = _ref.slots,
             methods = _ref.methods;
 
-
+        console.log(methods, props);
         return h('div', {
             staticClass: 'alert',
             attrs: {
