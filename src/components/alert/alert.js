@@ -1,3 +1,5 @@
+import BtnClose from '../button/button-close';
+
 export const props = {
     show: {
         type: Boolean,
@@ -24,19 +26,15 @@ export const props = {
 export default {
     name: 'alert',
     functional: true,
+    components: {
+        BtnClose
+    },
     props,
     render(h, {props, slots}) {
         let components = [];
 
         if (props.dismiss) {
-            components.push(h('button', {
-                staticClass: 'close',
-                attrs: {
-                    type: 'button',
-                    'data-dismiss': 'alert',
-                    'aria-label': props.dismissLabel
-                }
-            }));
+            components.push(h(BtnClose));
         }
 
         return h('div', {
