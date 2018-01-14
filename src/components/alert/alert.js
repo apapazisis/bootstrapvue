@@ -22,6 +22,8 @@ export default {
     functional: true,
     props,
     render(h, {props, slots}) {
+
+
         return h('div', {
             staticClass: 'alert',
             class: {
@@ -30,6 +32,6 @@ export default {
             attrs: {
                 role: 'alert'
             }
-        })
+        }, slots().default);
     }
 }

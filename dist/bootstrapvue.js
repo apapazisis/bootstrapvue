@@ -547,13 +547,14 @@ exports.default = {
         var props = _ref.props,
             slots = _ref.slots;
 
+
         return h('div', {
             staticClass: 'alert',
             class: _defineProperty({}, 'alert-' + props.variant, true),
             attrs: {
                 role: 'alert'
             }
-        });
+        }, slots().default);
     }
 };
 
