@@ -1,8 +1,9 @@
 import CardBody, {props as BodyProps} from './card-body';
 import ImageBody, {props as ImageProps} from './card-image';
 import Header, {props as HeaderProps} from './card-header';
+import Footer, {props as FooterProps} from './card-footer';
 
-export const props = Object.assign({}, BodyProps, ImageProps, HeaderProps);
+export const props = Object.assign({}, BodyProps, ImageProps, HeaderProps, FooterProps);
 
 export default {
     name: 'card',
@@ -10,9 +11,9 @@ export default {
     props,
     render(h, {props, slots}) {
         let components = [];
-console.log(props);
+
         if (props.header != '') {
-            components.push(h(Header, { props: props }));
+            components.push(h(Header, { props: props }, slots().header));
         }
 
         if (props.imgSrc != '' && !props.bottom) {
@@ -23,6 +24,10 @@ console.log(props);
             components.push(slots().default);
         } else {
             components.push(h(CardBody, { props: props }, slots().default));
+        }
+
+        if (props.footer != '') {
+            components.push(h(Footer, { props: props }, slots().footer));
         }
 
         if (props.imgSrc != '' && props.bottom) {

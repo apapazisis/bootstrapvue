@@ -1731,9 +1731,13 @@ var _cardHeader = __webpack_require__(29);
 
 var _cardHeader2 = _interopRequireDefault(_cardHeader);
 
+var _cardFooter = __webpack_require__(30);
+
+var _cardFooter2 = _interopRequireDefault(_cardFooter);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var props = exports.props = Object.assign({}, _cardBody.props, _cardImage.props, _cardHeader.props);
+var props = exports.props = Object.assign({}, _cardBody.props, _cardImage.props, _cardHeader.props, _cardFooter.props);
 
 exports.default = {
     name: 'card',
@@ -1744,9 +1748,9 @@ exports.default = {
             slots = _ref.slots;
 
         var components = [];
-        console.log(props);
+
         if (props.header != '') {
-            components.push(h(_cardHeader2.default, { props: props }));
+            components.push(h(_cardHeader2.default, { props: props }, slots().header));
         }
 
         if (props.imgSrc != '' && !props.bottom) {
@@ -1757,6 +1761,10 @@ exports.default = {
             components.push(slots().default);
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
+        }
+
+        if (props.footer != '') {
+            components.push(h(_cardFooter2.default, { props: props }, slots().footer));
         }
 
         if (props.imgSrc != '' && props.bottom) {
@@ -1848,6 +1856,37 @@ exports.default = {
 
         return h(props.headerTag, {
             staticClass: 'card-header'
+        });
+    }
+};
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var props = exports.props = {
+    footer: {
+        type: String,
+        default: ''
+    }
+};
+
+exports.default = {
+    name: 'card-footer',
+    functional: true,
+    props: props,
+    render: function render(h, _ref) {
+        var props = _ref.props;
+
+
+        return h('div', {
+            staticClass: 'card-footer'
         });
     }
 };
