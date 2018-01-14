@@ -25,9 +25,6 @@ export default {
         console.log(test);
         return h('div', {
             staticClass: 'alert',
-            class: [
-                this.getClass(props.variant)
-            ],
             attrs: {
                 role: 'alert'
             }
