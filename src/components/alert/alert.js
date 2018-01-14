@@ -21,8 +21,8 @@ export default {
     name: 'alert',
     functional: true,
     props,
-    render(h, {props, slots}) {
-console.log(this.getClass('success'));
+    render(h, asd) {
+        console.log(asd);
         return h('div', {
             staticClass: 'alert',
             attrs: {
