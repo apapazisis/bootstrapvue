@@ -543,10 +543,13 @@ exports.default = {
     name: 'alert',
     functional: true,
     props: props,
-    render: function render(h, asd) {
+    render: function render(h, _ref) {
+        var props = _ref.props,
+            slots = _ref.slots;
+
         return h('div', {
             staticClass: 'alert',
-            class: _defineProperty({}, 'alert-' + variant, true),
+            class: _defineProperty({}, 'alert-' + props.variant, true),
             attrs: {
                 role: 'alert'
             }

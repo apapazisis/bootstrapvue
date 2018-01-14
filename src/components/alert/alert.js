@@ -21,11 +21,11 @@ export default {
     name: 'alert',
     functional: true,
     props,
-    render(h, asd) {
+    render(h, {props, slots}) {
         return h('div', {
             staticClass: 'alert',
             class: {
-                [`alert-${variant}`]: true
+                [`alert-${props.variant}`]: true
             },
             attrs: {
                 role: 'alert'
