@@ -1855,10 +1855,9 @@ exports.default = {
             slots = _ref.slots;
 
 
-        console.log(slots().default);
         return h(props.headerTag, {
             staticClass: 'card-header'
-        }, slots().default || [h('div', { domProps: { innerHTML: props.header } })]);
+        }, [h('div', { domProps: { innerHTML: props.header } })]);
     }
 };
 
@@ -1889,7 +1888,7 @@ exports.default = {
 
         return h('div', {
             staticClass: 'card-footer'
-        });
+        }, [h('div', { domProps: { innerHTML: props.header } })]);
     }
 };
 

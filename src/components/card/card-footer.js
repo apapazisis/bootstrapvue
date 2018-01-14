@@ -13,6 +13,8 @@ export default {
 
         return h('div', {
             staticClass: 'card-footer'
-        })
+        }, [
+            h('div', {domProps: { innerHTML: props.header } })
+        ])
     }
 }
