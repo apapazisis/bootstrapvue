@@ -45,8 +45,6 @@ export default {
                 domProps: {innerHTML: props.subtitle}
             }))
         }
-
-        console.log( slots().default );
         components.push(slots().default);
 
         return h('div', {

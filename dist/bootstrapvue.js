@@ -579,8 +579,6 @@ exports.default = {
                 domProps: { innerHTML: props.subtitle }
             }));
         }
-
-        console.log(slots().default);
         components.push(slots().default);
 
         return h('div', {
@@ -1729,9 +1727,13 @@ var _cardImage = __webpack_require__(28);
 
 var _cardImage2 = _interopRequireDefault(_cardImage);
 
+var _cardHeader = __webpack_require__(29);
+
+var _cardHeader2 = _interopRequireDefault(_cardHeader);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var props = exports.props = Object.assign({}, _cardBody.props, _cardImage.props);
+var props = exports.props = Object.assign({}, _cardBody.props, _cardImage.props, _cardHeader.props);
 
 exports.default = {
     name: 'card',
@@ -1747,8 +1749,12 @@ exports.default = {
             components.push(h(_cardImage2.default, { props: props }));
         }
 
+        if (props.header != '') {
+            components.push(h(_cardHeader2.default, { props: props }));
+        }
+
         if (props.noBody) {
-            components.push(slots().default); // Edo periexete to <p class="card-text"></p>
+            components.push(slots().default);
         } else {
             components.push(h(_cardBody2.default, { props: props }, slots().default));
         }
@@ -1807,6 +1813,41 @@ exports.default = {
                 src: props.imgSrc,
                 alt: props.imgAlt
             }
+        });
+    }
+};
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var props = exports.props = {
+    header: {
+        type: String,
+        default: ''
+    },
+    headerTag: {
+        type: String,
+        default: 'div'
+    }
+};
+
+exports.default = {
+    name: 'card-header',
+    functional: true,
+    props: props,
+    render: function render(h, _ref) {
+        var props = _ref.props;
+
+
+        return h(props.headerTag, {
+            staticClass: 'card-header'
         });
     }
 };
