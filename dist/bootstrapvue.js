@@ -533,6 +533,10 @@ var props = exports.props = {
         type: Boolean,
         default: false
     },
+    dismissLabel: {
+        type: String,
+        default: 'Close'
+    },
     timeout: {
         type: Number,
         default: 0
@@ -550,7 +554,14 @@ exports.default = {
         var components = [];
 
         if (props.dismiss) {
-            components.push(h('button', {}, slots().default));
+            components.push(h('button', {
+                staticClass: 'close',
+                attrs: {
+                    type: 'button',
+                    'data-dismiss': 'alert',
+                    'aria-label': props.dismissLabel
+                }
+            }));
         }
 
         return h('div', {
@@ -559,7 +570,7 @@ exports.default = {
             attrs: {
                 role: 'alert'
             }
-        }, components);
+        }, [components, slots().default]);
     }
 };
 
