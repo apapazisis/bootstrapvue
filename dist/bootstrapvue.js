@@ -1857,7 +1857,7 @@ exports.default = {
 
         return h(props.headerTag, {
             staticClass: 'card-header'
-        }, slots().default);
+        }, slots().default || [h('div', { domProps: { innerHTML: props.header } })]);
     }
 };
 
