@@ -1856,7 +1856,7 @@ exports.default = {
 
         return h(props.headerTag, {
             staticClass: 'card-header'
-        });
+        }, slots().default);
     }
 };
 
