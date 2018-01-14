@@ -547,6 +547,11 @@ exports.default = {
         var props = _ref.props,
             slots = _ref.slots;
 
+        var components = [];
+
+        if (props.dismiss) {
+            components.push(h('button', {}, slots().default));
+        }
 
         return h('div', {
             staticClass: 'alert',
@@ -554,7 +559,7 @@ exports.default = {
             attrs: {
                 role: 'alert'
             }
-        }, slots().default);
+        }, components);
     }
 };
 

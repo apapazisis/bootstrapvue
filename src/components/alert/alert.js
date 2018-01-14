@@ -22,7 +22,11 @@ export default {
     functional: true,
     props,
     render(h, {props, slots}) {
+        let components = [];
 
+        if (props.dismiss) {
+            components.push(h('button', {}, slots().default));
+        }
 
         return h('div', {
             staticClass: 'alert',
@@ -32,6 +36,6 @@ export default {
             attrs: {
                 role: 'alert'
             }
-        }, slots().default);
+        }, components);
     }
 }
