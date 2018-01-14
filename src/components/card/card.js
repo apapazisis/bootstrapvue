@@ -11,12 +11,12 @@ export default {
     render(h, {props, slots}) {
         let components = [];
 
-        if (props.imgSrc != '' && !props.bottom) {
-            components.push(h(ImageBody, { props: props }));
-        }
-
         if (props.header != '') {
             components.push(h(Header, { props: props }));
+        }
+
+        if (props.imgSrc != '' && !props.bottom) {
+            components.push(h(ImageBody, { props: props }));
         }
 
         if (props.noBody) {

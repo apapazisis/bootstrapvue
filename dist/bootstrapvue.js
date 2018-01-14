@@ -1745,12 +1745,12 @@ exports.default = {
 
         var components = [];
 
-        if (props.imgSrc != '' && !props.bottom) {
-            components.push(h(_cardImage2.default, { props: props }));
-        }
-
         if (props.header != '') {
             components.push(h(_cardHeader2.default, { props: props }));
+        }
+
+        if (props.imgSrc != '' && !props.bottom) {
+            components.push(h(_cardImage2.default, { props: props }));
         }
 
         if (props.noBody) {
