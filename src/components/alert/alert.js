@@ -21,8 +21,8 @@ export default {
     name: 'alert',
     functional: true,
     props,
-    render(h, test, {props, slots}) {
-        console.log(test);
+    render(h, {props, slots, methods}) {
+
         return h('div', {
             staticClass: 'alert',
             attrs: {

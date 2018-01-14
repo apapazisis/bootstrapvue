@@ -540,11 +540,12 @@ exports.default = {
     name: 'alert',
     functional: true,
     props: props,
-    render: function render(h, test, _ref) {
+    render: function render(h, _ref) {
         var props = _ref.props,
-            slots = _ref.slots;
+            slots = _ref.slots,
+            methods = _ref.methods;
 
-        console.log(test);
+
         return h('div', {
             staticClass: 'alert',
             attrs: {
