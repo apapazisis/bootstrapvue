@@ -13,7 +13,7 @@ export default {
     name: 'card-header',
     functional: true,
     props,
-    render(h, {props}) {
+    render(h, {props, slots}) {
 
 
         return h(props.headerTag, {
