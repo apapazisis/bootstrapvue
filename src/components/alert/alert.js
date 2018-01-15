@@ -33,7 +33,7 @@ export default {
         let components = [];
 
         if (this.dismiss) {
-            components.push(h(BtnClose, {
+            components.push(h('btn-close', {
                 attrs: {
                     'aria-label': this.dismissLabel
                 },
