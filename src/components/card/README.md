@@ -1,28 +1,27 @@
-## Content Types
+<h1>Content Types</h1>
 
-### Body
-
+<h2>Body</h2>
 ```html
 <bv-card>
     This is some text within a card body.
 </bv-card>
 ```
-### Titles, text, and links
 
+<h2>Titles, text, and links</h2>
 ```html
 <bv-card
     title="My Title"
     title-tag="h4"
     subtitle="My Subtitle"
     subtitle-tag="h5">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some quick example text</p>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
 </bv-card>
 ```
 
-### Images
-
+<h2>Images</h2>
+<h3>Image by default is at top</h3>
 ```html
 <bv-card
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
@@ -31,12 +30,12 @@
     title-tag="h4"
     subtitle="My Subtitle"
     subtitle-tag="h5">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some quick example text</p>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
 </bv-card>
 ```
-
+<h3>Image at Bottom</h3>
 ```html
 <bv-card
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
@@ -46,7 +45,7 @@
     title-tag="h4"
     subtitle="My Subtitle"
     subtitle-tag="h5">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">Some quick example text</p>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
 </bv-card>
