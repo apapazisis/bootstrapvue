@@ -25,18 +25,17 @@ export const props = {
 
 export default {
     name: 'alert',
-    functional: true,
     components: {
         BtnClose
     },
     props,
-    render(h, {props, slots}) {
+    render(h) {
         let components = [];
 
-        if (props.dismiss) {
+        if (this.dismiss) {
             components.push(h(BtnClose, {
                 attrs: {
-                    'aria-label': props.dismissLabel
+                    'aria-label': this.dismissLabel
                 },
                 on: {
                     click: this.close
@@ -47,7 +46,7 @@ export default {
         return h('div', {
             staticClass: 'alert',
             class: {
-                [`alert-${props.variant}`]: true
+                [`alert-${this.variant}`]: true
             },
             attrs: {
                 role: 'alert'
