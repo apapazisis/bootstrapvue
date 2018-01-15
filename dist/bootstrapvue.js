@@ -243,6 +243,9 @@ const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__button_button_close
             return {
                 [`alert-${this.variant}`]: Boolean(this.variant)
             };
+        },
+        closeAlert(eventValue) {
+            this.mutateShow = eventValue;
         }
     }
 });
@@ -275,7 +278,12 @@ const props = {
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'button-close',
-    props
+    props,
+    methods: {
+        closeAlert() {
+            this.$emit('closeAlert', false);
+        }
+    }
 });
 
 /***/ }),
@@ -1075,7 +1083,8 @@ var render = function() {
             type: "button",
             "data-dismiss": "alert",
             "aria-label": _vm.ariaLabel
-          }
+          },
+          on: { click: _vm.closeAlert }
         },
         [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
       )
@@ -1114,8 +1123,8 @@ var render = function() {
             _c("bv-close-button", {
               attrs: { dismiss: _vm.dismiss },
               on: {
-                click: function($event) {
-                  _vm.mutateShow = false
+                closeAlert: function($event) {
+                  _vm.closeAlert($event)
                 }
               }
             }),

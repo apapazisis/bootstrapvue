@@ -1,5 +1,5 @@
 <template>
-    <button v-if="dismiss" type="button" class="close" data-dismiss="alert" :aria-label="ariaLabel">
+    <button v-if="dismiss" @click="closeAlert" type="button" class="close" data-dismiss="alert" :aria-label="ariaLabel">
         <span aria-hidden="true">&times;</span>
     </button>
 </template>
@@ -19,6 +19,11 @@
 
     export default {
         name: 'button-close',
-        props
+        props,
+        methods: {
+            closeAlert() {
+                this.$emit('closeAlert', false);
+            }
+        }
     }
 </script>
