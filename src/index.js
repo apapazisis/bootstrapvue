@@ -1,10 +1,11 @@
-import card from './components/card/card.vue';
-import cardBody from './components/card/card-body.vue';
-
+import Alert from './components/alert/alert.vue';
+import Card from './components/card/card.vue';
+import CardBody from './components/card/card-body.vue';
 
 const BootstrapVue = {
-    'bvCard': card,
-    'bvCardBody': cardBody
+    'bvAlert': Alert,
+    'bvCard': Card,
+    'bvCardBody': CardBody
 }
 
 module.exports = BootstrapVue
