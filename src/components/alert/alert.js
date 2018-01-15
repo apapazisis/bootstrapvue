@@ -37,6 +37,9 @@ export default {
             components.push(h(BtnClose, {
                 attrs: {
                     'aria-label': props.dismissLabel
+                },
+                on: {
+                    click: this.close
                 }
             }));
         }
@@ -50,5 +53,10 @@ export default {
                 role: 'alert'
             }
         }, [components, slots().default]);
+    },
+    methods: {
+        close() {
+            console.log('close it');
+        }
     }
 }
