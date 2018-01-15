@@ -38,7 +38,7 @@ export default {
                     'aria-label': this.dismissLabel
                 },
                 on: {
-                    click: this.close()
+                    click: this.close
                 }
             }));
         }
