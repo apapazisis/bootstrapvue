@@ -1,6 +1,7 @@
 <h1>Content Types</h1>
 
 <h2>Body</h2>
+
 ```html
 <bv-card>
     This is some text within a card body.
@@ -8,6 +9,7 @@
 ```
 
 <h2>Titles, text, and links</h2>
+
 ```html
 <bv-card
     title="My Title"
@@ -22,6 +24,7 @@
 
 <h2>Images</h2>
 <h3>Image by default is at top</h3>
+
 ```html
 <bv-card
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
@@ -36,6 +39,7 @@
 </bv-card>
 ```
 <h3>Image at Bottom</h3>
+
 ```html
 <bv-card
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
