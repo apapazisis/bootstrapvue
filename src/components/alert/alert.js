@@ -34,7 +34,11 @@ export default {
         let components = [];
 
         if (props.dismiss) {
-            components.push(h(BtnClose));
+            components.push(h(BtnClose, {
+                attrs: {
+                    'aria-label': props.dismissLabel
+                }
+            }));
         }
 
         return h('div', {
