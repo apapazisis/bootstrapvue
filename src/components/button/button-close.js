@@ -16,6 +16,11 @@ export default {
                 type: 'button',
                 'data-dismiss': 'alert',
                 'aria-label': props.ariaLabel
+            },
+            on: {
+                click(e) {
+                    console.log('close');
+                }
             }
         }, [
             h('span', {
