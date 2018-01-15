@@ -311,7 +311,12 @@ const props = {
 
 
 
-const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["props"], __WEBPACK_IMPORTED_MODULE_1__card_image_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_2__card_header_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_3__card_footer_vue__["b" /* props */]);
+const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["props"], __WEBPACK_IMPORTED_MODULE_1__card_image_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_2__card_header_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_3__card_footer_vue__["b" /* props */], {
+    style: {
+        type: [String, Object, Array],
+        default: null
+    }
+});
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;
 
 
@@ -1572,7 +1577,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card" },
+    { staticClass: "card", style: _vm.style },
     [
       _vm.headerText || this.$slots.header
         ? _c(
