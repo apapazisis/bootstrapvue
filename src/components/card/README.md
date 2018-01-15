@@ -27,7 +27,7 @@
 
 ```html
 <bv-card
-    img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
+    img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg?raw=true"
     img-alt="BootstrapVue"
     title="My Title"
     title-tag="h4"
@@ -42,7 +42,7 @@
 
 ```html
 <bv-card
-    img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg"
+    img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg?raw=true"
     img-alt="BootstrapVue"
     bottom
     title="My Title"
