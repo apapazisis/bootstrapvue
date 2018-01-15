@@ -44,7 +44,7 @@
 <bv-card
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg?raw=true"
     img-alt="BootstrapVue"
-    bottom
+    img-bottom
     title="My Title"
     title-tag="h4"
     subtitle="My Subtitle"
