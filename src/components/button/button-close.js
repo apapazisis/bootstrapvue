@@ -1,24 +1,30 @@
 export const props = {
-
+    ariaLabel: {
+        type: String,
+        default: ''
+    }
 }
 
 export default {
     name: 'button-close',
     functional: true,
     props,
-    render(h) {
+    render(h, {props}) {
         return h('button', {
             staticClass: 'close',
             attrs: {
+                type: 'button',
                 'data-dismiss': 'alert',
-                'aria-label': 'asd'
+                'aria-label': props.ariaLabel
             }
         }, [
             h('span', {
                 attrs: {
                     'aria-hidden': 'true'
                 },
-                innerHTML: '&times;'
+                domProps: {
+                    innerHTML: '&times;'
+                }
             })
         ]);
     }
