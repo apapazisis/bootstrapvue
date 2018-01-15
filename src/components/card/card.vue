@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :style="style">
+    <div class="card" :style="styles">
         <card-header v-if="headerText || this.$slots.header" :headerClass="headerClass" :headerTag="headerTag" :headerText="headerText"><slot name="header"></slot></card-header>
         <card-image v-if="imgBottom == false  && imgSrc != ''" :imgSrc="imgSrc" :imgAlt="imgAlt" :imgBottom="imgBottom"></card-image>
         <card-body v-if="noBody == false" :title-tag="titleTag" :title="title" :subtitle="subtitle" :subtitleTag="subtitleTag" :no-body="noBody"><slot></slot></card-body>
@@ -16,7 +16,7 @@
     import CardFooter, {props as CardFooterProps} from './card-footer.vue';
 
     export const props = Object.assign({}, CardBodyProps, CardImageProps, CardHeaderProps, CardFooterProps, {
-        style: {
+        styles: {
             type: [String, Object, Array],
             default: null
         }
