@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="alert" :class="getVariant" v-if="mutateShow" role="alert">
+        <div class="alert" :class="[getVariant()]" v-if="mutateShow" role="alert">
             <bv-close-button :dismiss="dismiss" @click="mutateShow = false"></bv-close-button>
             <slot></slot>
         </div>

@@ -1107,7 +1107,7 @@ var render = function() {
           "div",
           {
             staticClass: "alert",
-            class: _vm.getVariant,
+            class: [_vm.getVariant()],
             attrs: { role: "alert" }
           },
           [
