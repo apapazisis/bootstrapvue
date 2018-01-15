@@ -51,7 +51,7 @@ export default {
             attrs: {
                 role: 'alert'
             }
-        }, [components, slots().default]);
+        }, [components, this.$slots.default]);
     },
     methods: {
         close() {
