@@ -57,6 +57,6 @@ export default {
             attrs: {
                 role: 'alert'
             }
-        }, [components, this.$slots.default]);
+        }, [dismissBtn, this.$slots.default]);
     }
 }
