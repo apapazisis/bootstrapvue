@@ -234,7 +234,7 @@ const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__button_button_close
             if (val && this.timeout) {
                 setTimeout(() => {
                     this.mutateShow = false;
-                }, this.timeout);
+                }, this.timeout * 1000);
             }
         }
     },
@@ -267,7 +267,6 @@ const props = {
         type: String,
         default: 'Close'
     },
-    // Can alert be dismissed ?
     dismiss: {
         type: Boolean,
         default: false

@@ -10,7 +10,6 @@
             type: String,
             default: 'Close'
         },
-        // Can alert be dismissed ?
         dismiss: {
             type: Boolean,
             default: false

@@ -42,7 +42,7 @@
                 if (val && this.timeout) {
                     setTimeout(() => {
                         this.mutateShow = false
-                    }, this.timeout);
+                    }, this.timeout * 1000);
                 }
             }
         },
