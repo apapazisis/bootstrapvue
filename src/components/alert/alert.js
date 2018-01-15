@@ -29,18 +29,24 @@ export default {
         BtnClose
     },
     props,
+    methods: {
+        close() {
+            console.log('close it');
+        }
+    },
     render(h) {
         let components = [];
 
+        let dismissBtn = h(false)
         if (this.dismiss) {
-            components.push(h('btn-close', {
+            dismissBtn = h('btn-close', {
                 attrs: {
                     'aria-label': this.dismissLabel
                 },
                 on: {
                     click: this.close
                 }
-            }));
+            });
         }
 
         return h('div', {
@@ -52,10 +58,5 @@ export default {
                 role: 'alert'
             }
         }, [components, this.$slots.default]);
-    },
-    methods: {
-        close() {
-            console.log('close it');
-        }
     }
 }
