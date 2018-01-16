@@ -1,5 +1,5 @@
 <template>
-    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive()]" :class="[getVariant(), getSize(), getBlock(), getActive()]"><slot></slot></button>
+    <button v-if="type == 'button'" @click="clicked" type="button" class="btn" v-bind="[{disabled}, bindActive()]" :class="[getVariant(), getSize(), getBlock(), getActive()]"><slot></slot></button>
     <a v-else-if="type == 'link'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" v-bind="[bindDisabled(), bindActive()]" :href="href" role="button"><slot></slot></a>
     <input v-else-if="type == 'reset'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="reset" v-bind="[{value}, bindActive()]">
     <input v-else-if="type == 'submit'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="submit" v-bind="[{value}, bindActive()]">
@@ -39,6 +39,10 @@
         active: {
             type: Boolean,
             default: false
+        },
+        click: {
+            type: Function,
+            required: true
         }
     }
 
@@ -84,6 +88,9 @@
                         'aria-pressed': 'true'
                     }
                 }
+            },
+            clicked() {
+                this.$emit('click');
             }
         }
     }

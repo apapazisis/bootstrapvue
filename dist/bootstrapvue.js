@@ -334,6 +334,10 @@ const props = {
     active: {
         type: Boolean,
         default: false
+    },
+    click: {
+        type: Function,
+        required: true
     }
 };
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;
@@ -381,6 +385,9 @@ const props = {
                     'aria-pressed': 'true'
                 };
             }
+        },
+        clicked() {
+            this.$emit('click');
         }
     }
 });
@@ -1379,7 +1386,8 @@ var render = function() {
               _vm.getBlock(),
               _vm.getActive()
             ],
-            attrs: { type: "button" }
+            attrs: { type: "button" },
+            on: { click: _vm.clicked }
           },
           "button",
           [{ disabled: _vm.disabled }, _vm.bindActive()],
