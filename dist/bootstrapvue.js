@@ -299,42 +299,46 @@ const props = {
 //
 //
 
+const props = {
+    variant: {
+        type: String,
+        default: 'primary'
+    },
+    type: {
+        type: String,
+        default: 'button'
+    },
+    href: {
+        type: String,
+        default: '#'
+    },
+    size: {
+        type: String,
+        default: 'sm'
+    },
+    block: {
+        type: Boolean,
+        default: false
+    },
+    disabled: {
+        type: Boolean,
+        default: false
+    },
+    value: {
+        type: String,
+        default: ''
+    },
+    active: {
+        type: Boolean,
+        default: false
+    }
+};
+/* harmony export (immutable) */ __webpack_exports__["b"] = props;
+
+
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'btn',
-    props: {
-        variant: {
-            type: String,
-            default: 'primary'
-        },
-        type: {
-            type: String,
-            default: 'button'
-        },
-        href: {
-            type: String,
-            default: '#'
-        },
-        size: {
-            type: String,
-            default: 'sm'
-        },
-        block: {
-            type: Boolean,
-            default: false
-        },
-        disabled: {
-            type: Boolean,
-            default: false
-        },
-        value: {
-            type: String,
-            default: ''
-        },
-        active: {
-            type: Boolean,
-            default: false
-        }
-    },
+    props,
     methods: {
         getVariant() {
             return {
@@ -356,20 +360,20 @@ const props = {
                 ['disabled']: this.disabled
             };
         },
-        bindDisabled(disabled) {
-            if (disabled) {
-                return {
-                    'aria-disabled': 'true'
-                };
-            }
-        },
         getActive() {
             return {
                 ['active']: this.active
             };
         },
-        bindActive(active) {
-            if (active) {
+        bindDisabled() {
+            if (this.disabled) {
+                return {
+                    'aria-disabled': 'true'
+                };
+            }
+        },
+        bindActive() {
+            if (this.active) {
                 return {
                     'aria-pressed': 'true'
                 };
@@ -1256,7 +1260,7 @@ if (false) {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue__ = __webpack_require__(3);
-/* empty harmony namespace reexport */
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "props", function() { return __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_40f22148_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_vue__ = __webpack_require__(22);
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
@@ -1317,11 +1321,16 @@ var render = function() {
         _vm._b(
           {
             staticClass: "btn",
-            class: [_vm.getVariant(), _vm.getSize, _vm.getBlock, _vm.getActive],
+            class: [
+              _vm.getVariant(),
+              _vm.getSize(),
+              _vm.getBlock(),
+              _vm.getActive()
+            ],
             attrs: { type: "button" }
           },
           "button",
-          [{ disabled: _vm.disabled }, _vm.bindActive(_vm.active)],
+          [{ disabled: _vm.disabled }, _vm.bindActive()],
           false
         ),
         [_vm._t("default")],
@@ -1334,16 +1343,16 @@ var render = function() {
             {
               staticClass: "btn",
               class: [
-                _vm.getVariant,
-                _vm.getSize,
-                _vm.getBlock,
-                _vm.getDisabled,
-                _vm.getActive
+                _vm.getVariant(),
+                _vm.getSize(),
+                _vm.getBlock(),
+                _vm.getDisabled(),
+                _vm.getActive()
               ],
               attrs: { href: _vm.href, role: "button" }
             },
             "a",
-            [_vm.bindDisabled(_vm.disabled), _vm.bindActive(_vm.active)],
+            [_vm.bindDisabled(), _vm.bindActive()],
             false
           ),
           [_vm._t("default")],
@@ -1356,16 +1365,16 @@ var render = function() {
               {
                 staticClass: "btn",
                 class: [
-                  _vm.getVariant,
-                  _vm.getSize,
-                  _vm.getBlock,
-                  _vm.getDisabled,
-                  _vm.getActive
+                  _vm.getVariant(),
+                  _vm.getSize(),
+                  _vm.getBlock(),
+                  _vm.getDisabled(),
+                  _vm.getActive()
                 ],
                 attrs: { type: "reset" }
               },
               "input",
-              [{ value: _vm.value }, _vm.bindActive(_vm.active)],
+              [{ value: _vm.value }, _vm.bindActive()],
               false
             )
           )
@@ -1376,16 +1385,16 @@ var render = function() {
                 {
                   staticClass: "btn",
                   class: [
-                    _vm.getVariant,
-                    _vm.getSize,
-                    _vm.getBlock,
-                    _vm.getDisabled,
-                    _vm.getActive
+                    _vm.getVariant(),
+                    _vm.getSize(),
+                    _vm.getBlock(),
+                    _vm.getDisabled(),
+                    _vm.getActive()
                   ],
                   attrs: { type: "submit" }
                 },
                 "input",
-                [{ value: _vm.value }, _vm.bindActive(_vm.active)],
+                [{ value: _vm.value }, _vm.bindActive()],
                 false
               )
             )
@@ -1396,16 +1405,16 @@ var render = function() {
                   {
                     staticClass: "btn",
                     class: [
-                      _vm.getVariant,
-                      _vm.getSize,
-                      _vm.getBlock,
-                      _vm.getDisabled,
-                      _vm.getActive
+                      _vm.getVariant(),
+                      _vm.getSize(),
+                      _vm.getBlock(),
+                      _vm.getDisabled(),
+                      _vm.getActive()
                     ],
                     attrs: { type: "button" }
                   },
                   "input",
-                  [{ value: _vm.value }, _vm.bindActive(_vm.active)],
+                  [{ value: _vm.value }, _vm.bindActive()],
                   false
                 )
               )
