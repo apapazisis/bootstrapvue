@@ -1317,7 +1317,7 @@ var render = function() {
         _vm._b(
           {
             staticClass: "btn",
-            class: [_vm.getVariant, _vm.getSize, _vm.getBlock, _vm.getActive],
+            class: [_vm.getVariant(), _vm.getSize, _vm.getBlock, _vm.getActive],
             attrs: { type: "button" }
           },
           "button",

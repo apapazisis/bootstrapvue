@@ -1,5 +1,5 @@
 <template>
-    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getVariant, getSize, getBlock, getActive]"><slot></slot></button>
+    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getVariant(), getSize, getBlock, getActive]"><slot></slot></button>
     <a v-else-if="type == 'link'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
     <input v-else-if="type == 'reset'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" type="reset" v-bind="[{value}, bindActive(active)]">
     <input v-else-if="type == 'submit'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" type="submit" v-bind="[{value}, bindActive(active)]">
