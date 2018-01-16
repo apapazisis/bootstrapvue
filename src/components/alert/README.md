@@ -23,18 +23,18 @@
 
 ```html
 <bv-alert variant="primary" show>
-    This is a primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+    Lorem ipsum dolor sit amet, <a href="#" class="alert-link">consetetur sadipscing</a>. elitr, sed diam nonumy eirmod.
 </bv-alert>
 ```
 
 <h2>Additional Content</h2>
 
 ```html
-<bv-alert variant="success">
+<bv-alert show variant="success">
     <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+    <p>Aww yeah, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
     <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    <p class="mb-0">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.</p>
 </bv-alert>
 ```
 
@@ -42,6 +42,6 @@
 
 ```html
 <bv-alert show dismiss>
-    <strong>Dismissing alert!</strong> Close alert by clicking the button.
+    <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
 </bv-alert>
 ```
