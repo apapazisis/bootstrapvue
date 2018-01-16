@@ -38,6 +38,9 @@
             this.mutateShow = this.show;
         },
         watch: {
+            show() {
+                this.mutateShow = this.show;
+            },
             mutateShow(val) {
                 if (val && this.timeout) {
                     setTimeout(() => {

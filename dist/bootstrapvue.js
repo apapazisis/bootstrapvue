@@ -230,6 +230,9 @@ const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__button_button_close
         this.mutateShow = this.show;
     },
     watch: {
+        show() {
+            this.mutateShow = this.show;
+        },
         mutateShow(val) {
             if (val && this.timeout) {
                 setTimeout(() => {
