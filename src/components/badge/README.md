@@ -3,24 +3,8 @@
 <h2>How to</h2>
 
 <ul>
-    <li><strong>type</strong>: You can select between types which are [badge, contextual, pill, link]. By default is used badge.
-        <ul>
-            <li>Example:
-
-            ```
-            <bv-badge type="link" href="#">Example link</bv-badge>
-            ```
-
-            </li>
-        </ul>
-    </il>
-    <li><strong>variant</strong>: You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element.
-        <ul>
-            <li>Example:
-            <h1>Example heading <bv-badge variant="secondary">New</bv-badge></h1>
-            </li>
-        </ul>
-    </li>
+    <li><strong>type</strong>: You can select between types which are [badge, contextual, pill, link]. By default is used badge.</il>
+    <li><strong>variant</strong>: You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element.</li>
     <li><strong>href</strong>: When is used the link then you can define a href property.</li>
 </ul>
 
