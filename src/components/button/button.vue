@@ -39,10 +39,6 @@
         active: {
             type: Boolean,
             default: false
-        },
-        click: {
-            type: Function,
-            required: true
         }
     }
 

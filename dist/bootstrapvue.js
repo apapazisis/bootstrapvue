@@ -334,10 +334,6 @@ const props = {
     active: {
         type: Boolean,
         default: false
-    },
-    click: {
-        type: Function,
-        required: true
     }
 };
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;
