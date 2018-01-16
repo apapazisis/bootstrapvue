@@ -1,9 +1,9 @@
 <template>
-    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getClass(variant), getSize(size), getBlock(block), getActive(active)]"><slot></slot></button>
-    <a v-else-if="type == 'link'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
-    <input v-else-if="type == 'reset'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="reset" v-bind="[{value}, bindActive(active)]">
-    <input v-else-if="type == 'submit'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="submit" v-bind="[{value}, bindActive(active)]">
-    <input v-else-if="type == 'ibutton'" class="btn" :class="[getClass(variant), getSize(size), getBlock(block), getDisabled(disabled), getActive(active)]" type="button" v-bind="[{value}, bindActive(active)]">
+    <button v-if="type == 'button'" type="button" class="btn" v-bind="[{disabled}, bindActive(active)]" :class="[getVariant, getSize, getBlock, getActive]"><slot></slot></button>
+    <a v-else-if="type == 'link'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" v-bind="[bindDisabled(disabled), bindActive(active)]" :href="href" role="button"><slot></slot></a>
+    <input v-else-if="type == 'reset'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" type="reset" v-bind="[{value}, bindActive(active)]">
+    <input v-else-if="type == 'submit'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" type="submit" v-bind="[{value}, bindActive(active)]">
+    <input v-else-if="type == 'ibutton'" class="btn" :class="[getVariant, getSize, getBlock, getDisabled, getActive]" type="button" v-bind="[{value}, bindActive(active)]">
 </template>
 
 <script>
@@ -44,41 +44,24 @@
             }
         },
         methods: {
-            getClass(variant) {
+            getVariant() {
                 return {
-                    'btn-primary': variant == 'primary',
-                    'btn-secondary': variant == 'secondary',
-                    'btn-success': variant == 'success',
-                    'btn-danger': variant == 'danger',
-                    'btn-warning': variant == 'warning',
-                    'btn-info': variant == 'info',
-                    'btn-light': variant == 'light',
-                    'btn-dark': variant == 'dark',
-                    'btn-link': variant == 'link',
-                    'btn-outline-primary': variant == 'outline-primary',
-                    'btn-outline-secondary': variant == 'outline-secondary',
-                    'btn-outline-success': variant == 'outline-success',
-                    'btn-outline-danger': variant == 'outline-danger',
-                    'btn-outline-warning': variant == 'outline-warning',
-                    'btn-outline-info': variant == 'outline-info',
-                    'btn-outline-light': variant == 'outline-light',
-                    'btn-outline-dark': variant == 'outline-dark'
+                    [`btn-${this.variant}`]: Boolean(this.variant)
                 }
             },
-            getSize(size) {
+            getSize() {
                 return {
-                    'btn-lg': size == 'lg',
-                    'btn-sm': size == 'sm'
+                    [`btn-${this.size}`]: Boolean(this.size)
                 }
             },
-            getBlock(block) {
+            getBlock() {
                 return {
-                    'btn-block': block
+                    ['btn-block']: this.block
                 }
             },
-            getDisabled(disabled) {
+            getDisabled() {
                 return {
-                    'disabled': disabled
+                    ['disabled']: this.disabled
                 }
             },
             bindDisabled(disabled) {
@@ -88,9 +71,9 @@
                     }
                 }
             },
-            getActive(active) {
+            getActive() {
                 return {
-                    'active': active
+                    ['active']: this.active
                 }
             },
             bindActive(active) {
