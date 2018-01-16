@@ -7,9 +7,9 @@
         <ul>
             <li>Example:
 
-            ```html
-            <bv-badge type="link" href="#">Example link</bv-badge>
-            ```
+
+            <code><bv-badge type="link" href="#">Example link</bv-badge></code>
+
 
             </li>
         </ul>
@@ -18,9 +18,8 @@
         <ul>
         <li>Example:
 
-        ```html
-        <h1>Example heading <bv-badge variant="secondary">New</bv-badge></h1>
-        ```
+
+        <code><h1>Example heading <bv-badge variant="secondary">New</bv-badge></h1></code>
 
         </li>
         </ul>
