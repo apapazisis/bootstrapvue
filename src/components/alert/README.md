@@ -45,3 +45,11 @@
     <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
 </bv-alert>
 ```
+
+<h2>Timeout Alert</h2>
+
+```html
+<bv-alert show timeout="3">
+    <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
+</bv-alert>
+```
