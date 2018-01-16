@@ -1,5 +1,13 @@
 <h1>Badge</h1>
 
+<h2>How to</h2>
+
+<ul>
+    <li><strong>type</strong>: You can select between types which are [badge, contextual, pill, link]. By default is used badge.</il>
+    <li><strong>variant</strong>: You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element. </li>
+    <li><strong>href</strong>: When is used the link then you can define a href property.</li>
+</ul>
+
 <h2>Example</h2>
 
 ```html
