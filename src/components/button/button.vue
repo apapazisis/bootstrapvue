@@ -1,9 +1,9 @@
 <template>
     <button v-if="type == 'button'" @click="clicked" type="button" class="btn" v-bind="[{disabled}, bindActive()]" :class="[getVariant(), getSize(), getBlock(), getActive()]"><slot></slot></button>
-    <a v-else-if="type == 'link'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" v-bind="[bindDisabled(), bindActive()]" :href="href" role="button"><slot></slot></a>
-    <input v-else-if="type == 'reset'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="reset" v-bind="[{value}, bindActive()]">
-    <input v-else-if="type == 'submit'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="submit" v-bind="[{value}, bindActive()]">
-    <input v-else-if="type == 'ibutton'" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="button" v-bind="[{value}, bindActive()]">
+    <a v-else-if="type == 'link'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" v-bind="[bindDisabled(), bindActive()]" :href="href" role="button"><slot></slot></a>
+    <input v-else-if="type == 'reset'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="reset" v-bind="[{value}, bindActive()]">
+    <input v-else-if="type == 'submit'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="submit" v-bind="[{value}, bindActive()]">
+    <input v-else-if="type == 'ibutton'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="button" v-bind="[{value}, bindActive()]">
 </template>
 
 <script>

@@ -1405,7 +1405,8 @@ var render = function() {
                 _vm.getDisabled(),
                 _vm.getActive()
               ],
-              attrs: { href: _vm.href, role: "button" }
+              attrs: { href: _vm.href, role: "button" },
+              on: { click: _vm.clicked }
             },
             "a",
             [_vm.bindDisabled(), _vm.bindActive()],
@@ -1427,7 +1428,8 @@ var render = function() {
                   _vm.getDisabled(),
                   _vm.getActive()
                 ],
-                attrs: { type: "reset" }
+                attrs: { type: "reset" },
+                on: { click: _vm.clicked }
               },
               "input",
               [{ value: _vm.value }, _vm.bindActive()],
@@ -1447,7 +1449,8 @@ var render = function() {
                     _vm.getDisabled(),
                     _vm.getActive()
                   ],
-                  attrs: { type: "submit" }
+                  attrs: { type: "submit" },
+                  on: { click: _vm.clicked }
                 },
                 "input",
                 [{ value: _vm.value }, _vm.bindActive()],
@@ -1467,7 +1470,8 @@ var render = function() {
                       _vm.getDisabled(),
                       _vm.getActive()
                     ],
-                    attrs: { type: "button" }
+                    attrs: { type: "button" },
+                    on: { click: _vm.clicked }
                   },
                   "input",
                   [{ value: _vm.value }, _vm.bindActive()],
