@@ -400,7 +400,7 @@ const props = {
 const props = {
     variant: {
         type: String,
-        default: ''
+        default: 'primary'
     },
     type: {
         type: String,
