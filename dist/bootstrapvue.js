@@ -1545,7 +1545,7 @@ var render = function() {
   return _vm.type == "badge"
     ? _c(
         "span",
-        { staticClass: "babge", class: [_vm.getVariant()] },
+        { staticClass: "badge", class: [_vm.getVariant()] },
         [_vm._t("default")],
         2
       )

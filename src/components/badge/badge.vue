@@ -1,5 +1,5 @@
 <template>
-    <span v-if="type == 'badge'" class="babge" :class="[getVariant()]">
+    <span v-if="type == 'badge'" class="badge" :class="[getVariant()]">
         <slot></slot>
     </span>
     <span v-else-if="type == 'contextual'" class="badge" :class="[getVariant()]"><slot></slot></span>
