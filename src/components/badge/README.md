@@ -6,7 +6,7 @@
     <li><strong>type</strong>: You can select between types which are [badge, contextual, pill, link]. By default is used badge.
         <ul>
             <li>Example:
-            <bv-badge type="link" href="#">Example link</bv-badge>
+            ```<bv-badge type="link" href="#">Example link</bv-badge>```
             </li>
         </ul>
     </il>
