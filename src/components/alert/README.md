@@ -10,6 +10,8 @@
 
 <h2>Examples</h2>
 
+The alert will be shown and after 2 seconds will be auto dismissed.
+
 ```html
 <bv-alert
     variant="success"
@@ -40,6 +42,8 @@
 
 <h2>Dismissing Alert</h2>
 
+The close(X) button will be show so that the user can close on its own the alert.
+
 ```html
 <bv-alert show dismiss>
     <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
@@ -47,6 +51,8 @@
 ```
 
 <h2>Timeout Dismissing Alert</h2>
+
+The alert will be auto-dismissed after 2 seconds.
 
 ```html
 <bv-alert show timeout="3">
