@@ -46,10 +46,45 @@
 </bv-alert>
 ```
 
-<h2>Timeout Alert</h2>
+<h2>Timeout Dismissing Alert</h2>
 
 ```html
 <bv-alert show timeout="3">
     <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
 </bv-alert>
+```
+
+<h2>Vue Example</h2>
+
+```vue
+<template>
+    <div>
+        <bv-alert :show="alert">
+            <strong>Lorem ipsum dolor sit amet!</strong> elitr, sed diam nonumy eirmod.
+        </bv-alert>
+
+        <bv-button @click="showAlert" variant="success">Test</bv-button>
+    </div>
+</template>
+
+<script>
+    import {bvAlert, bvButton} from 'bootstrapvue';
+
+    export default {
+        name: 'mycomponent',
+        data: () => ({
+            alert: false
+        }),
+        components: {
+            bvAlert,
+            bvButton
+        },
+        methods: {
+            showAlert() {
+                this.alert = !this.alert;
+            }
+        }
+
+    }
+</script>
 ```
