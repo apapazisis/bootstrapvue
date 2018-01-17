@@ -56,16 +56,17 @@
                 }
             },
             binds() {
-                let binds = [];
+                let binds = {};
 
                 if (this.disabled) {
-                    binds.push({'aria-disabled': 'true'});
-                }
-                if (this.active) {
-                    binds.push({'aria-pressed': 'true'});
+                    binds = Object.assign(binds, {'aria-disabled': 'true'});
                 }
 
-                return {binds};
+                if (this.active) {
+                    binds = Object.assign(binds, {'aria-pressed': 'true'});
+                }
+
+                return binds;
             },
             clicked() {
                 this.$emit('click');
