@@ -65,7 +65,7 @@
                     binds.push({'aria-pressed': 'true'});
                 }
 
-                return binds;
+                return {binds};
             },
             clicked() {
                 this.$emit('click');
