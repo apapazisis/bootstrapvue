@@ -1,9 +1,9 @@
 <template>
-    <button v-if="type == 'button'" @click="clicked" type="button" class="btn" v-bind="[{disabled}, bindActive()]" :class="[getVariant(), getSize(), getBlock(), getActive()]"><slot></slot></button>
-    <a v-else-if="type == 'link'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" v-bind="[bindDisabled(), bindActive()]" :href="href" role="button"><slot></slot></a>
-    <input v-else-if="type == 'reset'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="reset" v-bind="[{value}, bindActive()]">
-    <input v-else-if="type == 'submit'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="submit" v-bind="[{value}, bindActive()]">
-    <input v-else-if="type == 'ibutton'" @click="clicked" class="btn" :class="[getVariant(), getSize(), getBlock(), getDisabled(), getActive()]" type="button" v-bind="[{value}, bindActive()]">
+    <button v-if="type == 'button'" @click="clicked" type="button" class="btn" v-bind="[{disabled}, binds()]" :class="[getClasses()]"><slot></slot></button>
+    <a v-else-if="type == 'link'" @click="clicked" class="btn" :class="[getClasses()]" v-bind="[binds()]" :href="href" role="button"><slot></slot></a>
+    <input v-else-if="type == 'reset'" @click="clicked" class="btn" :class="[getClasses()]" type="reset" v-bind="[{value}, binds()]">
+    <input v-else-if="type == 'submit'" @click="clicked" class="btn" :class="[getClasses()]" type="submit" v-bind="[{value}, binds()]">
+    <input v-else-if="type == 'ibutton'" @click="clicked" class="btn" :class="[getClasses()]" type="button" v-bind="[{value}, binds()]">
 </template>
 
 <script>
@@ -46,44 +46,26 @@
         name: 'btn',
         props,
         methods: {
-            getVariant() {
+            getClasses() {
                 return {
-                    [`btn-${this.variant}`]: Boolean(this.variant)
-                }
-            },
-            getSize() {
-                return {
-                    [`btn-${this.size}`]: Boolean(this.size)
-                }
-            },
-            getBlock() {
-                return {
-                    ['btn-block']: this.block
-                }
-            },
-            getDisabled() {
-                return {
-                    ['disabled']: this.disabled
-                }
-            },
-            getActive() {
-                return {
+                    [`btn-${this.variant}`]: Boolean(this.variant),
+                    [`btn-${this.size}`]: Boolean(this.size),
+                    ['btn-block']: this.block,
+                    ['disabled']: this.disabled,
                     ['active']: this.active
                 }
             },
-            bindDisabled() {
+            binds() {
+                let binds = [];
+
                 if (this.disabled) {
-                    return {
-                        'aria-disabled': 'true'
-                    }
+                    binds.push({'aria-disabled': 'true'});
                 }
-            },
-            bindActive() {
                 if (this.active) {
-                    return {
-                        'aria-pressed': 'true'
-                    }
+                    binds.push({'aria-pressed': 'true'});
                 }
+
+                return binds;
             },
             clicked() {
                 this.$emit('click');

@@ -343,44 +343,26 @@ const props = {
     name: 'btn',
     props,
     methods: {
-        getVariant() {
+        getClasses() {
             return {
-                [`btn-${this.variant}`]: Boolean(this.variant)
-            };
-        },
-        getSize() {
-            return {
-                [`btn-${this.size}`]: Boolean(this.size)
-            };
-        },
-        getBlock() {
-            return {
-                ['btn-block']: this.block
-            };
-        },
-        getDisabled() {
-            return {
-                ['disabled']: this.disabled
-            };
-        },
-        getActive() {
-            return {
+                [`btn-${this.variant}`]: Boolean(this.variant),
+                [`btn-${this.size}`]: Boolean(this.size),
+                ['btn-block']: this.block,
+                ['disabled']: this.disabled,
                 ['active']: this.active
             };
         },
-        bindDisabled() {
+        binds() {
+            let binds = [];
+
             if (this.disabled) {
-                return {
-                    'aria-disabled': 'true'
-                };
+                binds.push({ 'aria-disabled': 'true' });
             }
-        },
-        bindActive() {
             if (this.active) {
-                return {
-                    'aria-pressed': 'true'
-                };
+                binds.push({ 'aria-pressed': 'true' });
             }
+
+            return binds;
         },
         clicked() {
             this.$emit('click');
@@ -1376,17 +1358,12 @@ var render = function() {
         _vm._b(
           {
             staticClass: "btn",
-            class: [
-              _vm.getVariant(),
-              _vm.getSize(),
-              _vm.getBlock(),
-              _vm.getActive()
-            ],
+            class: [_vm.getClasses()],
             attrs: { type: "button" },
             on: { click: _vm.clicked }
           },
           "button",
-          [{ disabled: _vm.disabled }, _vm.bindActive()],
+          [{ disabled: _vm.disabled }, _vm.binds()],
           false
         ),
         [_vm._t("default")],
@@ -1398,18 +1375,12 @@ var render = function() {
           _vm._b(
             {
               staticClass: "btn",
-              class: [
-                _vm.getVariant(),
-                _vm.getSize(),
-                _vm.getBlock(),
-                _vm.getDisabled(),
-                _vm.getActive()
-              ],
+              class: [_vm.getClasses()],
               attrs: { href: _vm.href, role: "button" },
               on: { click: _vm.clicked }
             },
             "a",
-            [_vm.bindDisabled(), _vm.bindActive()],
+            [_vm.binds()],
             false
           ),
           [_vm._t("default")],
@@ -1421,18 +1392,12 @@ var render = function() {
             _vm._b(
               {
                 staticClass: "btn",
-                class: [
-                  _vm.getVariant(),
-                  _vm.getSize(),
-                  _vm.getBlock(),
-                  _vm.getDisabled(),
-                  _vm.getActive()
-                ],
+                class: [_vm.getClasses()],
                 attrs: { type: "reset" },
                 on: { click: _vm.clicked }
               },
               "input",
-              [{ value: _vm.value }, _vm.bindActive()],
+              [{ value: _vm.value }, _vm.binds()],
               false
             )
           )
@@ -1442,18 +1407,12 @@ var render = function() {
               _vm._b(
                 {
                   staticClass: "btn",
-                  class: [
-                    _vm.getVariant(),
-                    _vm.getSize(),
-                    _vm.getBlock(),
-                    _vm.getDisabled(),
-                    _vm.getActive()
-                  ],
+                  class: [_vm.getClasses()],
                   attrs: { type: "submit" },
                   on: { click: _vm.clicked }
                 },
                 "input",
-                [{ value: _vm.value }, _vm.bindActive()],
+                [{ value: _vm.value }, _vm.binds()],
                 false
               )
             )
@@ -1463,18 +1422,12 @@ var render = function() {
                 _vm._b(
                   {
                     staticClass: "btn",
-                    class: [
-                      _vm.getVariant(),
-                      _vm.getSize(),
-                      _vm.getBlock(),
-                      _vm.getDisabled(),
-                      _vm.getActive()
-                    ],
+                    class: [_vm.getClasses()],
                     attrs: { type: "button" },
                     on: { click: _vm.clicked }
                   },
                   "input",
-                  [{ value: _vm.value }, _vm.bindActive()],
+                  [{ value: _vm.value }, _vm.binds()],
                   false
                 )
               )
