@@ -22,9 +22,10 @@ $ npm install apapazisis/bootstrapvue#master
 
 ### Usage
 
-<a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/alert" alt="Alert component | bootstrapvue">- Alert</a>
-- Button
-
+<ul>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/alert" alt="Alert component | bootstrapvue">Alert</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button" alt="Alert component | bootstrapvue">Button</a></li>
+</ul>
 
 ### Support
 
