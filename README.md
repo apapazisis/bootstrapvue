@@ -20,15 +20,11 @@
 $ npm install apapazisis/bootstrapvue#master
 ```
 
-### Development
+### Usage
 
-Developed Components
-- Alert
-- Badge
-- Breadcrumb
-- Buttons
-- Button Group
-- Button Toolbar
+<a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/alert" alt="Alert component | bootstrapvue">- Alert</a>
+- Button
+
 
 ### Support
 
