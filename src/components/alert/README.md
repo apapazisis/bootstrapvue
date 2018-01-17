@@ -52,7 +52,7 @@ The close(X) button will be show so that the user can close on its own the alert
 
 <h2>Timeout Dismissing Alert</h2>
 
-The alert will be auto-dismissed after 2 seconds.
+The alert will be auto-dismissed after 3 seconds.
 
 ```html
 <bv-alert show timeout="3">
