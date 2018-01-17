@@ -20,12 +20,19 @@
 $ npm install apapazisis/bootstrapvue#master
 ```
 
-### Development
+### Usage
 
-Developed Components
-- Alert
-- Badge
-- Breadcrumb
-- Buttons
-- Button Group
-- Button Toolbar
+Navigate between components and check documentation out.
+
+<ul>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/alert" alt="Alert component | bootstrapvue">Alert</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button" alt="Alert component | bootstrapvue">Button</a></li>
+</ul>
+
+### Support
+
+Please open an issue for support.
+
+### Contributing
+
+Create a branch, add commits, and open a pull request.

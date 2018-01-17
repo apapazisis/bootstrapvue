@@ -1,6 +1,6 @@
 {
     "name": "bootstrapvue",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "",
     "main": "dist/bootstrapvue.js",
     "repository": {
