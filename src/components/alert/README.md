@@ -23,7 +23,7 @@
 
 ```html
 <bv-alert variant="primary" show>
-    Lorem ipsum dolor sit amet, <a href="#" class="alert-link">consetetur sadipscing</a>. elitr, sed diam nonumy eirmod.
+    Lorem ipsum dolor sit amet, <a href="#" class="alert-link">consetetur sadipscing</a>. elitr.
 </bv-alert>
 ```
 
@@ -32,9 +32,9 @@
 ```html
 <bv-alert show variant="success">
     <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+    <p>Aww yeah, Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
     <hr>
-    <p class="mb-0">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor.</p>
+    <p class="mb-0">At vero eos et accusam et justo duo doloreum dolor.</p>
 </bv-alert>
 ```
 
