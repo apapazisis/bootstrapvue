@@ -29,3 +29,11 @@ Developed Components
 - Buttons
 - Button Group
 - Button Toolbar
+
+### Support
+
+Please open an issue for support.
+
+### Contributing
+
+Please contribute using Github Flow. Create a branch, add commits, and open a pull request.

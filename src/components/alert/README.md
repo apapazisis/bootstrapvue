@@ -1,6 +1,6 @@
 <h1>Alert</h1>
 
-<h2>How to</h2>
+<h2>Properties</h2>
 
 <ul>
     <li><strong>variant</strong>:You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element.</li>

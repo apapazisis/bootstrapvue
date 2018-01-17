@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div class="alert" :class="[getVariant()]" v-if="mutateShow" role="alert">
+        <div class="alert" :class="[getClasses()]" v-if="mutateShow" role="alert">
             <bv-close-button :dismiss="dismiss" @closeAlert="closeAlert($event)"></bv-close-button>
             <slot></slot>
         </div>
@@ -50,7 +50,7 @@
             }
         },
         methods: {
-            getVariant() {
+            getClasses() {
                 return {
                     [`alert-${this.variant}`]: Boolean(this.variant),
                 }

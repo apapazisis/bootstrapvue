@@ -242,7 +242,7 @@ const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__button_button_close
         }
     },
     methods: {
-        getVariant() {
+        getClasses() {
             return {
                 [`alert-${this.variant}`]: Boolean(this.variant)
             };
@@ -1260,7 +1260,7 @@ var render = function() {
           "div",
           {
             staticClass: "alert",
-            class: [_vm.getVariant()],
+            class: [_vm.getClasses()],
             attrs: { role: "alert" }
           },
           [
