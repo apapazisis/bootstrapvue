@@ -6,20 +6,19 @@
 </template>
 
 <script>
-
-export const props = {
-    footerText: {
-        type: String,
-        default: ''
-    },
-    footerClass: {
-        type: [String, Object, Array],
-        default: null
+    export const props = {
+        footerText: {
+            type: String,
+            default: ''
+        },
+        footerClass: {
+            type: [String, Object, Array],
+            default: null
+        }
     }
-}
 
-export default {
-    name: 'card-footer',
-    props
-}
+    export default {
+        name: 'card-footer',
+        props
+    }
 </script>

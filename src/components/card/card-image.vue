@@ -1,5 +1,5 @@
 <template>
-    <img :class="getClass()" :src="imgSrc" :alt="imgAlt">
+    <img :class="getClasses()" :src="imgSrc" :alt="imgAlt">
 </template>
 
 <script>
@@ -22,7 +22,7 @@
         name: 'card-image',
         props,
         methods: {
-            getClass() {
+            getClasses() {
                 return  {
                     'card-img-top': this.imgBottom == false,
                     'card-img-bottom': this.imgBottom == true

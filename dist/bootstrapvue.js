@@ -560,12 +560,7 @@ const props = Object.assign({}, {
 
 
 
-const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["props"], __WEBPACK_IMPORTED_MODULE_1__card_image_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_2__card_header_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_3__card_footer_vue__["b" /* props */], {
-    styles: {
-        type: [String, Object, Array],
-        default: null
-    }
-});
+const props = Object.assign({}, __WEBPACK_IMPORTED_MODULE_0__card_body_vue__["props"], __WEBPACK_IMPORTED_MODULE_1__card_image_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_2__card_header_vue__["b" /* props */], __WEBPACK_IMPORTED_MODULE_3__card_footer_vue__["b" /* props */]);
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;
 
 
@@ -718,7 +713,7 @@ const props = {
     name: 'card-image',
     props,
     methods: {
-        getClass() {
+        getClasses() {
             return {
                 'card-img-top': this.imgBottom == false,
                 'card-img-bottom': this.imgBottom == true
@@ -777,7 +772,6 @@ const props = {
 //
 //
 //
-
 
 const props = {
     footerText: {
@@ -2154,7 +2148,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("img", {
-    class: _vm.getClass(),
+    class: _vm.getClasses(),
     attrs: { src: _vm.imgSrc, alt: _vm.imgAlt }
   })
 }

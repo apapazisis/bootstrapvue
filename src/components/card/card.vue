@@ -15,12 +15,7 @@
     import CardHeader, {props as CardHeaderProps} from './card-header.vue';
     import CardFooter, {props as CardFooterProps} from './card-footer.vue';
 
-    export const props = Object.assign({}, CardBodyProps, CardImageProps, CardHeaderProps, CardFooterProps, {
-        styles: {
-            type: [String, Object, Array],
-            default: null
-        }
-    });
+    export const props = Object.assign({}, CardBodyProps, CardImageProps, CardHeaderProps, CardFooterProps);
 
     export default {
         name: 'card',

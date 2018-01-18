@@ -21,7 +21,7 @@
 </bv-card>
 ```
 
-Use `no-body` property to disable the default `.card-body` element and add your body on your own using the component `<bv-card-body`. See example for more.
+Use `no-body` property to disable the default `.card-body` element and add your body on your own using the component `<bv-card-body>`. See example for more.
 
 ```html
 <bv-card no-body>
@@ -87,3 +87,32 @@ Use `no-body` property to disable the default `.card-body` element and add your 
 </bv-card>
 ```
 
+<h2>Header & Footer</h2>
+
+Define header and footer as properties.
+
+```html
+<bv-card
+    header-text="Card header"
+    header-tag="div"
+    title="My Title"
+    subtitle="My Subtitle">
+        <p class="card-text">Some quick example text</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+</bv-card>
+```
+
+Using `slots` for header and footer.
+
+```html
+<bv-card
+    title="My Title"
+    subtitle="My Subtitle">
+        <div slot="header">Card title</div>
+        <div slot="footer" class="text-muted">Card footer</div>
+        <p class="card-text">Some quick example text</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+</bv-card>
+```
