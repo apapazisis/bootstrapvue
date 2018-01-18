@@ -2023,53 +2023,53 @@ var render = function() {
         "div",
         { staticClass: "card-body" },
         [
-          _vm.titleTag == "h1"
+          _vm.titleTag == "h1" && _vm.title != ""
             ? _c("h1", { staticClass: "card-title" }, [
                 _vm._v(_vm._s(_vm.title))
               ])
-            : _vm.titleTag == "h2"
+            : _vm.titleTag == "h2" && _vm.title != ""
               ? _c("h2", { staticClass: "card-title" }, [
                   _vm._v(_vm._s(_vm.title))
                 ])
-              : _vm.titleTag == "h3"
+              : _vm.titleTag == "h3" && _vm.title != ""
                 ? _c("h3", { staticClass: "card-title" }, [
                     _vm._v(_vm._s(_vm.title))
                   ])
-                : _vm.titleTag == "h4"
+                : _vm.titleTag == "h4" && _vm.title != ""
                   ? _c("h4", { staticClass: "card-title" }, [
                       _vm._v(_vm._s(_vm.title))
                     ])
-                  : _vm.titleTag == "h5"
+                  : _vm.titleTag == "h5" && _vm.title != ""
                     ? _c("h5", { staticClass: "card-title" }, [
                         _vm._v(_vm._s(_vm.title))
                       ])
-                    : _vm.titleTag == "h6"
+                    : _vm.titleTag == "h6" && _vm.title != ""
                       ? _c("h6", { staticClass: "card-title" }, [
                           _vm._v(_vm._s(_vm.title))
                         ])
                       : _vm._e(),
           _vm._v(" "),
-          _vm.subtitleTag == "h1"
+          _vm.subtitleTag == "h1" && _vm.subtitle != ""
             ? _c("h1", { staticClass: "card-subtitle" }, [
                 _vm._v(_vm._s(_vm.subtitle))
               ])
-            : _vm.subtitleTag == "h2"
+            : _vm.subtitleTag == "h2" && _vm.subtitle != ""
               ? _c("h2", { staticClass: "card-tisubtitletle" }, [
                   _vm._v(_vm._s(_vm.subtitle))
                 ])
-              : _vm.subtitleTag == "h3"
+              : _vm.subtitleTag == "h3" && _vm.subtitle != ""
                 ? _c("h3", { staticClass: "card-subtitle" }, [
                     _vm._v(_vm._s(_vm.subtitle))
                   ])
-                : _vm.subtitleTag == "h4"
+                : _vm.subtitleTag == "h4" && _vm.subtitle != ""
                   ? _c("h4", { staticClass: "card-subtitle" }, [
                       _vm._v(_vm._s(_vm.subtitle))
                     ])
-                  : _vm.subtitleTag == "h5"
+                  : _vm.subtitleTag == "h5" && _vm.subtitle != ""
                     ? _c("h5", { staticClass: "card-subtitle" }, [
                         _vm._v(_vm._s(_vm.subtitle))
                       ])
-                    : _vm.subtitleTag == "h6"
+                    : _vm.subtitleTag == "h6" && _vm.subtitle != ""
                       ? _c("h6", { staticClass: "card-subtitle" }, [
                           _vm._v(_vm._s(_vm.subtitle))
                         ])
