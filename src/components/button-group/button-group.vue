@@ -32,7 +32,7 @@
             getClasses() {
                 return {
                     [`btn-group-${this.size}`]: Boolean(this.size),
-                    [`btn-group-${this.vertical}`]: Boolean(this.vertical),
+                    [`btn-group-vertical`]: Boolean(this.vertical),
                     [`mr-${this.space}`]: Boolean(this.space),
 
                 }
