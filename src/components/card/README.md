@@ -31,8 +31,7 @@ Use `no-body` property to disable the default `.card-body` element and add your 
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </bv-card-body>
-    <bv-card-body>
-        <h5 class="card-title">Card title</h5>
+    <bv-card-body title="Card Title" subtitle="Card subtitle">
         <p class="card-text">Some quick example text</p>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
