@@ -7,6 +7,8 @@ import ButtonToolbar from './components/button-toolbar/button-toolbar.vue';
 import Card from './components/card/card.vue';
 import CardBody from './components/card/card-body.vue';
 import Carousel from './components/carousel/carousel.vue'
+import CarouselSlide from './components/carousel/carousel-slide.vue'
+
 
 const BootstrapVue = {
     'bvAlert': Alert,
@@ -17,7 +19,8 @@ const BootstrapVue = {
     'bvButtonToolbar': ButtonToolbar,
     'bvCard': Card,
     'bvCardBody': CardBody,
-    'bvCarousel': Carousel
+    'bvCarousel': Carousel,
+    'bvCarouselSlide': CarouselSlide
 }
 
 module.exports = BootstrapVue
