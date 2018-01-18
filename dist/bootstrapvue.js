@@ -804,17 +804,27 @@ const props = {
 //
 //
 //
-//
-//
 
 const props = {
     id: {
         type: String,
         default: ''
     },
-    items: {
-        type: Array,
-        default: null
+    interval: {
+        type: Number,
+        default: 3000
+    },
+    controls: {
+        type: Boolean,
+        default: false
+    },
+    indicators: {
+        type: Boolean,
+        default: false
+    },
+    background: {
+        type: String,
+        default: '#fff'
     }
 };
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;
@@ -2565,28 +2575,7 @@ var render = function() {
       staticClass: "carousel slide",
       attrs: { id: _vm.id, "data-ride": "carousel" }
     },
-    [
-      _c(
-        "div",
-        { staticClass: "carousel-inner" },
-        _vm._l(_vm.items, function(item, index) {
-          return _c(
-            "div",
-            {
-              key: index,
-              staticClass: "carousel-item",
-              class: { active: item.active }
-            },
-            [
-              _c("img", {
-                staticClass: "d-block w-100",
-                attrs: { src: item.src, alt: item.alt }
-              })
-            ]
-          )
-        })
-      )
-    ]
+    [_c("div", { staticClass: "carousel-inner" }, [_vm._t("default")], 2)]
   )
 }
 var staticRenderFns = []

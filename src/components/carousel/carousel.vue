@@ -1,9 +1,7 @@
 <template>
     <div :id="id" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item" :class="{ 'active': item.active }" v-for="(item, index) in items" :key="index">
-                <img class="d-block w-100" :src="item.src" :alt="item.alt">
-            </div>
+            <slot></slot>
         </div>
     </div>
 </template>
@@ -14,9 +12,21 @@
             type: String,
             default: ''
         },
-        items: {
-            type: Array,
-            default: null
+        interval: {
+            type: Number,
+            default: 3000
+        },
+        controls: {
+            type: Boolean,
+            default: false
+        },
+        indicators: {
+            type: Boolean,
+            default: false
+        },
+        background: {
+            type: String,
+            default: '#fff'
         }
     }
 
