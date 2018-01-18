@@ -6,6 +6,7 @@
     <li><strong>vertical</strong>: The buttons are aligned vertically.</li>
     <li><strong>size</strong>: Size of the group. Default value is small(sm).</li>
     <li><strong>label</strong>: Set the aria-label property of the button-group element.</li>
+    <li><strong>space</strong>: Property space is used with toolbar component. <a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button-toolbar">Here</a> an example of button-toolbar with button-group component.</li>
 </ul>
 
 <h2>Examples</h2>
