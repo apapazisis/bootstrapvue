@@ -5,13 +5,16 @@
 </template>
 
 <script>
+
+    export const props = Object.assign({}, {
+        label: {
+            type: String,
+            default: 'toolbar'
+        }
+    });
+
     export default {
         name: 'button-toolbar',
-        props: {
-            label: {
-                type: String,
-                default: 'toolbar'
-            }
-        }
+        props
     }
 </script>
