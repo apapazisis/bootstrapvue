@@ -3,7 +3,7 @@
 <h2>Properties</h2>
 
 <ul>
-    <li><strong>variant</strong>:You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element.</li>
+    <li><strong>variant</strong>: You can select between variants [primary, secondary, success, danger, warning, info, light, dark] to color the element.</li>
     <li><strong>show</strong>: When this property is added then your alert will be shown.</li>
     <li><strong>timeout</strong>: Alert can be auto-closed after some time in seconds.</li>
     <li><strong>dismiss</strong>: A close button will be shown.</li>
