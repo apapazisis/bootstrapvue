@@ -24,7 +24,7 @@
 Use `no-body` property to disable the default `.card-body` element and add your body on your own using the component `<bv-card-body>`. See example for more.
 
 ```html
-<bv-card no-body>
+<bv-card style="max-width: 18rem" no-body>
     <bv-card-body>
         <h5 class="card-title">Card title</h5>
         <p class="card-text">Some quick example text</p>
@@ -44,6 +44,7 @@ Use `no-body` property to disable the default `.card-body` element and add your 
 
 ```html
 <bv-card
+    style="max-width: 18rem"
     title="My Title"
     title-tag="h4"
     subtitle="My Subtitle"
@@ -59,6 +60,7 @@ Use `no-body` property to disable the default `.card-body` element and add your 
 
 ```html
 <bv-card
+    style="max-width: 18rem"
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg?raw=true"
     img-alt="BootstrapVue"
     title="My Title"
@@ -74,6 +76,7 @@ Use `no-body` property to disable the default `.card-body` element and add your 
 
 ```html
 <bv-card
+    style="max-width: 18rem"
     img-src="https://github.com/apapazisis/bootstrapvue/blob/development/media/logo.jpg?raw=true"
     img-alt="BootstrapVue"
     img-bottom
@@ -93,6 +96,7 @@ Define header and footer as properties.
 
 ```html
 <bv-card
+    style="max-width: 18rem"
     header-text="Card header"
     header-tag="div"
     title="My Title"
@@ -107,6 +111,7 @@ Using `slots` for header and footer.
 
 ```html
 <bv-card
+    style="max-width: 18rem"
     title="My Title"
     subtitle="My Subtitle">
         <div slot="header">Card title</div>
