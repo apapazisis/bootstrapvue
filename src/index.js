@@ -6,6 +6,7 @@ import ButtonGroup from './components/button-group/button-group.vue';
 import ButtonToolbar from './components/button-toolbar/button-toolbar.vue';
 import Card from './components/card/card.vue';
 import CardBody from './components/card/card-body.vue';
+import Carousel from './components/carousel/carousel.vue'
 
 const BootstrapVue = {
     'bvAlert': Alert,
@@ -15,7 +16,8 @@ const BootstrapVue = {
     'bvButtonGroup': ButtonGroup,
     'bvButtonToolbar': ButtonToolbar,
     'bvCard': Card,
-    'bvCardBody': CardBody
+    'bvCardBody': CardBody,
+    'bvCarousel': Carousel
 }
 
 module.exports = BootstrapVue
