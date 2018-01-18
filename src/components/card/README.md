@@ -107,7 +107,7 @@ Define header and footer as properties.
 </bv-card>
 ```
 
-Using `slots` for header and footer.
+Define header and footer using `slots`.
 
 ```html
 <bv-card
