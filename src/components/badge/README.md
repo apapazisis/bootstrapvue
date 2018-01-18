@@ -1,6 +1,6 @@
 <h1>Badge</h1>
 
-<h2>How to</h2>
+<h2>Properties</h2>
 
 <ul>
     <li><strong>type</strong>: You can select between types which are [badge, contextual, pill, link]. By default is used badge.</il>
@@ -52,9 +52,32 @@
 <bv-badge type="link" href="#">Example link</bv-badge>
 ```
 
+<h2>Vue Example</h2>
 
+```vue
+<template>
+    <div>
+        <h1>Example heading <bv-badge variant="secondary">New</bv-badge></h1>
 
+        <bv-button>
+            Notifications <bv-badge variant="light">4</bv-badge>
+            <span class="sr-only">unread messages</span>
+        </bv-button>
+    </div>
+</template>
 
+<script>
+    import {bvBadge, bvButton} from 'bootstrapvue';
+
+    export default {
+        name: 'index',
+        components: {
+            bvBadge,
+            bvButton
+        }
+    }
+</script>
+```
 
 
 

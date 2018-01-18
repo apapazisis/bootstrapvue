@@ -26,7 +26,9 @@ Navigate between components and check documentation out.
 
 <ul>
     <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/alert" alt="Alert component | bootstrapvue">Alert</a></li>
-    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button" alt="Alert component | bootstrapvue">Button</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/badge" alt="Badge component | bootstrapvue">Badge</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/breadcrumb" alt="Breadcrumb component | bootstrapvue">Breadcrumb</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button" alt="Button component | bootstrapvue">Button</a></li>
 </ul>
 
 ### Support
