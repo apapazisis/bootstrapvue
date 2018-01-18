@@ -1,5 +1,17 @@
 <h1>Content Types</h1>
 
+<h2>Properties</h2>
+
+<ul>
+    <li><strong>title</strong>: The title of the card.</li>
+    <li><strong>title-tag</strong>: You can select between (h1, h2,h3, h4, h5, h6) tags to create your title.</li>
+    <li><strong>subtitle</strong>: The subtitle of the card.</li>
+    <li><strong>subtitle-tag</strong>: You can select between (h1, h2,h3, h4, h5, h6) tags to create your subtitle.</li>
+    <li><strong>img-src</strong>: If an image should be included then use then img-src property.</li>
+    <li><strong>img-alt</strong>: The alt property of the image.</li>
+    <li><strong>img-bottom</strong>: Image will be show at the bottom of the card. By default image is at top of card.</li>
+</ul>
+
 <h2>Body</h2>
 
 ```html
