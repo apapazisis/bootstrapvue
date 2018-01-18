@@ -2376,7 +2376,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "card", style: _vm.styles },
+    { staticClass: "card" },
     [
       _vm.headerText || this.$slots.header
         ? _c(
