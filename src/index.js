@@ -1,4 +1,3 @@
-import * as components from './components';
 import Alert from './components/alert/alert.vue';
 import Badge from './components/badge/badge.vue';
 import Breadcrumb from './components/breadcrumb/breadcrumb.vue';
@@ -7,8 +6,6 @@ import ButtonGroup from './components/button-group/button-group.vue';
 import ButtonToolbar from './components/button-toolbar/button-toolbar.vue';
 import Card from './components/card/card.vue';
 import CardBody from './components/card/card-body.vue';
-
-console.log( components );
 
 const BootstrapVue = {
     'bvAlert': Alert,

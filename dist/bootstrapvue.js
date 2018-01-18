@@ -811,10 +811,6 @@ module.exports = __webpack_require__(15);
 "use strict";
 
 
-var _components = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./components\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-
-var components = _interopRequireWildcard(_components);
-
 var _alert = __webpack_require__(16);
 
 var _alert2 = _interopRequireDefault(_alert);
@@ -848,10 +844,6 @@ var _cardBody = __webpack_require__(9);
 var _cardBody2 = _interopRequireDefault(_cardBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
-
-console.log(components);
 
 var BootstrapVue = {
     'bvAlert': _alert2.default,
