@@ -1,13 +1,22 @@
+import * as components from './components';
 import Alert from './components/alert/alert.vue';
-import Button from './components/button/button.vue';
 import Badge from './components/badge/badge.vue';
+import Breadcrumb from './components/breadcrumb/breadcrumb.vue';
+import Button from './components/button/button.vue';
+import ButtonGroup from './components/button-group/button-group.vue';
+import ButtonToolbar from './components/button-toolbar/button-toolbar.vue';
 import Card from './components/card/card.vue';
 import CardBody from './components/card/card-body.vue';
 
+console.log( components );
+
 const BootstrapVue = {
     'bvAlert': Alert,
-    'bvButton': Button,
     'bvBadge': Badge,
+    'bvBreadcrumb': Breadcrumb,
+    'bvButton': Button,
+    'bvButtonGroup': ButtonGroup,
+    'bvButtonToolbar': ButtonToolbar,
     'bvCard': Card,
     'bvCardBody': CardBody
 }
