@@ -353,7 +353,7 @@ const props = {
 const props = Object.assign({}, {
     items: {
         type: Array,
-        default: []
+        default: null
     }
 });
 /* harmony export (immutable) */ __webpack_exports__["b"] = props;

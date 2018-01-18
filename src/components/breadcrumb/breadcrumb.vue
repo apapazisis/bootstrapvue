@@ -14,7 +14,7 @@
     export const props = Object.assign({}, {
         items: {
             type: Array,
-            default: []
+            default: null
         }
     });
 
