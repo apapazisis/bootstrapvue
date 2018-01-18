@@ -31,6 +31,7 @@ Navigate between components and check documentation out.
     <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button" alt="Button component | bootstrapvue">Button</a></li>
     <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button-group" alt="Button-Group component | bootstrapvue">Button-Group</a></li>
     <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/button-toolbar" alt="Button-Toolbar component | bootstrapvue">Button-Toolbar</a></li>
+    <li><a href="https://github.com/apapazisis/bootstrapvue/tree/development/src/components/card" alt="Card component | bootstrapvue">Card</a></li>
 </ul>
 
 ### Support
