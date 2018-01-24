@@ -1,13 +1,17 @@
 <template>
-    <button v-if="type == 'button'" @click="clicked" type="button" class="btn" v-bind="[{disabled}, binds()]" :class="[getClasses()]"><slot></slot></button>
-    <a v-else-if="type == 'link'" @click="clicked" class="btn" :class="[getClasses()]" v-bind="[binds()]" :href="href" role="button"><slot></slot></a>
-    <input v-else-if="type == 'reset'" @click="clicked" class="btn" :class="[getClasses()]" type="reset" v-bind="[{value}, binds()]">
-    <input v-else-if="type == 'submit'" @click="clicked" class="btn" :class="[getClasses()]" type="submit" v-bind="[{value}, binds()]">
-    <input v-else-if="type == 'ibutton'" @click="clicked" class="btn" :class="[getClasses()]" type="button" v-bind="[{value}, binds()]">
+    <button v-if="type == 'button'" :id="id" @click="clicked" type="button" class="btn" v-bind="[{disabled}, binds()]" :class="[getClasses()]"><slot></slot></button>
+    <a v-else-if="type == 'link'" :id="id" @click="clicked" class="btn" :class="[getClasses()]" v-bind="[binds()]" :href="href" role="button"><slot></slot></a>
+    <input v-else-if="type == 'reset'" :id="id" @click="clicked" class="btn" :class="[getClasses()]" type="reset" v-bind="[{value}, binds()]">
+    <input v-else-if="type == 'submit'" :id="id" @click="clicked" class="btn" :class="[getClasses()]" type="submit" v-bind="[{value}, binds()]">
+    <input v-else-if="type == 'ibutton'" :id="id" @click="clicked" class="btn" :class="[getClasses()]" type="button" v-bind="[{value}, binds()]">
 </template>
 
 <script>
     export const props = {
+        id: {
+            type: String,
+            default: ''
+        },
         variant: {
             type: String,
             default: 'primary'
@@ -22,7 +26,7 @@
         },
         size: {
             type: String,
-            default: 'sm'
+            default: ''
         },
         block: {
             type: Boolean,

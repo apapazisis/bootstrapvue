@@ -6,9 +6,12 @@ import ButtonGroup from './components/button-group/button-group.vue';
 import ButtonToolbar from './components/button-toolbar/button-toolbar.vue';
 import Card from './components/card/card.vue';
 import CardBody from './components/card/card-body.vue';
-import Carousel from './components/carousel/carousel.vue'
-import CarouselSlide from './components/carousel/carousel-slide.vue'
-
+import Carousel from './components/carousel/carousel.vue';
+import CarouselSlide from './components/carousel/carousel-slide.vue';
+import Collapse from './components/collapse/collapse.vue';
+import Dropdown from './components/dropdown/dropdown.vue';
+import DropdownItem from './components/dropdown/dropdown-item.vue';
+import DropdownDivider from './components/dropdown/dropdown-divider.vue';
 
 const BootstrapVue = {
     'bvAlert': Alert,
@@ -20,7 +23,11 @@ const BootstrapVue = {
     'bvCard': Card,
     'bvCardBody': CardBody,
     'bvCarousel': Carousel,
-    'bvCarouselSlide': CarouselSlide
+    'bvCarouselSlide': CarouselSlide,
+    'bvCollapse': Collapse,
+    'bvDropdown': Dropdown,
+    'bvDropdownItem': DropdownItem,
+    'bvDropdownDivider': DropdownDivider
 }
 
 module.exports = BootstrapVue
