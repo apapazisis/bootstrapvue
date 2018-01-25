@@ -14,7 +14,7 @@
                 <span v-if="split" class="sr-only">Toggle Dropdown</span>
                 <template v-else>{{ text }}</template>
         </bv-button>
-        <div class="dropdown-menu" :class="{ 'show': show }" :aria-labelledby="id">
+        <div class="dropdown-menu" :class="getDropdownClasses" :aria-labelledby="id">
             <slot></slot>
         </div>
     </div>
@@ -27,13 +27,17 @@
     export const props = Object.assign({}, bvButtonProps, {
         text: {
             type: String,
-            default: ''
+            default: null
         },
         split: {
             type: Boolean,
             default: false
         },
         direction: {
+            type: String,
+            default: null
+        },
+        align: {
             type: String,
             default: null
         }
@@ -62,6 +66,12 @@
                 return {
                      [`show`]: this.show,
                      [`drop${this.direction}`]: Boolean(this.direction)
+                }
+            },
+            getDropdownClasses() {
+                return {
+                    [`show`]: this.show,
+                    [`dropdown-menu-${this.align}`]: Boolean(this.align)
                 }
             }
         },
