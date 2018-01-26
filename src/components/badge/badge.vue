@@ -1,10 +1,10 @@
 <template>
-    <span v-if="type == 'badge'" class="badge" :class="[getVariant()]">
+    <span v-if="type == 'badge'" class="badge" :class="getVariant">
         <slot></slot>
     </span>
-    <span v-else-if="type == 'contextual'" class="badge" :class="[getVariant()]"><slot></slot></span>
-    <span v-else-if="type == 'pill'" class="badge badge-pill" :class="[getVariant()]"><slot></slot></span>
-    <a v-else-if="type == 'link'" :href="href" class="badge" :class="[getVariant()]"><slot></slot></a>
+    <span v-else-if="type == 'contextual'" class="badge" :class="getVariant"><slot></slot></span>
+    <span v-else-if="type == 'pill'" class="badge badge-pill" :class="getVariant"><slot></slot></span>
+    <a v-else-if="type == 'link'" :href="href" class="badge" :class="getVariant"><slot></slot></a>
 </template>
 
 <script>
@@ -26,7 +26,7 @@
     export default {
         name: 'badge',
         props,
-        methods: {
+        computed: {
             getVariant() {
                 return {
                     [`badge-${this.variant}`]: Boolean(this.variant)

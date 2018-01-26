@@ -1,5 +1,5 @@
 <template>
-    <div class="btn-group" :class="[getClasses()]" role="group" :aria-label="label">
+    <div class="btn-group" :class="getClasses" role="group" :aria-label="label">
         <slot></slot>
     </div>
 </template>
@@ -28,7 +28,7 @@
     export default {
         name: 'button-group',
         props,
-        methods: {
+        computed: {
             getClasses() {
                 return {
                     [`btn-group-${this.size}`]: Boolean(this.size),
